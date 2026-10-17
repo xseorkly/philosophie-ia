@@ -2,24 +2,29 @@
 
 Site de formation publié sur GitHub Pages : <https://xseorkly.github.io/philosophie-ia/>
 
-## Le parcours : 9 modules en 3 temps
+## Le parcours : 12 modules en 3 temps (V13)
 
-| Temps | Module | Durée indicative |
+| Temps | Module | Durée |
 | --- | --- | --- |
-| Comprendre | 1 · Deux copies (ouverture, débat mouvant, positionnement) | 30 min |
-| | 2 · Comprendre la machine (cinq démonstrations) | 45 min |
-| | 3 · Les risques pour l’élève (six situations) | 1 h |
-| Concevoir | 4 · Lire et problématiser (4A trois usages, 4B lire Descartes, 4C faire naître un problème) | 1 h 30 |
-| | 5 · Vérifier, enquêter (fausse citation d’Arendt) | 1 h |
-| | 6 · Préparer ses cours avec l’IA | 1 h |
-| | 7 · Accompagner et corriger (7A différencier et feedback, 7B corriger, 12 traces) | 1 h 30 |
-| Penser, s’engager | 8 · Penser l’IA en philosophe (Platon, Descartes, Turing, Searle) | 1 h |
-| | 9 · Charte de classe et séance réelle | 1 h |
+| Comprendre l’élève | 1 · Deux copies (contrat didactique, débat mouvant, positionnement) | 30 min |
+| | 2 · Comprendre la machine (mise à niveau commune) | 30 min |
+| | 3 · Pourquoi l’élève délègue : effort, métacognition, motivation, lecture critique de la recherche | 1 h 15 |
+| | 4 · Les risques pour l’élève | 1 h |
+| Concevoir | 5 · Didactique de l’étayage : effet Topaze, dévolution, fonctions de Bruner, malentendus | 1 h 15 |
+| | 6 · Lire et problématiser (6A, 6B, 6C) | 1 h 30 |
+| | 7 · Vérifier, enquêter | 1 h |
+| | 8 · Préparer ses cours | 1 h |
+| | 9 · Différencier et corriger (9A, 9B) | 1 h 30 |
+| Accompagner et penser | 10 · Accompagner toute l’année : séance de rentrée, charte par niveaux, progression, rituels | 1 h 30 |
+| | 11 · Penser l’IA en philosophe | 1 h 15 |
+| | 12 · Séance réelle et engagement | 1 h |
 
-Version complète : environ 9 h 15. **Parcours express** (bouton dans la barre d’outils) : modules 1, 2, 3, 4A et 9, environ 3 h ; les activités marquées « Version longue » sont alors masquées.
+Version complète : environ deux jours. **Parcours essentiel** (½ journée) : modules 1, 3, 5, 10 et 12.
+Chaque module pratique se termine par un encart « Pour aller plus loin entre collègues ».
 
 ## Fonctionnalités
 
+- **Parcours essentiel** et **mode animateur** (déroulés minutés).
 - **Mode animateur** : affiche les déroulés minutés et les consignes réservées au formateur.
 - **Carnet local** : notes, activités réalisées et positionnement avant / après restent dans le navigateur ; export JSON ou TXT, import, et impression en PDF.
 - **Diaporama** (`diaporama.html?atelier=CLÉ`) : bilan projetable de chaque module, flèches du clavier, F pour le plein écran, enchaînement automatique des modules.

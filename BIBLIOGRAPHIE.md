@@ -155,3 +155,23 @@ Usage et portée : Le design des interactions doit maintenir une agentivité hum
 - **TUR** — Turing (1950), *Computing Machinery and Intelligence*, Mind 59(236). https://doi.org/10.1093/mind/LIX.236.433
 - **SEA** — Searle (1980), *Minds, Brains, and Programs*, Behavioral and Brain Sciences 3(3). https://doi.org/10.1017/S0140525X00005756
 - **STI** — Stiegler (2010), *Ce qui fait que la vie vaut la peine d’être vécue. De la pharmacologie*, Flammarion.
+
+## Ajouts V13 (modules 3, 5 et 10)
+
+- **KOO** — Kool et al. (2010), *Decision making and the avoidance of cognitive demand*. https://doi.org/10.1037/a0020198
+- **SHE** — Shenhav et al. (2017), *Toward a rational and mechanistic account of mental effort*. https://doi.org/10.1146/annurev-neuro-072116-031526
+- **RIS** — Risko et Gilbert (2016), *Cognitive offloading*. https://doi.org/10.1016/j.tics.2016.07.002
+- **FLU** — Alter et Oppenheimer (2009), *Uniting the tribes of fluency*. https://doi.org/10.1177/1088868309341564
+- **IOED** — Rozenblit et Keil (2002), *An illusion of explanatory depth*. https://doi.org/10.1207/s15516709cog2605_1
+- **GEN** — Slamecka et Graf (1978), *The generation effect*. https://doi.org/10.1037/0278-7393.4.6.592
+- **FAN** — Fan et al. (2025), *Beware of Metacognitive Laziness*. https://arxiv.org/abs/2412.09315
+- **KOS** — Kosmyna et al. (2025, prépublication), *Your Brain on ChatGPT*. https://arxiv.org/abs/2506.08872
+- **SDT** — Ryan et Deci (2000), *Self-determination theory*. https://doi.org/10.1037/0003-066X.55.1.68
+- **BAN** — Bandura (1977), *Self-efficacy*. https://doi.org/10.1037/0033-295X.84.2.191
+- **STE** — Steel (2007), *The nature of procrastination*. https://doi.org/10.1037/0033-2909.133.1.65
+- **BRO** — Brousseau (1998), *Théorie des situations didactiques*, La Pensée sauvage.
+- **WBR** — Wood, Bruner et Ross (1976), *The role of tutoring in problem solving*. https://doi.org/10.1111/j.1469-7610.1976.tb00381.x
+- **VYG** — Vygotski (1934), *Pensée et langage*, La Dispute.
+- **BAU** — Bautier et Rayou (2009), *Les inégalités d’apprentissage*, PUF.
+- **LEP** — Leplat (1997), *Regards sur l’activité en situation de travail*, PUF.
+- **AIAS** — Perkins, Furze, Roe et MacVaugh (2024), *The AI Assessment Scale*. https://arxiv.org/abs/2312.07086
