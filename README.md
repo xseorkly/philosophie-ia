@@ -1,23 +1,38 @@
-# Philosophie × IA — V11 (version locale de relecture)
+# Philosophie × IA — formation des professeurs de philosophie (V12)
 
-Le parcours est constitué de sept ateliers indépendants sans jours ni horaires imposés. Les ateliers 1 et 2 sont conservés de la V10 ; les ateliers 3 à 7 ont été reconstruits autour d’expérimentations actives pour les professeurs stagiaires.
+Site de formation publié sur GitHub Pages : <https://xseorkly.github.io/philosophie-ia/>
 
-## Pour chaque activité reconstruite
+## Le parcours : 9 modules en 3 temps
 
-1. Le besoin ou obstacle d’apprentissage est explicité.
-2. Le support de départ est affiché directement ; une ressource personnelle est facultative, et un cas de secours est disponible.
-3. Une production individuelle initiale sans IA sert de référence.
-4. Plusieurs prompts contrastés sont testés, idéalement en conversations distinctes.
-5. Les stagiaires jouent réellement l’élève avant de reprendre la posture de professeur.
-6. Une synthèse du formateur met les observations en lien avec la recherche sans prétendre démontrer une efficacité en Terminale.
+| Temps | Module | Durée indicative |
+| --- | --- | --- |
+| Comprendre | 1 · Deux copies (ouverture, débat mouvant, positionnement) | 30 min |
+| | 2 · Comprendre la machine (cinq démonstrations) | 45 min |
+| | 3 · Les risques pour l’élève (six situations) | 1 h |
+| Concevoir | 4 · Lire et problématiser (4A trois usages, 4B lire Descartes, 4C faire naître un problème) | 1 h 30 |
+| | 5 · Vérifier, enquêter (fausse citation d’Arendt) | 1 h |
+| | 6 · Préparer ses cours avec l’IA | 1 h |
+| | 7 · Accompagner et corriger (7A différencier et feedback, 7B corriger, 12 traces) | 1 h 30 |
+| Penser, s’engager | 8 · Penser l’IA en philosophe (Platon, Descartes, Turing, Searle) | 1 h |
+| | 9 · Charte de classe et séance réelle | 1 h |
 
-Le corpus des copies et les douze traces P01–P12 sont fictifs. Ils ne doivent pas être pris pour des copies complètes notées officiellement.
+Version complète : environ 9 h 15. **Parcours express** (bouton dans la barre d’outils) : modules 1, 2, 3, 4A et 9, environ 3 h ; les activités marquées « Version longue » sont alors masquées.
+
+## Fonctionnalités
+
+- **Mode animateur** : affiche les déroulés minutés et les consignes réservées au formateur.
+- **Carnet local** : notes, activités réalisées et positionnement avant / après restent dans le navigateur ; export JSON ou TXT, import, et impression en PDF.
+- **Diaporama** (`diaporama.html?atelier=CLÉ`) : bilan projetable de chaque module, flèches du clavier, F pour le plein écran, enchaînement automatique des modules.
+- Activités terminées repliées automatiquement ; badges « Sans IA », « Avec IA », « En binôme », « Version longue ».
 
 ## Fichiers
-- `index.html` : ateliers, prompts copiables, carnet local.
-- `dossiers.html` : fiches opérationnelles synchronisées.
-- `diaporama.html` : six écrans de bilan par atelier.
-- `syntheses.html` : synthèses théoriques plus détaillées.
+
+- `index.html` : parcours, prompts copiables, carnet.
+- `diaporama.html` : bilans projetables.
+- `syntheses.html` : fiches formateur imprimables, une par module.
+- `dossiers.html` : dossiers imprimables des activités des modules 4, 5, 7 et 9.
 - `sources.html` et `BIBLIOGRAPHIE.md` : bibliographie commentée.
 
-Aucune modification GitHub n’est effectuée par cette génération locale.
+Les clés internes des modules (`N1`, `N2`, `N3`, `O`, `M1`…`M6`, `N6`, `N8`) sont conservées pour ne pas perdre les carnets déjà enregistrés par les participants.
+
+Toutes les copies, traces et situations d’élèves sont fictives. Aucune donnée n’est envoyée sur Internet.

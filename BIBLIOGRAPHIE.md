@@ -141,3 +141,17 @@ Usage et portée : Approche centrée sur l’agentivité humaine, l’éthique, 
 **Guidance for Generative AI in Education and Research** — Référentiel international.
 https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research
 Usage et portée : Le design des interactions doit maintenir une agentivité humaine et une validation pédagogique.
+
+## Ajouts V12 (modules 2, 3 et 8)
+
+- **BEN** — Bender, Gebru, McMillan-Major et Shmitchell (2021), *On the Dangers of Stochastic Parrots: Can Language Models Be Too Big?* https://doi.org/10.1145/3442188.3445922
+- **HAL** — Ji et al. (2023), *Survey of Hallucination in Natural Language Generation*, ACM Computing Surveys. https://doi.org/10.1145/3571730
+- **SYC** — Sharma et al. (2023), *Towards Understanding Sycophancy in Language Models*. https://arxiv.org/abs/2310.13548
+- **GER** — Gerlich (2025), *AI Tools in Society: Impacts on Cognitive Offloading and the Future of Critical Thinking*, Societies 15(1). https://doi.org/10.3390/soc15010006
+- **DET** — Liang et al. (2023), *GPT detectors are biased against non-native English writers*, Patterns 4(7). https://doi.org/10.1016/j.patter.2023.100779
+- **DIV** — Doshi et Hauser (2024), *Generative AI enhances individual creativity but reduces the collective diversity of novel content*, Science Advances 10(28). https://doi.org/10.1126/sciadv.adn5290
+- **PLA** — Platon, *Phèdre*, 274c-275b, trad. V. Cousin (Wikisource).
+- **DSD** — Descartes, *Discours de la méthode*, Ve partie (1637). https://www.gutenberg.org/ebooks/13846
+- **TUR** — Turing (1950), *Computing Machinery and Intelligence*, Mind 59(236). https://doi.org/10.1093/mind/LIX.236.433
+- **SEA** — Searle (1980), *Minds, Brains, and Programs*, Behavioral and Brain Sciences 3(3). https://doi.org/10.1017/S0140525X00005756
+- **STI** — Stiegler (2010), *Ce qui fait que la vie vaut la peine d’être vécue. De la pharmacologie*, Flammarion.
