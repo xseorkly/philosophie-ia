@@ -1,21 +1,9 @@
-# Philosophie × IA — Parcours clair pour enseignants experts (V6)
+# Philosophie × IA — V10, atelier 02 reconstruit (NON PUBLIÉ)
 
-Site statique autonome. Ouvrir `index.html`. Aucune installation, aucun service externe requis pour le parcours (les liens vers sources ouvrent naturellement des sites tiers).
+Cette version conserve le parcours complet de sept ateliers. Elle reprend l’atelier 02 (« Lire et expliquer ») en quatre expériences concrètes adressées aux enseignants stagiaires : immersion momentanée en posture d’élève, prompts 1/2/3 comparables, test d’un tuteur, transfert final sans IA, puis décision professionnelle.
 
-Chaque atelier comprend : contexte et justification, problématique, objectifs, activités avec productions, bilans intermédiaires, synthèse finale et diaporama projetable. Aucun jour, horaire ou minutage dans l’interface.
+Les extraits authentiques de la Première Méditation de Descartes sont immédiatement visibles dans `index.html` et repris dans `dossiers.html`. Source éditoriale : ATHENA/Université de Genève ; traduction française ancienne du domaine public. Les productions d’élèves éventuellement affichées sont fictives.
 
-- `index.html` : parcours et carnet stagiaire interactif ; notes sauvegardées localement (même préfixe que la V5).
-- `diaporama.html?atelier=O` (ou M1 ... M6) : bilans en mode projection, cinq écrans de synthèse + références ; flèches gauche/droite.
-- `syntheses.html` : sept fiches théoriques imprimables pour le formateur.
-- `sources.html`, `BIBLIOGRAPHIE.md` : 28 sources explicites, classées, lien et portée de chaque résultat.
+L’atelier 01 reste dans sa version immersive V9. Les autres ateliers sont inchangés. Aucun changement GitHub n’a été effectué.
 
-Copie de travail NON PUBLIÉE : aucune modification GitHub effectuée.
-
-
-## V7 — audit opérationnel des activités
-
-Les 22 activités disposent désormais d’un **dossier opérationnel intégré** : support de départ réellement fourni (ou référence primaire directement cliquable), productions à créer ou à faire générer par l’IA, contrôle humain, tableau de travail le cas échéant. `dossiers.html` compile ces 22 dossiers pour le formateur et pour impression. Activité Descartes M1A : trois traces fictives incluses ; activité M1B : trois fiches explicitement à générer ; activité M5D : douze micro-traces fictives P01–P12 incluses. Aucune copie réelle ni sortie IA présentée comme résultat observé. Les autres pages de diaporama et synthèse scientifique sont conservées.
-
-
-## Révision ciblée V8 — atelier 01
-Les deux activités de l’atelier initial ont été entièrement reconstruites : séance fictive entièrement reproduite dans index.html, deux tests IA effectifs, prompts, trois traces fictives, grille de comparaison, deuxième test de tutorat, conclusions ajustées. Aucun jour ni horaire imposé. Les autres ateliers restent identiques à V7. La séance de l’atelier 01 est un cas pédagogique créé pour la formation et n’est pas présentée comme une séance académique authentique.
+Ouvrir `index.html` ; sélectionner Atelier 02. Bilan en `diaporama.html?atelier=M1` ; synthèse en `syntheses.html#fiche-M1`.
