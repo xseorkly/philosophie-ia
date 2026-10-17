@@ -1,4 +1,4 @@
-# Philosophie × IA — formation des professeurs de philosophie (V12)
+# Philosophie × IA — formation des professeurs de philosophie (V13)
 
 Site de formation publié sur GitHub Pages : <https://xseorkly.github.io/philosophie-ia/>
 
@@ -24,7 +24,6 @@ Chaque module pratique se termine par un encart « Pour aller plus loin entre co
 
 ## Fonctionnalités
 
-- **Parcours essentiel** et **mode animateur** (déroulés minutés).
 - **Mode animateur** : affiche les déroulés minutés et les consignes réservées au formateur.
 - **Carnet local** : notes, activités réalisées et positionnement avant / après restent dans le navigateur ; export JSON ou TXT, import, et impression en PDF.
 - **Diaporama** (`diaporama.html?atelier=CLÉ`) : bilan projetable de chaque module, flèches du clavier, F pour le plein écran, enchaînement automatique des modules.
