@@ -1,11 +1,23 @@
-# Philosophie × IA — Parcours stagiaire
+# Philosophie × Intelligence artificielle
 
-Formation de 6 heures : **Apprendre à penser avec l’IA, sans lui déléguer sa pensée**.
+**Apprendre à penser avec l’IA, sans lui déléguer sa pensée.**
 
-Site statique à publier sur GitHub Pages. Contenu prévu : 16 activités, 16 bilans, 5 modules, espaces de réflexion, prompts copiables et ressources PDF.
+Site interactif destiné aux enseignants stagiaires d’une formation de **6 heures** en philosophie de Terminale.
 
-## Déploiement
+## Accès au site
 
-Importer à la racine du dépôt les fichiers du kit `Site_Formation_Philosophie_IA_Stagiaires.zip` : `index.html`, `LISEZ_MOI.txt` et le dossier `ressources/`. Conserver les noms et chemins. Dans Settings > Pages, choisir **Deploy from a branch**, branche **main**, dossier **/(root)**. Le site sera accessible à `https://xseorkly.github.io/philosophie-ia/` une fois la publication terminée.
+➡️ **https://xseorkly.github.io/philosophie-ia/**
 
-Les réponses des stagiaires sont conservées localement dans leur navigateur et non envoyées à GitHub.
+## Contenu
+
+- Cinq modules de formation et seize activités scénarisées.
+- Un espace bilan après chaque activité : synthèse, éclairages pédagogiques, didactiques et sciences cognitives.
+- Des prompts copiables, des zones de réponse et la progression des stagiaires.
+- Une sauvegarde locale dans le navigateur et l’export des productions.
+- Trois ressources PDF dans le dossier `ressources/` : carnet stagiaire, banque de prompts et fiches imprimables.
+
+## Publication
+
+Le site est publié depuis la branche `main` via GitHub Pages. Le fichier `.github/workflows/static.yml` définit le workflow de publication statique.
+
+Les réponses saisies sur le site restent sur l’appareil utilisé ; GitHub n’en recueille pas les contenus.
