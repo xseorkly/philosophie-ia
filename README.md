@@ -15,3 +15,7 @@ Copie de travail NON PUBLIÉE : aucune modification GitHub effectuée.
 ## V7 — audit opérationnel des activités
 
 Les 22 activités disposent désormais d’un **dossier opérationnel intégré** : support de départ réellement fourni (ou référence primaire directement cliquable), productions à créer ou à faire générer par l’IA, contrôle humain, tableau de travail le cas échéant. `dossiers.html` compile ces 22 dossiers pour le formateur et pour impression. Activité Descartes M1A : trois traces fictives incluses ; activité M1B : trois fiches explicitement à générer ; activité M5D : douze micro-traces fictives P01–P12 incluses. Aucune copie réelle ni sortie IA présentée comme résultat observé. Les autres pages de diaporama et synthèse scientifique sont conservées.
+
+
+## Révision ciblée V8 — atelier 01
+Les deux activités de l’atelier initial ont été entièrement reconstruites : séance fictive entièrement reproduite dans index.html, deux tests IA effectifs, prompts, trois traces fictives, grille de comparaison, deuxième test de tutorat, conclusions ajustées. Aucun jour ni horaire imposé. Les autres ateliers restent identiques à V7. La séance de l’atelier 01 est un cas pédagogique créé pour la formation et n’est pas présentée comme une séance académique authentique.
