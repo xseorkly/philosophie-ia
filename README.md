@@ -1,9 +1,23 @@
-# Philosophie × IA — V10, atelier 02 reconstruit (NON PUBLIÉ)
+# Philosophie × IA — V11 (version locale de relecture)
 
-Cette version conserve le parcours complet de sept ateliers. Elle reprend l’atelier 02 (« Lire et expliquer ») en quatre expériences concrètes adressées aux enseignants stagiaires : immersion momentanée en posture d’élève, prompts 1/2/3 comparables, test d’un tuteur, transfert final sans IA, puis décision professionnelle.
+Le parcours est constitué de sept ateliers indépendants sans jours ni horaires imposés. Les ateliers 1 et 2 sont conservés de la V10 ; les ateliers 3 à 7 ont été reconstruits autour d’expérimentations actives pour les professeurs stagiaires.
 
-Les extraits authentiques de la Première Méditation de Descartes sont immédiatement visibles dans `index.html` et repris dans `dossiers.html`. Source éditoriale : ATHENA/Université de Genève ; traduction française ancienne du domaine public. Les productions d’élèves éventuellement affichées sont fictives.
+## Pour chaque activité reconstruite
 
-L’atelier 01 reste dans sa version immersive V9. Les autres ateliers sont inchangés. Aucun changement GitHub n’a été effectué.
+1. Le besoin ou obstacle d’apprentissage est explicité.
+2. Le support de départ est affiché directement ; une ressource personnelle est facultative, et un cas de secours est disponible.
+3. Une production individuelle initiale sans IA sert de référence.
+4. Plusieurs prompts contrastés sont testés, idéalement en conversations distinctes.
+5. Les stagiaires jouent réellement l’élève avant de reprendre la posture de professeur.
+6. Une synthèse du formateur met les observations en lien avec la recherche sans prétendre démontrer une efficacité en Terminale.
 
-Ouvrir `index.html` ; sélectionner Atelier 02. Bilan en `diaporama.html?atelier=M1` ; synthèse en `syntheses.html#fiche-M1`.
+Le corpus des copies et les douze traces P01–P12 sont fictifs. Ils ne doivent pas être pris pour des copies complètes notées officiellement.
+
+## Fichiers
+- `index.html` : ateliers, prompts copiables, carnet local.
+- `dossiers.html` : fiches opérationnelles synchronisées.
+- `diaporama.html` : six écrans de bilan par atelier.
+- `syntheses.html` : synthèses théoriques plus détaillées.
+- `sources.html` et `BIBLIOGRAPHIE.md` : bibliographie commentée.
+
+Aucune modification GitHub n’est effectuée par cette génération locale.
