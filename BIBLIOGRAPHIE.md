@@ -175,3 +175,15 @@ Usage et portée : Le design des interactions doit maintenir une agentivité hum
 - **BAU** — Bautier et Rayou (2009), *Les inégalités d’apprentissage*, PUF.
 - **LEP** — Leplat (1997), *Regards sur l’activité en situation de travail*, PUF.
 - **AIAS** — Perkins, Furze, Roe et MacVaugh (2024), *The AI Assessment Scale*. https://arxiv.org/abs/2312.07086
+
+## Ajouts V14 (modules 6A à 9B)
+
+- **SPE** — Sperber et al. (2010), *Epistemic Vigilance*, Mind & Language 25(4). https://doi.org/10.1111/j.1468-0017.2010.01394.x
+- **ANC** — Tversky et Kahneman (1974), *Judgment under Uncertainty: Heuristics and Biases*, Science 185. https://doi.org/10.1126/science.185.4157.1124
+- **AUT** — Parasuraman et Manzey (2010), *Complacency and Bias in Human Use of Automation*, Human Factors 52(3). https://doi.org/10.1177/0018720810376055
+- **PIE** — Piéron (1963), *Examens et docimologie*, PUF.
+- **MER** — Merle (2007), *Les notes. Secrets de fabrication*, PUF.
+- **KAL** — Kalyuga et al. (2003), *The Expertise Reversal Effect*, Educational Psychologist 38(1). https://doi.org/10.1207/S15326985EP3801_4
+- **CHE** — Chevallard (1985), *La transposition didactique*, La Pensée sauvage.
+- **GIC** — Gick et Holyoak (1980), *Analogical problem solving*, Cognitive Psychology 12(3). https://doi.org/10.1016/0010-0285(80)90013-4
+- **KLU** — Kluger et DeNisi (1996), *The effects of feedback interventions on performance*, Psychological Bulletin 119(2). https://doi.org/10.1037/0033-2909.119.2.254
