@@ -1,8 +1,8 @@
-# Philosophie × IA — formation des professeurs de philosophie (V14)
+# Philosophie × IA — formation des professeurs de philosophie (V15)
 
 Site de formation publié sur GitHub Pages : <https://xseorkly.github.io/philosophie-ia/>
 
-## Le parcours : 12 modules en 3 temps (V13)
+## Le parcours : 12 modules en 3 temps
 
 | Temps | Module | Durée |
 | --- | --- | --- |
@@ -20,7 +20,7 @@ Site de formation publié sur GitHub Pages : <https://xseorkly.github.io/philoso
 | | 12 · Séance réelle et engagement | 1 h |
 
 Version complète : environ deux jours. **Parcours essentiel** (½ journée) : modules 1, 3, 5, 10 et 12.
-Les modules 6A à 9B s’ouvrent sur un cadre conceptuel (mécanismes cognitifs et concepts didactiques), chaque activité comporte une lecture experte et un débrief d’analyse, et chaque module se termine par un encart « Pour aller plus loin entre collègues ».
+Les modules 6A à 12 s’ouvrent sur un cadre conceptuel (mécanismes cognitifs et concepts didactiques), chaque activité comporte une lecture experte et un débrief d’analyse, et chaque module se termine par un encart « Pour aller plus loin entre collègues ». Le module 12 contient la matrice de conception finale : la séance pensée comme une hypothèse à tester.
 
 ## Fonctionnalités
 

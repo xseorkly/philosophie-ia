@@ -187,3 +187,11 @@ Usage et portée : Le design des interactions doit maintenir une agentivité hum
 - **CHE** — Chevallard (1985), *La transposition didactique*, La Pensée sauvage.
 - **GIC** — Gick et Holyoak (1980), *Analogical problem solving*, Cognitive Psychology 12(3). https://doi.org/10.1016/0010-0285(80)90013-4
 - **KLU** — Kluger et DeNisi (1996), *The effects of feedback interventions on performance*, Psychological Bulletin 119(2). https://doi.org/10.1037/0033-2909.119.2.254
+
+## Ajouts V15 (module 12 et matrice)
+
+- **CUR** — Camerer, Loewenstein et Weber (1989), *The Curse of Knowledge in Economic Settings*, Journal of Political Economy 97(5). https://doi.org/10.1086/261651
+- **DBR** — Design-Based Research Collective (2003), *Design-Based Research: An Emerging Paradigm for Educational Inquiry*, Educational Researcher 32(1). https://doi.org/10.3102/0013189X032001005
+- **GUS** — Guskey (2002), *Professional Development and Teacher Change*, Teachers and Teaching 8(3). https://doi.org/10.1080/135406002100000512
+- **GOL** — Gollwitzer (1999), *Implementation Intentions: Strong Effects of Simple Plans*, American Psychologist 54(7). https://doi.org/10.1037/0003-066X.54.7.493
+- **SCH** — Schön (1983), *The Reflective Practitioner*, Basic Books.
