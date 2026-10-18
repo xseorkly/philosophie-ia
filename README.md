@@ -1,4 +1,4 @@
-# Philosophie × IA — formation des professeurs de philosophie (V16)
+# Philosophie × IA — formation des professeurs de philosophie (V17)
 
 Site de formation publié sur GitHub Pages : <https://xseorkly.github.io/philosophie-ia/>
 
@@ -28,6 +28,7 @@ Les modules 6A à 12 s’ouvrent sur un cadre conceptuel (mécanismes cognitifs 
 - **Le stagiaire écrit le prompt** dans 15 activités, avec un cahier des charges en sept rubriques qui s’allège du niveau A (6A-6C) au niveau D (12). Le prompt du formateur reste caché jusqu’au test.
 - **Rôles tournants** dans chaque groupe : gardien du temps, observateur, avocat du diable.
 - Chaque mécanisme est expliqué une fois ; les modules suivants y renvoient par un rappel.
+- **V17 :** organisation sur 40 activités : 7 en groupe entier, 12 en petits groupes, 14 en binômes, 7 seul. Trois activités font tourner les participants entre les tables (stations du module 2, enquête du module 7, tri de cartes du module 9B), 14 productions sont affichées, et chaque demi-journée s’ouvre sur un quiz debout de récupération. La disputatio du module 5 entre dans le parcours essentiel.
 
 ## Fonctionnalités
 
