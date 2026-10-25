@@ -195,3 +195,9 @@ Usage et portée : Le design des interactions doit maintenir une agentivité hum
 - **GUS** — Guskey (2002), *Professional Development and Teacher Change*, Teachers and Teaching 8(3). https://doi.org/10.1080/135406002100000512
 - **GOL** — Gollwitzer (1999), *Implementation Intentions: Strong Effects of Simple Plans*, American Psychologist 54(7). https://doi.org/10.1037/0003-066X.54.7.493
 - **SCH** — Schön (1983), *The Reflective Practitioner*, Basic Books.
+
+## Ajouts V18 (procès du module 11, enquête du module 7)
+
+- **EMI** — Jean-Jacques Rousseau, *Émile ou De l’éducation* (1762), livre III : « Qu’il ne sache rien parce que vous le lui avez dit, mais parce qu’il l’a compris lui-même. » Témoin du procès. https://fr.wikisource.org/wiki/%C3%89mile,_ou_De_l%E2%80%99%C3%A9ducation
+- **MON** — Michel de Montaigne, *Essais*, I, 26 (ou I, 25 selon les éditions), « De l’institution des enfants » : une tête bien faite plutôt que bien pleine. Témoin du procès. https://fr.wikisource.org/wiki/Essais/Livre_I/Chapitre_26
+- Pièces de l’enquête du module 7 (solutions en mode animateur) : Evelyn Beatrice Hall (S. G. Tallentyre), *The Friends of Voltaire* (1906) ; Pascal, *Pensées*, fragment Lafuma 423 / Brunschvicg 277 ; Camus, « Sur une philosophie de l’expression », *Poésie 44* (1944) ; Sartre, *Huis clos* (1944). La phrase attribuée à Malraux n’est attestée dans aucun texte publié.
