@@ -70,6 +70,7 @@ Chaque demi-journée (sauf la première et la dernière) s’ouvre sur 15 minute
 - `syntheses.html` : fiches formateur imprimables, générées à partir des bilans.
 - `supports.html` : supports imprimables et fiche « avant la formation ». `dossiers.html` y redirige.
 - `glossaire.html` : glossaire.
+- `cahier-formateur.pdf` : cahier du formateur (A4, environ 105 pages) : pour chaque module, ce qu’il faut préparer, le déroulé minuté, les phrases à dire, les relances, ce qu’il faut faire émerger, les points de vigilance et les documents à distribuer.
 - `sources.html` et `BIBLIOGRAPHIE.md` : bibliographie commentée.
 
 Les clés internes des modules (`N1`, `N2`, `N3`, `O`, `M1`…`M6`, `N6`…`N8`) et des notes sont conservées pour ne pas perdre les carnets déjà enregistrés : les activités de l’ancien 6C (`M2B`, `M2C`) et du 9A (`M4B`) gardent leurs clés de carnet dans leurs nouveaux modules.
