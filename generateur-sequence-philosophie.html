@@ -124,21 +124,28 @@ return x.join("\n");
 }
 function additionalPrompts(){
 const common=projectContext()+"N'utilise que les documents effectivement accessibles dans le projet et indique lesquels ont servi. N'invente aucune citation ni référence.\n";
-$("prompt-explication").value=common+"À partir d'un EXTR AIT PHILOSOPHIQUE VÉRIFIÉ que j'ai fourni (si aucun n'est disponible, demande-le-moi), prépare un atelier d'explication de texte pour ma classe : thèse, mouvements argumentatifs, difficultés de vocabulaire, 2 questions de repérage, 3 questions d'analyse, 2 objections ou discussions, une consigne finale personnelle. Pour chaque question, indique le passage précis qui permet d'y répondre. Propose des éléments de correction à valider, jamais un « corrigé officiel » inventé.";
+$("prompt-explication").value=common+"À partir d'un EXTRAIT PHILOSOPHIQUE VÉRIFIÉ que j'ai fourni (si aucun n'est disponible, demande-le-moi), prépare un atelier d'explication de texte pour ma classe : thèse, mouvements argumentatifs, difficultés de vocabulaire, 2 questions de repérage, 3 questions d'analyse, 2 objections ou discussions, une consigne finale personnelle. Pour chaque question, indique le passage précis qui permet d'y répondre. Propose des éléments de correction à valider, jamais un « corrigé officiel » inventé.";
 $("prompt-dissertation").value=common+"Pour le sujet « "+lines("sujet")+" », prépare une progression d'entraînement à la dissertation : analyse des mots, trois interprétations du sujet, tensions entre deux réponses défendables, exemples de relances, travail sur la problématisation, exercice d'écriture d'introduction, exercice de transitions et critères de relecture. Distingue les sujets authentiques du baccalauréat des sujets que tu inventes. Ne donne pas un devoir à recopier aux élèves.";
 $("prompt-evaluation").value=common+"En fonction de la séquence sur « "+lines("sujet")+" », propose une évaluation formative réalisable en "+v("minutes")+" minutes, une consigne claire adressée aux élèves, des critères qualitatifs de relecture et des indications de reprise de copie. Distingue une grille pédagogique conçue par moi d'un texte réglementaire ; n'invente aucun barème officiel de philosophie.";
 $("prompt-fiche").value=common+"Crée une fiche notionnelle de "+lines("notion")+" pour "+v("voie")+" : définitions à discuter, distinctions, 3 situations problématiques, deux objections, références philosophiques prises dans le corpus, questions de révision et mini-synthèse. Indique les extraits réellement exploités et signale toute référence incertaine.";
 $("prompt-html").value=common+"À partir de la séquence sur « "+lines("sujet")+" » que j'ai validée, crée UN FICHIER HTML AUTONOME pour mes élèves de "+v("voie")+" : sommaire cliquable, rubriques par séance, textes exacts et sourcés, consignes progressives, champs de réponse sans collecte, bilans pliables, fiches méthodologiques et mise en page adaptée aux téléphones. Le HTML doit fonctionner hors ligne, sans API, serveur, clé secrète, bibliothèque distante ni transmission des réponses. Ne publie pas le site. Fournis le code complet et une liste de tests de fonctionnement. Signale tout texte dont les droits de reproduction ou la référence ne sont pas vérifiés.";
-$("prompt-explication").value=$("prompt-explication").value.replace("EXTR AIT","EXTRAIT");
+
 }
 function update(){if(document.activeElement!==$("output"))$("output").value=mainPrompt();additionalPrompts();$("status").textContent="";}
 fields.forEach(id=>{$(id).addEventListener("input",update);$(id).addEventListener("change",update)});
-async function copyText(txt){
-try{await navigator.clipboard.writeText(txt);$("status").textContent="Prompt copié. Collez-le dans une conversation de votre projet ChatGPT ou Claude."}
-catch(e){const out=$("output");out.focus();out.select();$("status").textContent="Copie directe non autorisée : sélectionnez le texte et utilisez Ctrl+C."}
+async function copyText(txt,source){
+try{
+ await navigator.clipboard.writeText(txt);
+ $("status").textContent="Prompt copié. Collez-le dans une conversation de votre projet ChatGPT ou Claude.";
+}catch(e){
+ const field=source||$("output");
+ field.focus();field.select();
+ let done=false;try{done=!!document.execCommand("copy")}catch(ex){}
+ $("status").textContent=done?"Prompt copié.":"Texte sélectionné : utilisez Ctrl+C, puis collez-le dans votre projet.";
 }
-$("copy").addEventListener("click",()=>copyText($("output").value));
-document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",()=>copyText($(button.dataset.copy).value)));
+}
+$("copy").addEventListener("click",()=>copyText($("output").value,$("output")));
+document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",()=>copyText($(button.dataset.copy).value,$(button.dataset.copy))));
 $("refresh").addEventListener("click",()=>{$("output").value=mainPrompt();additionalPrompts();$("status").textContent="Prompt régénéré depuis les champs."});
 $("reset").addEventListener("click",()=>{
 for(const id of ["notion","sujet","place","prerequis","objectifs","activites","evaluation","sources","textes","methodes","diff"])$(id).value="";
