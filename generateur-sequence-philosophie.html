@@ -92,11 +92,11 @@ const fields=["voie","notion","sujet","seances","minutes","place","prerequis","o
 const v=id=>($(id).value||"").trim();
 const lines=id=>v(id)||"[À PRÉCISER]";
 function projectContext(){
-return "Je suis professeur de philosophie en "+v("voie")+". Je travaille à partir de mon PROJET DOCUMENTAIRE ChatGPT ou Claude.\\n"+
-"Sujet de séquence : « "+lines("sujet")+" ». Notion : "+lines("notion")+".\\n"+
-"Ressources que j'indique comme réellement intégrées : "+(v("sources")||"Aucune liste de sources transmise : commence par me demander ce que j’ai chargé.")+"\\n"+
-"Textes philosophiques envisagés : "+(v("textes")||"Aucun texte fixé ; n’invente pas d’extrait.")+"\\n"+
-"Autres documents pédagogiques : "+(v("methodes")||"Aucun document cité.")+"\\n";
+return "Je suis professeur de philosophie en "+v("voie")+". Je travaille à partir de mon PROJET DOCUMENTAIRE ChatGPT ou Claude.\n"+
+"Sujet de séquence : « "+lines("sujet")+" ». Notion : "+lines("notion")+".\n"+
+"Ressources que j'indique comme réellement intégrées : "+(v("sources")||"Aucune liste de sources transmise : commence par me demander ce que j’ai chargé.")+"\n"+
+"Textes philosophiques envisagés : "+(v("textes")||"Aucun texte fixé ; n’invente pas d’extrait.")+"\n"+
+"Autres documents pédagogiques : "+(v("methodes")||"Aucun document cité.")+"\n";
 }
 function mainPrompt(){
 const x=[projectContext(),"CADRE DE TRAVAIL :",
@@ -120,10 +120,10 @@ x.push("INSTRUCTIONS :",
 "8. Si tu ajoutes une source externe, identifie-la explicitement comme ressource à vérifier. Ne prétends pas qu'un lien web a été lu ou importé sans l'avoir réellement consulté.",
 "9. Termine par trois choix pédagogiques à me faire arbitrer, puis demande-moi quelle séance je souhaite développer.",
 "PRODUCTION ATTENDUE : une progression utilisable, argumentée et adaptée aux ressources vérifiées du projet. Ne commence pas par une dissertation rédigée à la place des élèves.");
-return x.join("\\n");
+return x.join("\n");
 }
 function additionalPrompts(){
-const common=projectContext()+"N'utilise que les documents effectivement accessibles dans le projet et indique lesquels ont servi. N'invente aucune citation ni référence.\\n";
+const common=projectContext()+"N'utilise que les documents effectivement accessibles dans le projet et indique lesquels ont servi. N'invente aucune citation ni référence.\n";
 $("prompt-explication").value=common+"À partir d'un EXTR AIT PHILOSOPHIQUE VÉRIFIÉ que j'ai fourni (si aucun n'est disponible, demande-le-moi), prépare un atelier d'explication de texte pour ma classe : thèse, mouvements argumentatifs, difficultés de vocabulaire, 2 questions de repérage, 3 questions d'analyse, 2 objections ou discussions, une consigne finale personnelle. Pour chaque question, indique le passage précis qui permet d'y répondre. Propose des éléments de correction à valider, jamais un « corrigé officiel » inventé.";
 $("prompt-dissertation").value=common+"Pour le sujet « "+lines("sujet")+" », prépare une progression d'entraînement à la dissertation : analyse des mots, trois interprétations du sujet, tensions entre deux réponses défendables, exemples de relances, travail sur la problématisation, exercice d'écriture d'introduction, exercice de transitions et critères de relecture. Distingue les sujets authentiques du baccalauréat des sujets que tu inventes. Ne donne pas un devoir à recopier aux élèves.";
 $("prompt-evaluation").value=common+"En fonction de la séquence sur « "+lines("sujet")+" », propose une évaluation formative réalisable en "+v("minutes")+" minutes, une consigne claire adressée aux élèves, des critères qualitatifs de relecture et des indications de reprise de copie. Distingue une grille pédagogique conçue par moi d'un texte réglementaire ; n'invente aucun barème officiel de philosophie.";
