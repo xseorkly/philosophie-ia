@@ -182,6 +182,16 @@ section.session-block{padding:0!important;overflow:visible}
 }
 @media(max-width:520px){.session-toggle{padding:14px}.session-name{font-size:1.1rem}.session-body{padding:8px 12px 17px}.part-body{padding:8px}.activity-toggle{padding:10px}.activity-time{font-size:.75rem}}
 @media print{.side-nav{display:none!important}.page-layout{display:block;width:100%}.activity-accordion>.step,.session-body,.part-body{display:block!important}}
+
+/* Section et sous-partie courantes : mise en gras et fond distinctif */
+.nav-group:not(.is-current)>summary{font-weight:600}
+.nav-nested:not(.is-current)>summary{font-weight:550}
+.nav-group.is-current>summary,.nav-nested.is-current>summary{
+  font-weight:850;color:var(--teal);background:var(--teall);
+  box-shadow:inset 4px 0 0 var(--teal);
+}
+.nav-nested.is-current>summary{font-size:.9rem}
+.sidebar-content .nav-sub a[aria-current="location"]{font-weight:750;color:var(--teal);background:var(--teall)}
 </style>
 </head>
 <body>
@@ -202,7 +212,7 @@ section.session-block{padding:0!important;overflow:visible}
  <nav id="navContent" class="sidebar-content" aria-label="Sommaire détaillé">
   <div class="sidebar-header"><strong>Philosophie × IA</strong><small>4 séances · 7 h</small></div>
   <div class="sidebar-quick"><a href="#enbref">Présentation</a><a href="#programme">Programme</a><a href="#avant">Préparation</a></div>
-  <details class="nav-group" open><summary>1 · Une machine peut-elle penser ?</summary><div class="nav-sub">
+  <details class="nav-group" data-session="s1" open><summary>1 · Une machine peut-elle penser ?</summary><div class="nav-sub">
    <a href="#s1">Voir la séance 1</a>
    <a class="nav-activity" href="#s1-a1" title="1. Écrire d’abord, sans IA">1. Écrire d’abord, sans IA</a>
 <a class="nav-activity" href="#s1-a2" title="2. Quatre philosophes face à l’IA">2. Quatre philosophes face à l’IA</a>
@@ -211,9 +221,9 @@ section.session-block{padding:0!important;overflow:visible}
 <a class="nav-activity" href="#s1-a5" title="5. Ce que je pensais, ce que je pense maintenant : passer du débat à une activité de classe">5. Ce que je pensais, ce que je pense maintenant : passer du débat à une activité de classe</a>
    <a class="nav-bilan" href="#bilan-s1">🦋 Bilan séance 1</a>
   </div></details>
-  <details class="nav-group" open><summary>2 · Apprentissage et tuteur</summary><div class="nav-sub">
+  <details class="nav-group" data-session="s2" open><summary>2 · Apprentissage et tuteur</summary><div class="nav-sub">
    <a href="#s2">Vue d’ensemble</a>
-   <details class="nav-nested" open><summary>Partie 1 · Comprendre</summary><div class="nav-sub">
+   <details class="nav-nested" data-part="s2a" open><summary>Partie 1 · Comprendre</summary><div class="nav-sub">
     <a href="#s2a">Voir la partie 1</a>
     <a class="nav-activity" href="#s2a-a1" title="1. Deux copies : laquelle pense, laquelle imite ?">1. Deux copies : laquelle pense, laquelle imite ?</a>
 <a class="nav-activity" href="#s2a-a2" title="2. Deux expériences pour comprendre les limites">2. Deux expériences pour comprendre les limites</a>
@@ -221,7 +231,7 @@ section.session-block{padding:0!important;overflow:visible}
 <a class="nav-activity" href="#s2a-a4" title="4. Tester et améliorer une IA qui accompagne un élève">4. Tester et améliorer une IA qui accompagne un élève</a>
     <a class="nav-bilan" href="#bilan-papillon">🦋 Bilan-papillon</a>
    </div></details>
-   <details class="nav-nested"><summary>Partie 2 · Créer un tuteur</summary><div class="nav-sub">
+   <details class="nav-nested" data-part="s2b"><summary>Partie 2 · Créer un tuteur</summary><div class="nav-sub">
     <a href="#s2b">Voir la partie 2</a>
     <a class="nav-activity" href="#s2b-a1" title="1. Définir le rôle du tuteur avant de toucher à ChatGPT">1. Définir le rôle du tuteur avant de toucher à ChatGPT</a>
 <a class="nav-activity" href="#s2b-a2" title="2. Remplir le générateur HTML de prompt">2. Remplir le générateur HTML de prompt</a>
@@ -233,7 +243,7 @@ section.session-block{padding:0!important;overflow:visible}
     <a href="#recette">Générateur de tuteur</a>
    </div></details>
   </div></details>
-  <details class="nav-group"><summary>3 · Préparer ses cours</summary><div class="nav-sub">
+  <details class="nav-group" data-session="s3"><summary>3 · Préparer ses cours</summary><div class="nav-sub">
    <a href="#s3">Voir la séance 3</a>
    <a class="nav-activity" href="#s3-a1" title="1. Trois propositions d’IA : laquelle garder pour préparer son cours ?">1. Trois propositions d’IA : laquelle garder pour préparer son cours ?</a>
 <a class="nav-activity" href="#s3-a2" title="2. Atelier central : travailler un texte">2. Atelier central : travailler un texte</a>
@@ -241,7 +251,7 @@ section.session-block{padding:0!important;overflow:visible}
 <a class="nav-activity" href="#s3-a4" title="4. Vérifier, sélectionner et réécrire">4. Vérifier, sélectionner et réécrire</a>
 <a class="nav-activity" href="#s3-a5" title="5. Marché des ressources">5. Marché des ressources</a>
   </div></details>
-  <details class="nav-group"><summary>4 · Charte d’utilisation</summary><div class="nav-sub">
+  <details class="nav-group" data-session="s4"><summary>4 · Charte d’utilisation</summary><div class="nav-sub">
    <a href="#s4">Voir la séance 4</a>
    <a class="nav-activity" href="#s4-a1" title="1. Partir du tuteur conversationnel créé">1. Partir du tuteur conversationnel créé</a>
 <a class="nav-activity" href="#s4-a2" title="2. Définir des niveaux d’usage">2. Définir des niveaux d’usage</a>
@@ -637,6 +647,60 @@ $('.sidebar-content a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
 }));
 window.addEventListener('hashchange',()=>focusSection(decodeURIComponent(location.hash.slice(1)),true));
 if(location.hash)focusSection(decodeURIComponent(location.hash.slice(1)),true);
+
+/* Suivi automatique du titre actif dans le sommaire latéral */
+const sideGroups=$('.sidebar-content .nav-group[data-session]');
+const sideParts=$('.sidebar-content .nav-nested[data-part]');
+const sideLinks=$('.sidebar-content a[href^="#"]');
+let lastSideSession='',lastSidePart='',sideScheduled=false;
+function markCurrent(id){
+ const el=document.getElementById(id);if(!el)return;
+ const session=el.closest('section.session-block'),part=el.closest('details.part-accordion');
+ const sid=session?session.id:'',pid=part?part.id:'';
+ const newSession=sid!==lastSideSession,newPart=pid!==lastSidePart;
+ lastSideSession=sid;lastSidePart=pid;
+ sideGroups.forEach(group=>{
+  const active=group.dataset.session===sid;
+  group.classList.toggle('is-current',active);
+  const heading=group.querySelector(':scope > summary');
+  if(heading){if(active)heading.setAttribute('aria-current','location');else heading.removeAttribute('aria-current')}
+  if(active&&newSession)group.open=true;
+ });
+ sideParts.forEach(group=>{
+  const active=group.dataset.part===pid;
+  group.classList.toggle('is-current',active);
+  const heading=group.querySelector(':scope > summary');
+  if(heading){if(active)heading.setAttribute('aria-current','location');else heading.removeAttribute('aria-current')}
+  if(active&&newPart){group.open=true;const parent=group.closest('.nav-group');if(parent)parent.open=true}
+ });
+ sideLinks.forEach(link=>link.removeAttribute('aria-current'));
+ const link=sideLinks.find(link=>link.getAttribute('href')==='#'+id);
+ if(link)link.setAttribute('aria-current','location');
+}
+function visibleNearTop(elems,y){
+ const boxes=elems.map(el=>({el,rect:el.getBoundingClientRect()})).filter(x=>x.rect.height>0&&x.rect.bottom>0&&x.rect.top<window.innerHeight);
+ const hit=boxes.find(x=>x.rect.top<=y&&x.rect.bottom>y)||boxes.find(x=>x.rect.top>=0&&x.rect.top<y+70);
+ return hit?hit.el:null;
+}
+function updateCurrentReading(){
+ if(side&&side.classList.contains('mobile-open'))return;
+ const y=Math.min(170,Math.max(95,window.innerHeight*.23));
+ const session=visibleNearTop($('section.session-block'),y);if(!session)return;
+ const part=session.id==='s2'?visibleNearTop([...session.querySelectorAll('details.part-accordion')],y):null;
+ const scope=part||session;
+ const item=visibleNearTop([...scope.querySelectorAll('details.activity-accordion, .session-bilan, #bilan-papillon')],y);
+ markCurrent((item||part||session).id);
+}
+function scheduleCurrentReading(){
+ if(sideScheduled)return;sideScheduled=true;
+ requestAnimationFrame(()=>{sideScheduled=false;updateCurrentReading()});
+}
+window.addEventListener('scroll',scheduleCurrentReading,{passive:true});
+window.addEventListener('resize',scheduleCurrentReading);
+$('.session-accordion, .part-accordion, .activity-accordion').forEach(d=>d.addEventListener('toggle',scheduleCurrentReading));
+sideLinks.forEach(link=>link.addEventListener('click',()=>markCurrent(link.getAttribute('href').slice(1))));
+window.addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.slice(1));if(document.getElementById(id))markCurrent(id)});
+window.addEventListener('load',()=>{if(location.hash){const id=decodeURIComponent(location.hash.slice(1));if(document.getElementById(id))markCurrent(id)}else scheduleCurrentReading()});
 
 /* À l’impression, ouvrir les parties et activités pour conserver le contenu sur papier. */
 let printDetails=[];
