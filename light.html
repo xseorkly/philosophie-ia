@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Philosophie × IA · cinq séances (8 h 30 hors pauses)</title>
-<meta name="description" content="Formation Philosophie × IA : cinq séances, 8 h 30 hors pauses, réflexion philosophique, apprentissage, préparation de cours, création interactive et charte avec les élèves."/>
+<title>Philosophie × IA · quatre séances (7 h hors pauses)</title>
+<meta name="description" content="Formation Philosophie × IA : quatre séances, 7 h hors pauses, réflexion philosophique, apprentissage, préparation de cours, création interactive et charte avec les élèves."/>
 <script defer src="https://cloud.umami.is/script.js" data-website-id="09bb50e4-e5cd-47d4-b231-1551e99b2df5" data-domains="xseorkly.github.io" data-exclude-search="true"></script>
 <style>
 :root{--ink:#203042;--muted:#5d6e80;--bg:#f4f5f2;--paper:#fff;--stroke:#dbe3e2;--teal:#14635e;--teall:#e9f5f1;--gold:#ad6c2a;--goldl:#fcf3e6;--blue:#2d5d8a;--bluel:#eaf0f6;--red:#9b3b2e;--redl:#fbecea;--radius:14px}
@@ -104,6 +104,28 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 .person-info .person-tooltip strong{display:block;margin-bottom:4px;color:#d7f4eb}
 @media(max-width:580px){.person-info .person-tooltip{left:auto;right:0;width:min(280px,78vw)}}
 @media print{.person-info .person-tooltip{display:none}}
+
+/* Bilan-papillon dépliable entre les deux parties */
+.part-head{margin:22px 0 10px;background:#f1f6f4;border-left:5px solid var(--teal);border-radius:0 12px 12px 0;padding:14px 18px}
+.part-head span{font-weight:700;color:var(--teal);font-size:.84rem;text-transform:uppercase;letter-spacing:.04em}
+.part-head h3{font-family:Georgia,serif;font-size:1.3rem;margin:4px 0}
+.part-head>b{color:var(--muted);font-size:.92rem}
+.part-head p{margin:6px 0 0}
+.butterfly{border:1px solid #b8d7cf;border-radius:14px;background:#f5faf8;overflow:hidden;margin:5px 0}
+.butterfly>summary{cursor:pointer;padding:14px 18px;font-weight:750;color:#125a55;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.butterfly>summary:focus-visible{outline:3px solid #6dcab4;outline-offset:-4px}
+.butterfly>summary small{margin-left:auto;font-weight:500;color:#55746e}
+.butterfly[open]>summary{border-bottom:1px solid #b8d7cf;background:#e9f5ef}
+.butterfly-body{padding:12px 18px 18px}
+.butterfly-wings{display:grid;grid-template-columns:minmax(0,1fr) minmax(110px,.45fr) minmax(0,1fr);gap:10px;align-items:center;margin:15px 0}
+.butterfly-wing{background:#fff;border:2px solid #b5dace;padding:16px;border-radius:35px 12px 35px 12px;min-height:240px}
+.butterfly-wing:last-child{border-radius:12px 35px 12px 35px;background:#fffcf5;border-color:#e5d1a9}
+.butterfly-wing h4{margin:0 0 10px;color:#145d59}
+.butterfly-wing p{margin:7px 0;font-size:.91rem;line-height:1.48}
+.butterfly-axis{background:#d6eae3;border-radius:40px;padding:10px 8px;text-align:center;font-size:.82rem;line-height:1.45;display:grid;gap:8px;color:#184843}
+.butterfly-axis span{font-weight:700}
+@media(max-width:700px){.butterfly-wings{grid-template-columns:1fr}.butterfly-wing,.butterfly-wing:last-child{border-radius:14px;min-height:auto}.butterfly-axis{border-radius:12px}.butterfly>summary small{margin-left:0}}
+@media print{.butterfly-body{display:block!important}}
 </style>
 </head>
 <body>
@@ -111,20 +133,20 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 <header class="top"><div class="wrap">
 <div class="eyebrow">Philosophie × IA · formation courte</div>
 <h1>Philosophie × IA : penser, comprendre, concevoir et encadrer.</h1>
-<p class="lead">Cinq séances, 8 h 30 de formation effective et deux pauses de 15 minutes. Une entrée philosophique, des ateliers pratiques, une page interactive et une charte à construire avec les élèves.</p>
+<p class="lead">Quatre séances, 7 h de formation effective et deux pauses de 15 minutes. Une entrée philosophique, des ateliers pratiques, une page interactive et une charte à construire avec les élèves.</p>
 <div class="btns">
 <button class="btn" type="button" onclick="window.print()">Imprimer cette page</button>
 <a class="btn ghost" href="index.html">Voir la formation complète (3 jours)</a>
 </div>
 </div></header>
 
-<nav class="toc" aria-label="Sommaire"><div class="wrap"><a href="#enbref">En bref</a><a href="#avant">À préparer</a><a href="#programme">Programme</a><a href="#s1">1 · Philosopher</a><a href="#s2">2 · Comprendre</a><a href="#s3">3 · Préparer</a><a href="#s4">4 · Concevoir</a><a href="#s5">5 · Charte</a><a href="#recette">Fiche interactive</a><a href="#cadre">Cadre</a><a href="#faq">FAQ</a></div></nav>
+<nav class="toc" aria-label="Sommaire"><div class="wrap"><a href="#enbref">En bref</a><a href="#avant">À préparer</a><a href="#programme">Programme</a><a href="#s1">1 · Philosopher</a><a href="#s2a">2.1 · Comprendre</a><a href="#s2b">2.2 · Construire</a><a href="#s3">3 · Préparer</a><a href="#s4">4 · Charte</a><a href="#recette">Fiche interactive</a><a href="#cadre">Cadre</a><a href="#faq">FAQ</a></div></nav>
 
 <main class="wrap">
 
-<section class="block" id="enbref"><div class="eyebrow">En bref</div><h2>Un parcours en cinq séances</h2><div class="grid3"><div class="card teal"><div class="big">8 h 30</div><p>Formation effective, à laquelle s’ajoutent deux pauses de 15 minutes : <b>9 h au total</b> hors éventuel déjeuner.</p></div><div class="card gold"><div class="big">5</div><p>Questionner, comprendre, expérimenter, concevoir et encadrer les usages de l’IA.</p></div><div class="card blue"><div class="big">3</div><p>Repartir avec des ressources vérifiées, un espace d’entraînement et une charte à coélaborer.</p></div></div><div class="retain"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</div></section>
-<section class="block" id="avant"><div class="eyebrow">Avant de venir</div><h2>Votre préparation</h2><ul class="checklist"><li><input id="c1" type="checkbox"/><label for="c1">Un ordinateur portable et un accès Internet.</label></li><li><input id="c2" type="checkbox"/><label for="c2">Un compte Claude, si son usage est autorisé par votre établissement.</label></li><li><input id="c3" type="checkbox"/><label for="c3">Un texte philosophique de 10 à 25 lignes, tiré d’une édition vérifiée et autorisée.</label></li><li><input id="c4" type="checkbox"/><label for="c4">Une distinction difficile pour vos élèves et un exemple de devoir à discuter.</label></li></ul></section>
-<section class="block" id="programme"><div class="eyebrow">Programme</div><h2>Cinq séances · 8 h 30 de formation et deux pauses de 15 minutes</h2><div class="tablewrap"><table><tr><th>Séance</th><th>Objectif</th><th>Durée</th></tr><tr><td><a href="#s1">1 · Philosopher</a></td><td>Une machine peut-elle penser ?</td><td>1 h 15</td></tr><tr><td><a href="#s2">2 · Comprendre</a></td><td>IA, cognition et étayage</td><td>1 h 45</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 1 · 15 minutes</b></td></tr><tr><td><a href="#s3">3 · Préparer</a></td><td>Ressources vérifiées</td><td>1 h 45</td></tr><tr><td><a href="#s4">4 · Concevoir</a></td><td>Espace interactif</td><td>2 h 45</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 2 · 15 minutes</b></td></tr><tr><td><a href="#s5">5 · Encadrer</a></td><td>Charte avec les élèves</td><td>1 h</td></tr><tr><th colspan="2">Total hors pauses</th><th>8 h 30</th></tr></table></div><p class="why">Avec les deux pauses : 9 h de présence, hors éventuelle pause méridienne. Les durées indiquées pour les activités sont approximatives et peuvent être ajustées selon le groupe. Seule la durée globale de chaque séance est fixe.</p></section>
+<section class="block" id="enbref"><div class="eyebrow">En bref</div><h2>Un parcours en quatre séances</h2><div class="grid3"><div class="card teal"><div class="big">7 h</div><p>Formation effective, à laquelle s’ajoutent deux pauses de 15 minutes : <b>7 h 30 au total</b> hors éventuel déjeuner.</p></div><div class="card gold"><div class="big">4</div><p>Questionner, comprendre, expérimenter, concevoir et encadrer les usages de l’IA.</p></div><div class="card blue"><div class="big">3</div><p>Repartir avec des ressources vérifiées, un espace d’entraînement et une charte à coélaborer.</p></div></div><div class="retain"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</div></section>
+<section class="block" id="avant"><div class="eyebrow">Avant de venir</div><h2>Votre préparation</h2><ul class="checklist"><li><input id="c1" type="checkbox"/><label for="c1">Un ordinateur portable et un accès Internet.</label></li><li><input id="c2" type="checkbox"/><label for="c2">Un accès autorisé à ChatGPT ou Claude ; les fonctionnalités de création et de partage dépendent du compte.</label></li><li><input id="c3" type="checkbox"/><label for="c3">Un texte philosophique de 10 à 25 lignes, tiré d’une édition vérifiée et autorisée.</label></li><li><input id="c4" type="checkbox"/><label for="c4">Une distinction difficile pour vos élèves et un exemple de devoir à discuter.</label></li></ul></section>
+<section class="block" id="programme"><div class="eyebrow">Programme</div><h2>Quatre séances · 7 h de formation + deux pauses de 15 minutes</h2><div class="tablewrap"><table><tr><th>Séance</th><th>Objectif</th><th>Durée</th></tr><tr><td><a href="#s1">1 · Philosopher</a></td><td>Une machine qui parle peut-elle penser ?</td><td>1 h 15</td></tr><tr><td><a href="#s2a">2 · Partie 1</a></td><td>Comprendre les effets de l’IA sur l’apprentissage</td><td>1 h 15</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 1 · 15 min, entre les deux parties de la séance 2</b></td></tr><tr><td><a href="#s2b">2 · Partie 2</a></td><td>Créer et tester une page interactive avec ChatGPT ou Claude</td><td>1 h 45</td></tr><tr><td><a href="#s3">3 · Préparer</a></td><td>Ressources pédagogiques vérifiées</td><td>1 h 45</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 2 · 15 min</b></td></tr><tr><td><a href="#s4">4 · Encadrer</a></td><td>Charte à construire avec les élèves</td><td>1 h</td></tr><tr><th colspan="2">Total hors pauses</th><th>7 h</th></tr></table></div><p class="why">Avec les deux pauses : 7 h 30 de présence, hors éventuel déjeuner. Les durées des sous-activités restent indicatives, mais le total des séances est conservé. La séance 2 regroupe désormais l’ancienne séance sur l’apprentissage et l’atelier de création.</p></section>
 <section class="block" id="s1"><div class="session-head"><span class="num">Séance 1</span><h2 style="margin:0">Une machine qui parle peut-elle penser ?</h2><span class="dur">1 h 15</span></div><p><b>À la fin de cette séance, vous serez capables de :</b> formuler un problème philosophique, confronter les arguments de quatre penseurs et préparer une activité de débat en classe.</p><div class="step"><div class="when"><span class="time">Environ 10 min</span></div><h3>1. Écrire d’abord, sans IA</h3><p>Répondez individuellement en trois phrases : <b>« Une machine qui répond à tout peut-elle penser ? »</b> Conservez votre écrit initial pour le bilan.</p></div>
 <div class="step"><div class="when"><span class="time">Environ 20 min</span></div><h3>2. Quatre philosophes face à l’IA</h3><p><b>Votre mission (environ 20 minutes) :</b> par petits groupes, choisissez <b>un philosophe</b> parmi les quatre présentés ci-dessous. Lisez la courte présentation de sa pensée, puis répondez ensemble aux trois questions suivantes :</p><ol class="do"><li><b>Quelle est son idée principale ?</b> Reformulez-la avec vos propres mots, en une phrase.</li><li><b>Comment cette idée peut-elle nous aider à réfléchir à l’IA ?</b> Donnez un exemple concret, en une ou deux phrases.</li><li><b>Quelle question ou quelle objection peut-on lui opposer aujourd’hui ?</b> Formulez une limite ou un désaccord possible.</li></ol><p><b>Pour terminer :</b> désignez un rapporteur. Chaque groupe présente ses trois réponses oralement en une minute. <b>Aucune recherche extérieure n’est nécessaire :</b> les informations utiles sont dans les quatre encadrés.</p><div class="grid2"><div class="card"><b>Platon, <i>Phèdre</i></b><p>Une technique peut donner l’apparence du savoir au lieu de le développer.</p></div><div class="card"><b>Descartes, <i>Discours de la méthode</i>, V</b><p>Le langage est-il un signe suffisant de pensée ?</p></div><div class="card"><b>Alan Turing (1950)</b><p>Un dialogue indiscernable du dialogue humain prouve-t-il la pensée ?</p></div><div class="card"><b>John Searle (1980)</b><p>Manipuler des symboles signifie-t-il comprendre ?</p></div></div><p class="why">Les encadrés reformulent des idées philosophiques pour lancer la discussion ; ils ne reproduisent pas des citations littérales.</p></div>
 <div class="step"><div class="when"><span class="time">Environ 20 min</span></div><h3>3. Mettre notre philosophe à l’épreuve de Claude</h3>
@@ -362,9 +384,9 @@ Je peux défendre mon travail sans cet outil.</pre></div></div>
 <div class="step"><div class="when"><span class="time">Environ 5 min</span></div><h3>5. Programmer la séance avec les élèves</h3><div class="retain"><b>Production :</b> une charte provisoire, une déclaration d’usage et une date pour débattre et adopter les règles avec la classe, puis les réviser à partir des pratiques observées.</div></div></section>
 <!-- ================= RECETTE ================= -->
 <section class="block" id="recette">
-<div class="eyebrow">Séance 4 · L’outil</div>
-<h2>La recette : fiche de préparation et texte à donner à Claude</h2>
-<p>Remplissez les champs. Le texte complet à transmettre à Claude se construit automatiquement en bas de la fiche. Vos réponses restent dans votre navigateur (rien n’est envoyé). Le bouton « Exemple » remplit la fiche avec un texte de Descartes, pour voir le résultat.</p>
+<div class="eyebrow">Séance 2 · Partie 2 · Fiche de création</div>
+<h2>Ma fiche de création : à transmettre à ChatGPT ou Claude</h2>
+<p>Remplissez les champs. Le texte de création à transmettre à ChatGPT ou à Claude se construit automatiquement en bas de la fiche. Vos réponses restent dans votre navigateur (rien n’est envoyé). Le bouton « Exemple » remplit la fiche avec un texte de Descartes, pour voir le résultat.</p>
 <div class="btns" style="margin:8px 0 4px"><button class="btn copy" type="button" id="fillExample">Exemple (Descartes)</button><button class="btn small" type="button" id="clearForm" style="border:1px solid var(--stroke)">Vider la fiche</button></div>
 
 <label class="f" for="r-title">Titre de la page <small>(ce que l’élève verra en haut)</small></label>
@@ -394,7 +416,7 @@ Je peux défendre mon travail sans cet outil.</pre></div></div>
 <label class="f" for="r-tries">Nombre de retours par question</label>
 <select class="t" id="r-tries" data-r><option>3</option><option>2</option><option>4</option><option>5</option></select>
 
-<div class="prompt" style="margin-top:18px"><div class="ph">Ma recette, à coller dans une nouvelle conversation Claude<button class="btn small copy" type="button" id="copyRecipe">Copier ma recette</button></div><pre id="recipeOut"></pre></div>
+<div class="prompt" style="margin-top:18px"><div class="ph">Ma recette, à coller dans ChatGPT ou Claude<button class="btn small copy" type="button" id="copyRecipe">Copier ma recette</button></div><pre id="recipeOut"></pre></div>
 <details class="faq"><summary>Variante sans IA : la même page avec autoévaluation (utilisable par tous les élèves)</summary>
 <p>Si vos élèves n’ont pas l’âge requis ou n’ont pas de compte, demandez à Claude, <b>après</b> votre première page, dans la même conversation :</p>
 <div class="prompt"><div class="ph">Prompt · version sans IA<button class="btn small copy" type="button">Copier</button></div><pre>Fais une seconde version de cette page, qui n’utilise pas Claude du tout : après sa réponse, l’élève clique sur « Me relire » et voit mes critères sous forme de liste à cocher (« J’ai bien… »), puis une question pour l’aider à réécrire. Garde le texte, les questions et le bouton « Copier mon travail ». Aucune donnée n’est envoyée nulle part.</pre></div>
@@ -432,10 +454,10 @@ Je peux défendre mon travail sans cet outil.</pre></div></div>
 </section>
 
 <!-- ================= POURQUOI ================= -->
-<section class="block" id="pourquoi"><div class="eyebrow">Choix pédagogiques</div><h2>Articulation avec la formation longue</h2><p>Les séances 1 et 5 adaptent les modules 11 et 10 de la <a href="index.html">formation complète</a>. La version courte préserve l’expérimentation, les critères d’apprentissage et la construction d’un outil utilisable, puis pose le cadre d’usage à élaborer avec les élèves.</p><p>Pour approfondir l’évaluation, la différenciation, la didactique et les références de recherche, consultez le <a href="index.html">parcours complet</a>, le <a href="glossaire.html">glossaire</a> et les <a href="sources.html">sources</a>.</p></section>
+<section class="block" id="pourquoi"><div class="eyebrow">Choix pédagogiques</div><h2>Articulation avec la formation longue</h2><p>Les séances 1 et 4 adaptent les modules 11 et 10 de la <a href="index.html">formation complète</a>. La version courte préserve l’expérimentation, les critères d’apprentissage et la construction d’un outil utilisable, puis pose le cadre d’usage à élaborer avec les élèves.</p><p>Pour approfondir l’évaluation, la différenciation, la didactique et les références de recherche, consultez le <a href="index.html">parcours complet</a>, le <a href="glossaire.html">glossaire</a> et les <a href="sources.html">sources</a>.</p></section>
 
 </main>
-<footer><div class="wrap">Philosophie × IA · cinq séances (8 h 30 hors pauses). Toutes les copies et situations d’élèves sont fictives. Les données saisies dans la fiche de préparation restent dans ce navigateur ; l’utilisation de liens et d’outils externes obéit à leurs propres règles de traitement des données. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a></div></footer>
+<footer><div class="wrap">Philosophie × IA · quatre séances (7 h hors pauses). Toutes les copies et situations d’élèves sont fictives. Les données saisies dans la fiche de préparation restent dans ce navigateur ; l’utilisation de liens et d’outils externes obéit à leurs propres règles de traitement des données. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -443,7 +465,7 @@ Je peux défendre mon travail sans cet outil.</pre></div></div>
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const store={get(k,d){try{const v=localStorage.getItem('philoia-light:'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('philoia-light:'+k,JSON.stringify(v))}catch(e){}}};
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),2200)}
-async function copy(text){try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}toast('Copié : collez-le dans Claude')}
+async function copy(text){try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}toast('Copié : à coller dans ChatGPT ou Claude')}
 
 /* boutons Copier des prompts */
 $$('.prompt .btn.copy').forEach(b=>{if(b.id==='copyRecipe')return;b.addEventListener('click',()=>copy(b.closest('.prompt').querySelector('pre').textContent))});
