@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Générateur de séquences de philosophie · ChatGPT ou Claude</title>
+<meta name="description" content="Construisez un prompt de séquence de philosophie contextualisé à partir de vos documents, puis utilisez-le dans votre projet ChatGPT ou Claude.">
+<style>
+:root{--ink:#203042;--muted:#5e6b77;--teal:#14635e;--pale:#e9f5f1;--bg:#f5f6f3;--border:#d4e2df;--paper:#fff;--gold:#fff4e7}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",sans-serif}
+a{color:var(--teal)}header{padding:24px 18px;background:var(--teal);color:#fff}header .wrap,main,footer .wrap{max-width:1070px;margin:auto}
+header a{color:#e3fff4}h1{font:700 clamp(1.65rem,4vw,2.3rem)/1.2 Georgia,serif;margin:8px 0}
+h2{font:700 1.45rem Georgia,serif;margin:0 0 9px}h3{margin:0 0 8px;font-size:1.08rem}p{margin:6px 0 11px}
+main{padding:17px 14px 35px}.panel{background:var(--paper);border:1px solid var(--border);border-radius:13px;padding:21px;margin:15px 0}
+.intro{background:var(--pale);padding:13px 16px;border-left:5px solid var(--teal);border-radius:0 8px 8px 0}
+.warn{background:var(--gold);padding:13px 16px;border-left:5px solid #bd812e;border-radius:0 8px 8px 0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.field{margin:9px 0}.field label{display:block;font-weight:690;margin-bottom:5px}
+input,select,textarea{width:100%;padding:10px 11px;border-radius:8px;border:1.5px solid #afc6c0;background:#fff;color:var(--ink);font:inherit}
+textarea{min-height:92px;resize:vertical}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #69aaa2;outline-offset:2px}
+.hint,small{font-size:.86rem;color:var(--muted)}
+fieldset{border:1px solid var(--border);border-radius:9px;padding:12px;margin:12px 0}
+legend{color:var(--teal);font-weight:700}
+.choice{display:flex;align-items:flex-start;gap:9px;margin:7px 0}
+.choice input{width:17px;height:17px;flex:none;margin:4px 0 0;accent-color:var(--teal)}
+.actions{display:flex;flex-wrap:wrap;gap:9px;align-items:center;margin-top:13px}
+button{background:var(--teal);color:#fff;border:0;border-radius:9px;padding:10px 15px;cursor:pointer;font:700 .95rem system-ui}
+button.secondary{background:#eef5f2;color:var(--teal);border:1px solid var(--border)}
+#output{height:520px;min-height:420px;background:#f5f8fa;font:13.5px/1.55 ui-monospace,Consolas,monospace}
+#status{min-height:1.4em;font-weight:650;color:var(--teal)}
+.prompts{margin-top:20px}.prompts details{border:1px solid var(--border);border-radius:9px;background:#fff;margin:10px 0;padding:7px 12px}
+.prompts summary{font-weight:700;color:var(--teal);cursor:pointer;padding:7px}
+.prompts textarea{min-height:245px;font:13px/1.5 ui-monospace,monospace;margin-bottom:8px}
+footer{text-align:center;color:var(--muted);padding:0 15px 25px;font-size:.9rem}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.panel{padding:15px}main{padding:9px 10px 22px}}
+</style></head>
+<body>
+<header><div class="wrap"><a href="light.html#s3">← Revenir à la séance 3</a><h1>Créer une séquence de philosophie à partir de votre projet documentaire</h1><p>Renseignez vos choix pédagogiques ; le formulaire rédige un prompt complet, utilisable dans <strong>votre projet ChatGPT ou Claude</strong>.</p></div></header>
+<main>
+<div class="intro"><strong>Qui remplit le formulaire ?</strong> Vous, professeur de philosophie. <strong>À quoi sert-il ?</strong> À produire une demande explicite et contextualisée, pas à créer lui-même une séquence. Le projet d’IA doit déjà contenir vos documents de référence, et vous devrez vérifier la production obtenue.</div>
+<section class="panel"><h2>1 · Votre classe et le cadre du cours</h2>
+<div class="grid">
+<div class="field"><label for="voie">Voie</label><select id="voie"><option>Terminale générale</option><option>Terminale technologique</option></select></div>
+<div class="field"><label for="notion">Notion principale</label><input id="notion" value="La vérité" placeholder="Ex. : La liberté"></div>
+<div class="field"><label for="sujet">Question philosophique directrice</label><input id="sujet" value="Peut-on vouloir la vérité à tout prix ?" placeholder="Ex. : Être libre, est-ce n'obéir à personne ?"></div>
+<div class="field"><label for="seances">Nombre de séances</label><select id="seances"><option value="4">4 séances</option><option value="2">2 séances</option><option value="3">3 séances</option><option value="5">5 séances</option><option value="6">6 séances</option></select></div>
+<div class="field"><label for="minutes">Durée de chaque séance</label><select id="minutes"><option value="55">55 minutes</option><option value="50">50 minutes</option><option value="60">60 minutes</option><option value="90">90 minutes</option></select></div>
+<div class="field"><label for="place">Place dans la progression annuelle</label><input id="place" value="Après un travail sur l'opinion et la connaissance"></div>
+</div>
+<div class="field"><label for="prerequis">Ce que les élèves savent déjà et les difficultés anticipées</label><textarea id="prerequis">Les élèves distinguent parfois mal la recherche de la vérité et le fait de dire la vérité. Ils ont besoin de s’entraîner à identifier une tension entre deux raisons défendables.</textarea></div>
+<div class="field"><label for="objectifs">Ce que les élèves doivent être capables de faire à la fin</label><textarea id="objectifs">Définir les termes du sujet, distinguer vouloir savoir et dire la vérité, construire une opposition argumentée et formuler personnellement un problème philosophique.</textarea></div>
+</section>
+<section class="panel"><h2>2 · Vos documents réellement présents dans le projet</h2>
+<p>Indiquez uniquement des documents effectivement importés ou accessibles dans <em>votre projet</em>. N’écrivez pas qu’un lien est « chargé » si vous l’avez seulement ouvert dans un navigateur.</p>
+<div class="field"><label for="sources">Liste des fichiers chargés et leurs références</label><textarea id="sources" placeholder="Ex. : Programme officiel terminale générale (PDF) ; ma progression annuelle 2026-2027.docx ; sujet de bac 2026.pdf ; mon extrait vérifié de Descartes.docx ; critères de dissertation.pdf"></textarea><small>Ne chargez pas de copies d’élèves identifiables ni de documents non autorisés.</small></div>
+<div class="field"><label for="textes">Textes philosophiques et auteurs à privilégier</label><textarea id="textes" placeholder="Auteur, œuvre, édition, extrait et passage vérifiés. Si aucun texte n’est choisi, laissez vide."></textarea></div>
+<div class="field"><label for="methodes">Méthodes, exemples de séquences ou documents d’évaluation à imiter sans les recopier</label><textarea id="methodes" placeholder="Ex. : séquence modele-2025.pdf ; fiche de méthode dissertation.docx ; critères de relecture terminale.pdf"></textarea></div>
+</section>
+<section class="panel"><h2>3 · Vos choix pédagogiques</h2>
+<fieldset><legend>Opérations intellectuelles visées</legend>
+<label class="choice"><input type="checkbox" id="concept" checked> Conceptualiser : définir et distinguer les notions</label>
+<label class="choice"><input type="checkbox" id="problem" checked> Problématiser : faire apparaître une difficulté réelle</label>
+<label class="choice"><input type="checkbox" id="argue" checked> Argumenter : justifier, objecter, discuter</label>
+<label class="choice"><input type="checkbox" id="explain" checked> Expliquer un texte philosophique fourni</label>
+<label class="choice"><input type="checkbox" id="write" checked> Entraîner à la dissertation / à l’écriture philosophique</label>
+</fieldset>
+<div class="grid">
+<div class="field"><label for="activites">Activités à privilégier</label><textarea id="activites">Étude d'une situation-problème, analyse d'un extrait vérifié, discussion argumentée, écriture individuelle, confrontation d'objections.</textarea></div>
+<div class="field"><label for="evaluation">Évaluation ou trace finale attendue</label><textarea id="evaluation">Une courte rédaction problématisée puis une autoévaluation à partir de critères définis par l’enseignant ; pas de barème prétendument officiel.</textarea></div>
+</div>
+<div class="field"><label for="diff">Adaptations éventuelles (facultatif)</label><textarea id="diff" placeholder="Ex. : lexique du passage, questions d’entrée plus progressives, consignes plus lisibles ; garder le travail philosophique."></textarea></div>
+</section>
+<section class="panel"><h2>4 · Votre prompt principal prêt à copier</h2>
+<p>Il se génère automatiquement. Relisez-le, puis cliquez sur <strong>Copier le prompt</strong> et collez-le dans une <strong>nouvelle conversation de votre projet</strong>. Le formulaire ne transmet aucune donnée à un serveur.</p>
+<textarea id="output" aria-label="Prompt de création de séquence, modifiable" spellcheck="false"></textarea>
+<div class="actions"><button id="refresh" type="button">Régénérer</button><button id="copy" type="button">Copier le prompt</button><button id="download" class="secondary" type="button">Enregistrer en .txt</button><button id="reset" class="secondary" type="button">Revenir à l’exemple</button></div>
+<p id="status" role="status" aria-live="polite"></p>
+<div class="warn"><strong>Après la réponse de l’IA :</strong> vérifiez les références et les extraits, les objectifs, la progression et la durée. Demandez ensuite à l’IA d’approfondir une seule séance. Une génération rapide ne constitue pas une séquence validée.</div>
+</section>
+<section class="panel prompts"><h2>5 · Poursuivre dans le même projet</h2>
+<p>Une fois votre première séquence produite, vous pouvez demander d’autres ressources en réutilisant le même contexte. Chaque bouton copie <strong>une demande autonome et contextualisée</strong>.</p>
+<details><summary>A · Questions et explication d’un texte</summary><textarea id="prompt-explication" readonly></textarea><button type="button" data-copy="prompt-explication">Copier ce prompt</button></details>
+<details><summary>B · Entraînement à la dissertation</summary><textarea id="prompt-dissertation" readonly></textarea><button type="button" data-copy="prompt-dissertation">Copier ce prompt</button></details>
+<details><summary>C · Évaluation et critères de relecture</summary><textarea id="prompt-evaluation" readonly></textarea><button type="button" data-copy="prompt-evaluation">Copier ce prompt</button></details>
+<details><summary>D · Fiche notionnelle et synthèse</summary><textarea id="prompt-fiche" readonly></textarea><button type="button" data-copy="prompt-fiche">Copier ce prompt</button></details>
+<details><summary>E · Prototype de site HTML autonome</summary><textarea id="prompt-html" readonly></textarea><button type="button" data-copy="prompt-html">Copier ce prompt</button></details>
+</section>
+</main><footer><div class="wrap">Outil pédagogique autonome · Aucune connexion à l’IA, aucune sauvegarde ou transmission des champs vers un serveur · Novembre 2026</div></footer>
+<script>
+(()=>{
+"use strict";
+const $=id=>document.getElementById(id);
+const fields=["voie","notion","sujet","seances","minutes","place","prerequis","objectifs","sources","textes","methodes","concept","problem","argue","explain","write","activites","evaluation","diff"];
+const v=id=>($(id).value||"").trim();
+const lines=id=>v(id)||"[À PRÉCISER]";
+function projectContext(){
+return "Je suis professeur de philosophie en "+v("voie")+". Je travaille à partir de mon PROJET DOCUMENTAIRE ChatGPT ou Claude.\\n"+
+"Sujet de séquence : « "+lines("sujet")+" ». Notion : "+lines("notion")+".\\n"+
+"Ressources que j'indique comme réellement intégrées : "+(v("sources")||"Aucune liste de sources transmise : commence par me demander ce que j’ai chargé.")+"\\n"+
+"Textes philosophiques envisagés : "+(v("textes")||"Aucun texte fixé ; n’invente pas d’extrait.")+"\\n"+
+"Autres documents pédagogiques : "+(v("methodes")||"Aucun document cité.")+"\\n";
+}
+function mainPrompt(){
+const x=[projectContext(),"CADRE DE TRAVAIL :",
+"Durée : "+v("seances")+" séances de "+v("minutes")+" minutes. Place dans ma progression : "+lines("place")+".",
+"Prérequis et difficultés des élèves : "+lines("prerequis")+".",
+"Objectifs observables : "+lines("objectifs")+".",
+"Activités souhaitées : "+lines("activites")+".",
+"Évaluation et traces attendues : "+lines("evaluation")+"."];
+if(v("diff"))x.push("Adaptations nécessaires : "+v("diff")+".");
+x.push("DÉMARCHES INTELLECTUELLES À FAIRE TRAVAILLER :");
+const ops=[["concept","conceptualiser : définir et distinguer"],["problem","problématiser : faire apparaître une difficulté"],["argue","argumenter : justifier, objecter et répondre"],["explain","expliquer un extrait vérifié"],["write","entraîner à la dissertation et à l’écriture philosophique"]];
+for(const [id,t] of ops)if($(id).checked)x.push("- "+t+".");
+x.push("INSTRUCTIONS :",
+"1. Commence par dresser l'inventaire des sources réellement disponibles dans ce projet. Si un document listé est inaccessible ou absent, dis-le. Distingue ce que tu as consulté, ce que je déclare avoir chargé et tes propositions.",
+"2. Privilégie les programmes et textes d'épreuve en vigueur, adaptés à la voie sélectionnée. Ne mélange pas philosophie commune et spécialité HLP.",
+"3. Propose un tableau synoptique des "+v("seances")+" séances : question, objectif, auteur et extrait, activité précise des élèves, production écrite, durée.",
+"4. Développe ensuite la première séance minute par minute avec : consignes adressées aux élèves, questions progressives, supports à préparer, réponses ou erreurs probables, éléments de reprise par le professeur, trace écrite.",
+"5. Chaque séance doit préciser distinctement ce que fait le professeur et ce que font les élèves. Les élèves doivent conceptualiser, problématiser, argumenter et reformuler, pas seulement écouter un cours rédigé.",
+"6. Prévois une activité d'entraînement à la dissertation ou à l'explication de texte selon mon objectif, une évaluation formative et un travail final sans IA.",
+"7. Reproduis uniquement des citations dont le texte exact et la référence peuvent être vérifiés dans les documents fournis ; sinon signale « citation à vérifier ». N'invente jamais de page, d'édition, de corrigé officiel ni de grille d'évaluation réglementaire.",
+"8. Si tu ajoutes une source externe, identifie-la explicitement comme ressource à vérifier. Ne prétends pas qu'un lien web a été lu ou importé sans l'avoir réellement consulté.",
+"9. Termine par trois choix pédagogiques à me faire arbitrer, puis demande-moi quelle séance je souhaite développer.",
+"PRODUCTION ATTENDUE : une progression utilisable, argumentée et adaptée aux ressources vérifiées du projet. Ne commence pas par une dissertation rédigée à la place des élèves.");
+return x.join("\\n");
+}
+function additionalPrompts(){
+const common=projectContext()+"N'utilise que les documents effectivement accessibles dans le projet et indique lesquels ont servi. N'invente aucune citation ni référence.\\n";
+$("prompt-explication").value=common+"À partir d'un EXTR AIT PHILOSOPHIQUE VÉRIFIÉ que j'ai fourni (si aucun n'est disponible, demande-le-moi), prépare un atelier d'explication de texte pour ma classe : thèse, mouvements argumentatifs, difficultés de vocabulaire, 2 questions de repérage, 3 questions d'analyse, 2 objections ou discussions, une consigne finale personnelle. Pour chaque question, indique le passage précis qui permet d'y répondre. Propose des éléments de correction à valider, jamais un « corrigé officiel » inventé.";
+$("prompt-dissertation").value=common+"Pour le sujet « "+lines("sujet")+" », prépare une progression d'entraînement à la dissertation : analyse des mots, trois interprétations du sujet, tensions entre deux réponses défendables, exemples de relances, travail sur la problématisation, exercice d'écriture d'introduction, exercice de transitions et critères de relecture. Distingue les sujets authentiques du baccalauréat des sujets que tu inventes. Ne donne pas un devoir à recopier aux élèves.";
+$("prompt-evaluation").value=common+"En fonction de la séquence sur « "+lines("sujet")+" », propose une évaluation formative réalisable en "+v("minutes")+" minutes, une consigne claire adressée aux élèves, des critères qualitatifs de relecture et des indications de reprise de copie. Distingue une grille pédagogique conçue par moi d'un texte réglementaire ; n'invente aucun barème officiel de philosophie.";
+$("prompt-fiche").value=common+"Crée une fiche notionnelle de "+lines("notion")+" pour "+v("voie")+" : définitions à discuter, distinctions, 3 situations problématiques, deux objections, références philosophiques prises dans le corpus, questions de révision et mini-synthèse. Indique les extraits réellement exploités et signale toute référence incertaine.";
+$("prompt-html").value=common+"À partir de la séquence sur « "+lines("sujet")+" » que j'ai validée, crée UN FICHIER HTML AUTONOME pour mes élèves de "+v("voie")+" : sommaire cliquable, rubriques par séance, textes exacts et sourcés, consignes progressives, champs de réponse sans collecte, bilans pliables, fiches méthodologiques et mise en page adaptée aux téléphones. Le HTML doit fonctionner hors ligne, sans API, serveur, clé secrète, bibliothèque distante ni transmission des réponses. Ne publie pas le site. Fournis le code complet et une liste de tests de fonctionnement. Signale tout texte dont les droits de reproduction ou la référence ne sont pas vérifiés.";
+$("prompt-explication").value=$("prompt-explication").value.replace("EXTR AIT","EXTRAIT");
+}
+function update(){if(document.activeElement!==$("output"))$("output").value=mainPrompt();additionalPrompts();$("status").textContent="";}
+fields.forEach(id=>{$(id).addEventListener("input",update);$(id).addEventListener("change",update)});
+async function copyText(txt){
+try{await navigator.clipboard.writeText(txt);$("status").textContent="Prompt copié. Collez-le dans une conversation de votre projet ChatGPT ou Claude."}
+catch(e){const out=$("output");out.focus();out.select();$("status").textContent="Copie directe non autorisée : sélectionnez le texte et utilisez Ctrl+C."}
+}
+$("copy").addEventListener("click",()=>copyText($("output").value));
+document.querySelectorAll("[data-copy]").forEach(button=>button.addEventListener("click",()=>copyText($(button.dataset.copy).value)));
+$("refresh").addEventListener("click",()=>{$("output").value=mainPrompt();additionalPrompts();$("status").textContent="Prompt régénéré depuis les champs."});
+$("reset").addEventListener("click",()=>{
+for(const id of ["notion","sujet","place","prerequis","objectifs","activites","evaluation","sources","textes","methodes","diff"])$(id).value="";
+$("notion").value="La vérité";$("sujet").value="Peut-on vouloir la vérité à tout prix ?";$("place").value="Après l'opinion et la connaissance";$("objectifs").value="Définir les notions, construire une tension argumentée et une problématique personnelle";
+$("voie").value="Terminale générale";$("seances").value="4";$("minutes").value="55";
+for(const id of ["concept","problem","argue","explain","write"])$(id).checked=true;
+$("output").value=mainPrompt();additionalPrompts();$("status").textContent="Exemple rétabli.";
+});
+$("download").addEventListener("click",()=>{
+const blob=new Blob([$("output").value],{type:"text/plain;charset=utf-8"});
+const url=URL.createObjectURL(blob),anchor=document.createElement("a");anchor.href=url;anchor.download="prompt-sequence-philosophie.txt";document.body.appendChild(anchor);anchor.click();anchor.remove();URL.revokeObjectURL(url);$("status").textContent="Prompt enregistré au format texte.";
+});
+update();
+})();
+</script></body></html>
