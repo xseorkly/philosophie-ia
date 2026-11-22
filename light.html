@@ -111,6 +111,7 @@ footer .synth textarea{width:100%;font:inherit;font-size:.85rem;border:1px solid
 .answer-state{display:block;color:#5e6b77;font-size:.8rem;min-height:1em;margin-top:2px}
 .send-box{margin:22px 0 4px;padding:14px 16px;border-radius:12px;background:#e9f5f1;border:1px solid #bfdcd4}
 .send-box p{margin:4px 0}
+.nav-send{font-weight:700;color:var(--teal)!important}
 main .btn,footer .btn{background:var(--teal);color:#fff;border:1.5px solid var(--teal)}
 main .btn.ghost,footer .btn.ghost{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
 .send-status{font-weight:600;color:#12615b}
@@ -294,7 +295,7 @@ section.session-block{padding:0!important;overflow:visible}
 <a class="nav-activity" href="#s2b-a2" title="2. Remplir le générateur HTML de prompt">2. Remplir le générateur HTML de prompt</a>
 <a class="nav-activity" href="#s2b-a3" title="3. Activer le tuteur dans l’IA de votre choix">3. Activer le tuteur dans l’IA de votre choix</a>
 <a class="nav-activity" href="#s2b-a4" title="4. Tester trois nouveaux comportements d’élève">4. Tester trois nouveaux comportements d’élève</a>
-<a class="nav-activity" href="#s2b-a5" title="5. Améliorer les instructions et vérifier le partage">5. Améliorer les instructions et vérifier le partage</a>
+<a class="nav-activity" href="#s2b-a5" title="5. Améliorer les instructions">5. Améliorer les instructions</a>
 <a class="nav-activity" href="#s2b-a6" title="6. Présenter le tuteur et son effet sur l’apprentissage">6. Présenter le tuteur et son effet sur l’apprentissage</a>
     <a class="nav-bilan" href="#bilan-s2b">🦋 Bilan partie 2</a>
     <a href="generateur-tuteur-chatgpt.html" target="_blank" rel="noopener">Générateur de tuteur</a>
@@ -1333,10 +1334,12 @@ Q.forEach(q=>{
 const SEND_AT={S1:'#session-toggle-s1 > .session-body',S2:'#session-toggle-s2 > .session-body',S3:'#session-toggle-s3 > .session-body',S4:'#session-toggle-s4 > .session-body',S5:'#session-toggle-s5 > .session-body',FIN:'#cloture .cloture-send'};
 Object.entries(SEND_AT).forEach(([s,sel])=>{
  const host=$(sel);if(!host)return;
- const box=document.createElement('div');box.className='send-box';box.dataset.seance=s;
+ const box=document.createElement('div');box.className='send-box';box.dataset.seance=s;box.id='envoi-'+s;
  box.innerHTML='<p><b>Fin de '+(s==='FIN'?'la formation':'la séance')+' :</b> envoyez vos réponses au formateur. <span class="send-count"></span></p><p class="send-who">Envoi au nom de : <b class="who-name"></b> · <a href="#identite">modifier</a></p><p class="send-actions"><button type="button" class="btn send-btn">Envoyer mes réponses '+(s==='FIN'?'de clôture':'de la séance')+'</button> <button type="button" class="btn ghost small copy-mine">Copier mes réponses</button></p><p class="send-status" role="status" aria-live="polite"></p>';
  host.appendChild(box);
  box.querySelector('.send-btn').addEventListener('click',()=>send(s,box));
+ const sub=document.querySelector('.nav-group[data-session="'+s.toLowerCase()+'"] > .nav-sub');
+ if(sub){const a=document.createElement('a');a.className='nav-send';a.href='#envoi-'+s;a.textContent='📤 Envoyer mes réponses';sub.appendChild(a)}
  box.querySelector('.copy-mine').addEventListener('click',()=>copyText(mine(s),'Vos réponses sont copiées'));
  refresh(s);
 });
