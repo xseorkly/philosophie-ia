@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Générateur pédagogique de prompts pour un tuteur de philosophie dans ChatGPT. Formulaire autonome, sans collecte de données.">
+<title>Créer mon tuteur de philosophie · Générateur ChatGPT</title>
+<style>
+:root{--bg:#f5f6f2;--ink:#203042;--muted:#607080;--teal:#12615b;--pale:#e9f5f1;--border:#d9e5e1;--blue:#e9f1f8;--gold:#fff6e7;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Arial,sans-serif}
+header{background:var(--teal);color:#fff;padding:25px 0 30px}main,.inside{width:min(1050px,calc(100% - 32px));margin:auto}
+header h1{font-family:Georgia,serif;font-size:clamp(1.6rem,3.5vw,2.25rem);margin:8px 0}header p{max-width:750px;margin:0;color:#ebf8f4}
+nav{background:#0e4f4a;padding:9px 0}nav a{color:#fff;text-decoration:underline;text-underline-offset:4px}
+main{padding:20px 0 40px}.panel{background:#fff;border:1px solid var(--border);border-radius:15px;padding:22px;margin:15px 0}h2{font-family:Georgia,serif;margin:0 0 9px;font-size:1.5rem}h3{margin:0 0 8px;font-size:1.05rem}p{margin:7px 0 12px}
+.lead{font-size:1.05rem}.note{background:var(--pale);border-left:4px solid var(--teal);padding:12px 15px;border-radius:0 10px 10px 0;margin:12px 0}
+.caution{background:var(--gold);border-left:4px solid #be8737;padding:12px 15px;border-radius:0 10px 10px 0;margin:12px 0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.step{border:1px solid var(--border);border-radius:12px;background:#fff;padding:14px}.step b{color:var(--teal)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.field{margin:12px 0}.field label{display:block;font-weight:650;margin-bottom:5px}small,.hint{font-size:.87rem;color:var(--muted)}
+input[type=text],select,textarea{font:inherit;width:100%;background:#fff;color:var(--ink);border:1.5px solid #b9c8c6;border-radius:9px;padding:10px 12px}textarea{resize:vertical;min-height:85px}
+input:focus-visible,select:focus-visible,textarea:focus-visible,button:focus-visible,a:focus-visible{outline:3px solid #55a8a1;outline-offset:2px}
+fieldset{margin:10px 0;padding:13px 15px;border:1px solid var(--border);border-radius:11px}legend{font-weight:700;color:var(--teal)}fieldset label{display:flex;align-items:flex-start;gap:9px;margin:8px 0;cursor:pointer}input[type=checkbox],input[type=radio]{accent-color:var(--teal);width:18px;height:18px;flex:none;margin-top:3px}
+button{font:inherit;font-weight:700;cursor:pointer;border:0;border-radius:9px;padding:11px 17px;background:var(--teal);color:#fff}button.secondary{background:#e7efec;color:var(--ink);border:1px solid var(--border)}button.ghost{background:#fff;color:var(--teal);border:1px solid var(--teal)}
+.actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:12px 0}.actions button{flex:none}
+#output{font:14px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;background:#f3f7fa;min-height:440px;white-space:pre-wrap}
+#copy-status{color:var(--teal);font-weight:650;min-height:1.3em}
+ul,ol{padding-left:24px}li{margin:6px 0}a{color:var(--teal)}footer{text-align:center;color:var(--muted);padding:20px 0 30px}
+@media(max-width:740px){.steps,.grid{grid-template-columns:1fr}.panel{padding:16px}}
+@media print{body{background:#fff}nav,.actions{display:none}header{background:#fff;color:#000;padding:8px 0}header p{color:#000}.panel{border:0;break-inside:avoid}#output{min-height:0}}
+</style>
+</head>
+<body>
+<header><div class="inside"><div>Philosophie × IA · Séance 2 · Partie 2</div><h1>Créer mon tuteur de philosophie avec ChatGPT</h1><p>Définissez les règles pédagogiques de votre assistant conversationnel. Ce formulaire transforme vos choix en un prompt prêt à copier dans ChatGPT, sans aucune programmation.</p></div></header>
+<nav><div class="inside"><a href="light.html#s2b">Retour à la formation</a></div></nav>
+<main>
+<div class="steps" aria-label="Les trois étapes">
+ <div class="step"><b>1. Définir</b><p>Indiquez ce que l’élève doit apprendre et comment l’IA doit l’accompagner.</p></div>
+ <div class="step"><b>2. Copier</b><p>Le prompt se construit automatiquement à partir du formulaire. Copiez-le.</p></div>
+ <div class="step"><b>3. Tester</b><p>Collez-le dans ChatGPT, jouez un élève fictif et vérifiez les réponses.</p></div>
+</div>
+<div class="note"><b>Qui remplit cette fiche ?</b> Le professeur, en tant que concepteur pédagogique. <b>Qui dialogue ensuite avec ChatGPT ?</b> Un élève ou, pendant la formation, un professeur stagiaire jouant le rôle de l’élève.</div>
+<section class="panel" aria-labelledby="form-head">
+<h2 id="form-head">1. Définissez votre tuteur</h2>
+<div class="field"><label for="mode">Comment comptez-vous utiliser ces instructions ?</label>
+<select id="mode"><option value="chat">Conversation ChatGPT classique (test immédiat)</option><option value="gpt">Instructions d’un GPT personnalisé (si votre espace permet sa création)</option></select>
+<p class="hint" id="mode-hint">Le prompt sera le premier message d’une conversation ChatGPT : l’utilisateur pourra ensuite dialoguer avec l’IA dans ce chat.</p></div>
+<div class="grid">
+ <div class="field"><label for="name">Nom du tuteur</label><input id="name" type="text" value="Mon compagnon de problématisation" placeholder="Ex. : Atelier de philosophie"></div>
+ <div class="field"><label for="level">Public concerné</label><select id="level"><option>Terminale générale</option><option>Terminale technologique</option><option>Première</option><option>Seconde</option><option>BTS</option><option>Autre niveau (précisez dans le contexte)</option></select></div>
+</div>
+<div class="field"><label for="subject">Sujet ou notion philosophique <small>(obligatoire)</small></label><input id="subject" type="text" value="Peut-on vouloir la vérité à tout prix ?" placeholder="Ex. : La liberté suppose-t-elle des limites ?"></div>
+<div class="field"><label for="goal">Que doit apprendre l’élève ? <small>(objectif observable)</small></label><textarea id="goal">Identifier les notions du sujet, construire une tension philosophique, formuler personnellement une problématique et justifier ses choix.</textarea></div>
+<div class="field"><label for="context">Contexte ou texte de référence <small>(facultatif, sans données personnelles)</small></label><textarea id="context" placeholder="Ex. : Sujet de dissertation étudié en classe ; notions déjà vues ; extrait vérifié et sa référence."></textarea></div>
+<fieldset><legend>Quelles opérations intellectuelles voulez-vous entraîner ?</legend>
+<label><input type="checkbox" id="concept" checked>Conceptualiser : définir et distinguer les notions</label>
+<label><input type="checkbox" id="problem" checked>Problématiser : faire apparaître une difficulté et une tension</label>
+<label><input type="checkbox" id="argue" checked>Argumenter : justifier, illustrer et examiner une objection</label>
+<label><input type="checkbox" id="read">Analyser un texte fourni par l’enseignant, sans inventer de passage</label>
+</fieldset>
+<div class="grid">
+ <div class="field"><label for="tone">Comment l’IA doit-elle s’exprimer ?</label><select id="tone"><option>Clair, encourageant mais exigeant</option><option>Sobre et méthodique</option><option>Très progressif et accessible</option></select></div>
+ <div class="field"><label for="questions">Nombre de questions par réponse</label><select id="questions"><option>Une seule question ouverte, puis attendre</option><option>Deux questions au maximum, puis attendre</option></select></div>
+</div>
+<div class="field"><label for="first">Première question de l’assistant <small>(facultatif)</small></label><input id="first" type="text" placeholder="Ex. : Que signifie « à tout prix » dans ce sujet ?"></div>
+<fieldset><legend>Quand l’élève rencontre une difficulté</legend>
+<label><input type="checkbox" id="stuck" checked>S’il bloque, demander une petite étape ou un exemple, sans donner la solution</label>
+<label><input type="checkbox" id="wrong" checked>S’il se trompe, questionner l’affirmation sans la valider automatiquement</label>
+<label><input type="checkbox" id="demand" checked>S’il réclame un plan ou une réponse toute faite, le ramener à un travail personnel</label>
+<label><input type="checkbox" id="verify" checked>Reconnaître l’incertitude et ne jamais inventer de citation ou de référence</label>
+</fieldset>
+<div class="field"><label for="never">Interdictions pédagogiques supplémentaires <small>(facultatif)</small></label><textarea id="never" placeholder="Ex. : Ne jamais donner une problématique rédigée ni une dissertation complète.">Ne rédige pas la problématique, le plan détaillé ou la dissertation à la place de l’élève.</textarea></div>
+<div class="field"><label for="finish">Quelle trace de réflexion demander à la fin ?</label><textarea id="finish">Demander à l’élève de reformuler avec ses propres mots la difficulté principale du sujet, d’expliquer une objection et d’indiquer ce qu’il pourra refaire sans IA.</textarea></div>
+<div class="actions"><button type="button" id="example">Remettre l’exemple « vérité »</button><button type="button" class="secondary" id="clear">Vider les champs de contenu</button></div>
+</section>
+<section class="panel" aria-labelledby="output-head">
+<h2 id="output-head">2. Votre prompt ChatGPT prêt à copier</h2>
+<p>Il est généré automatiquement. Relisez-le : <b>c’est votre consigne pédagogique à l’IA, pas une réponse d’élève</b>. Vous pouvez modifier le texte directement avant de le copier.</p>
+<textarea id="output" aria-label="Prompt généré et modifiable" spellcheck="false"></textarea>
+<div class="actions"><button type="button" id="generate">Régénérer depuis le formulaire</button><button type="button" id="copy">Copier mon prompt</button><button type="button" class="secondary" id="download">Enregistrer en .txt</button></div>
+<div id="copy-status" role="status" aria-live="polite"></div>
+</section>
+<section class="panel" aria-labelledby="test-head">
+<h2 id="test-head">3. Utiliser et tester le tuteur dans ChatGPT</h2>
+<ol>
+<li><b>Enseignant concepteur :</b> choisissez le mode ci-dessus et cliquez sur <b>Copier mon prompt</b>.</li>
+<li><b>Conversation classique :</b> ouvrez <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a>, démarrez une nouvelle conversation et envoyez le prompt comme <b>premier message</b>. Attendez que l’IA pose sa première question.</li>
+<li><b>Enseignant testeur :</b> répondez comme un élève fictif, par exemple « Je ne sais pas comment commencer ». Faites ensuite deux autres essais : « Je suis sûr que… » et « Donne-moi le plan tout fait ».</li>
+<li><b>Observez :</b> l’IA vous invite-t-elle à définir, justifier et chercher une objection, ou donne-t-elle la solution ? Si une réponse n’est pas satisfaisante, modifiez les règles dans le formulaire, <b>ouvrez une nouvelle conversation</b> et recommencez le même test.</li>
+<li><b>GPT personnalisé si autorisé :</b> dans un espace de travail où le bouton de création de GPT est disponible, collez la version « GPT personnalisé » dans le champ <b>Instructions</b>, testez puis utilisez les options <b>Partager</b> réellement proposées par votre espace.</li>
+</ol>
+<div class="caution"><b>Important pour le partage aux élèves :</b> un <b>lien vers une conversation classique</b> n’est pas un assistant personnalisé réutilisable avec vos règles. Pour fournir un lien vers un GPT configuré, votre espace doit réellement autoriser sa création et son partage. Depuis octobre 2026, les comptes ChatGPT personnels ne permettent plus de créer de nouveaux GPT ; les possibilités varient selon les espaces professionnels ou éducatifs. À défaut, vous pouvez distribuer <b>le prompt</b> pour que chaque utilisateur l’utilise dans sa propre conversation, sous réserve des règles de l’établissement et des conditions d’âge. <a href="https://help.openai.com/en/articles/8554397-creating-and-editing-gpts" target="_blank" rel="noopener">Documentation officielle</a>.</div>
+<div class="note"><b>Protection des élèves :</b> n’insérez aucune copie identifiable, information personnelle ou donnée sensible dans cette fiche ou dans un prompt. Vérifiez les conditions d’âge, le consentement parental lorsque requis et les règles de votre établissement. Ce fichier HTML reste local : il ne transmet aucune information à un serveur.</div>
+</section>
+</main>
+<footer>Outil pédagogique indépendant · Philosophie × IA · Fonctionne hors ligne · Aucun compte requis pour remplir la fiche</footer>
+<script>
+(function(){
+"use strict";
+var ids=["mode","name","level","subject","goal","context","concept","problem","argue","read","tone","questions","first","stuck","wrong","demand","verify","never","finish"];
+function el(id){return document.getElementById(id)}
+function value(id){return (el(id).value||"").trim()}
+function addIf(a,flag,text){if(el(flag).checked)a.push(text)}
+function build(){
+var isGpt=value("mode")==="gpt",arr=[],name=value("name")||"Tuteur de philosophie",topic=value("subject")||"[SUJET À RENSEIGNER]",target=value("goal")||"[OBJECTIF À RENSEIGNER]";
+arr.push(isGpt?"INSTRUCTIONS DU GPT PERSONNALISÉ (à coller dans le champ Instructions du configurateur de GPT autorisé)":"PROMPT INITIAL DU TUTEUR (à envoyer comme premier message d’une nouvelle conversation ChatGPT)");
+arr.push("");
+arr.push("IDENTITÉ ET MISSION");
+arr.push("Tu es « "+name+" », un assistant de dialogue pédagogique destiné à des élèves de "+value("level")+".");
+arr.push("Tu accompagnes l’élève dans sa propre réflexion philosophique. Tu n’es pas chargé de produire le devoir à sa place.");
+arr.push("Sujet de départ : « "+topic+" ».");
+arr.push("Objectif d’apprentissage : "+target);
+if(value("context"))arr.push("Contexte fourni par l’enseignant : "+value("context"));
+arr.push("");
+arr.push("RÈGLES DE DIALOGUE");
+arr.push("Parle à l’élève directement en le tutoyant. Ton style est "+value("tone").toLowerCase()+".");
+arr.push("Pose "+value("questions").toLowerCase()+". Attends toujours la réponse avant de poursuivre.");
+arr.push("Commence par écouter la représentation de l’élève : demande-lui ce qu’il comprend du sujet avant de proposer des relances.");
+arr.push("Utilise les réponses réelles de l’élève comme point de départ. Cite brièvement ce qu’il vient d’écrire avant de demander une précision, une justification ou un contre-exemple.");
+arr.push("Ne confonds pas la réussite apparente avec l’apprentissage : conserve à l’élève les opérations intellectuelles essentielles.");
+arr.push("");
+arr.push("OPÉRATIONS À FAIRE TRAVAILLER");
+var before=arr.length;
+addIf(arr,"concept","- Conceptualiser : amener l’élève à définir les termes et à construire des distinctions.");
+addIf(arr,"problem","- Problématiser : demander à l’élève de faire émerger des réponses plausibles en tension et de formuler lui-même un problème.");
+addIf(arr,"argue","- Argumenter : demander une raison, un exemple, une objection et une réponse possible à cette objection.");
+addIf(arr,"read","- Lire un texte : ne travailler qu’à partir d’un passage effectivement fourni, en demandant des preuves textuelles.");
+if(before===arr.length)arr.push("- Demande à l’élève de décrire une difficulté puis de justifier ses idées.");
+arr.push("");
+arr.push("QUAND L’ÉLÈVE RENCONTRE UNE DIFFICULTÉ");
+addIf(arr,"stuck","- S’il dit « je ne sais pas », réduis la tâche à une seule étape accessible ; demande un exemple ou le sens d’un mot sans fournir la conclusion.");
+addIf(arr,"wrong","- S’il formule une erreur ou une affirmation trop assurée, ne l’approuve pas automatiquement ; demande-lui de chercher une justification ou un contre-exemple.");
+addIf(arr,"demand","- S’il insiste pour obtenir un plan, une problématique rédigée ou une dissertation, refuse brièvement de faire ce travail à sa place et propose une opération précise à réaliser lui-même.");
+addIf(arr,"verify","- N’invente jamais de citation, de référence ou de page. Si une référence n’est pas vérifiable, indique clairement ton incertitude.");
+if(value("never"))arr.push("- Interdictions supplémentaires : "+value("never"));
+arr.push("");
+arr.push("VÉRIFIER L’APPRENTISSAGE");
+arr.push(value("finish")||"Demande à l’élève de reformuler son idée et de dire ce qu’il peut refaire seul.");
+arr.push("À la fin, fais un bref bilan des opérations que l’élève a effectivement réalisées, sans inventer ses progrès ni lui attribuer une note.");
+arr.push("");
+arr.push("PREMIER MESSAGE À L’ÉLÈVE");
+arr.push(value("first")?"Commence uniquement par cette question, puis attends : « "+value("first")+" »":"Commence par une seule question ouverte très simple pour savoir ce que l’élève comprend du sujet. Attends sa réponse.");
+if(isGpt){arr.push("");arr.push("AMORCES DE CONVERSATION À RENSEIGNER SÉPARÉMENT DANS LE CONFIGURATEUR");arr.push("1. Je ne comprends pas ce sujet, peux-tu m’aider à commencer ?");arr.push("2. Je propose un argument : peux-tu m’aider à le vérifier ?");arr.push("3. Pose-moi une question pour que je trouve moi-même une problématique.");}
+return arr.join("\n");
+}
+var dirty=false;
+function update(){el("mode-hint").textContent=value("mode")==="gpt"?"Version destinée au champ Instructions d’un GPT personnalisé, uniquement si votre espace de travail autorise sa création. Ce formulaire ne crée pas le GPT lui-même.":"Le prompt sera le premier message d’une conversation ChatGPT : l’utilisateur pourra ensuite dialoguer avec l’IA dans ce chat.";el("output").value=build();dirty=false;el("copy-status").textContent="";}
+ids.forEach(function(id){el(id).addEventListener("input",update);el(id).addEventListener("change",update)});
+el("output").addEventListener("input",function(){dirty=true;el("copy-status").textContent="Vous avez modifié le prompt à la main. Il sera copié tel qu’il apparaît ici."});
+el("generate").addEventListener("click",update);
+el("example").addEventListener("click",function(){
+var sample={mode:"chat",name:"Mon compagnon de problématisation",level:"Terminale générale",subject:"Peut-on vouloir la vérité à tout prix ?",goal:"Identifier les notions du sujet, construire une tension philosophique, formuler personnellement une problématique et justifier ses choix.",context:"",tone:"Clair, encourageant mais exigeant",questions:"Une seule question ouverte, puis attendre",first:"",never:"Ne rédige pas la problématique, le plan détaillé ou la dissertation à la place de l’élève.",finish:"Demander à l’élève de reformuler avec ses propres mots la difficulté principale du sujet, d’expliquer une objection et d’indiquer ce qu’il pourra refaire sans IA."};
+Object.keys(sample).forEach(function(k){el(k).value=sample[k]});
+["concept","problem","argue","stuck","wrong","demand","verify"].forEach(function(k){el(k).checked=true});
+el("read").checked=false;update();});
+el("clear").addEventListener("click",function(){["name","subject","goal","context","first","never","finish"].forEach(function(k){el(k).value=""});update();});
+function notify(s){el("copy-status").textContent=s}
+el("copy").addEventListener("click",async function(){
+var v=el("output").value;
+if(!v.trim()){notify("Le prompt est vide.");return}
+try{await navigator.clipboard.writeText(v);notify("Prompt copié. Ouvrez ChatGPT et collez-le dans une nouvelle conversation ou dans les instructions du GPT.")}catch(e){
+el("output").focus();el("output").select();try{document.execCommand("copy");notify("Prompt sélectionné et copié, si le navigateur l’autorise. Sinon : Ctrl+C.")}catch(ex){notify("Sélectionnez le prompt et utilisez Ctrl+C pour le copier.")}}
+});
+el("download").addEventListener("click",function(){
+var blob=new Blob([el("output").value],{type:"text/plain;charset=utf-8"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="prompt-tuteur-philosophie.txt";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u);notify("Le prompt a été enregistré au format texte.")});
+update();
+})();
+</script>
+</body>
+</html>
