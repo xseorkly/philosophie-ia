@@ -361,7 +361,7 @@ section.session-block{padding:0!important;overflow:visible}
 <div class="grid3"><div class="card"><b>Performance</b><p>Réussir une tâche avec une aide ne prouve pas qu’on saura la refaire sans assistance.</p></div><div class="card"><b>Apprentissage</b><p>Définir, distinguer, justifier et formuler soi-même sont des opérations intellectuelles essentielles.</p></div><div class="card"><b>L’<span class="person-info"><a href="glossaire.html#g-topaze" aria-describedby="topaze-definition">effet Topaze</a><span class="person-tooltip" id="topaze-definition" role="tooltip"><strong>Qu’est-ce que l’effet Topaze ?</strong>Phénomène didactique décrit par Guy Brousseau : à force de simplifier la tâche pour aider, l’enseignant finit par donner les éléments essentiels de la réponse. L’élève réussit en apparence, sans avoir nécessairement fait le raisonnement attendu. Le terme renvoie à la pièce <i>Topaze</i> de Marcel Pagnol.</span></span></b><p>Une aide trop directive peut finir par effectuer le raisonnement à la place de l’élève. Survolez le terme pour lire sa définition.</p></div></div>
 <h4>Étape 1 · Lire le dialogue fictif </h4>
 <p><b>Sujet :</b> « Peut-on vouloir la vérité à tout prix ? » Inès demande à une IA de l’aider à formuler une problématique.</p>
-<div class="text-source dialogue"><p><b>Inès :</b> Je n’arrive pas à trouver une problématique pour ce sujet.</p><p><b>IA :</b> Réfléchissons ensemble. La vérité est-elle toujours une bonne chose ?</p><p><b>Inès :</b> Oui, je crois.</p><p><b>IA :</b> Mais si dire la vérité risque de faire souffrir quelqu’un, faut-il quand même la dire ?</p><p><b>Inès :</b> Pas forcément.</p><p><b>IA :</b> Très bien ! Tu peux donc utiliser cette problématique : « La recherche de la vérité doit-elle toujours primer sur le bonheur ? »</p><p><b>Inès :</b> D’accord, je vais reprendre cette formulation.</p></div>
+<div class="text-source dialogue"><p><b>Inès :</b> Bonjour, je suis en terminale et mon professeur m’a donné une dissertation de philosophie sur « Peut-on vouloir la vérité à tout prix ? ». Je ne sais pas comment trouver une problématique. J’ai compris qu’il faut parler de la vérité, mais je ne vois pas encore quelle difficulté le sujet soulève. Est-ce que tu peux m’aider à commencer ?</p><p><b>IA :</b> Réfléchissons ensemble. La vérité est-elle toujours une bonne chose ?</p><p><b>Inès :</b> Oui, je crois.</p><p><b>IA :</b> Mais si dire la vérité risque de faire souffrir quelqu’un, faut-il quand même la dire ?</p><p><b>Inès :</b> Pas forcément.</p><p><b>IA :</b> Très bien ! Tu peux donc utiliser cette problématique : « La recherche de la vérité doit-elle toujours primer sur le bonheur ? »</p><p><b>Inès :</b> D’accord, je vais reprendre cette formulation.</p></div>
 <h4>Étape 2 · Analyser l’échange (environ 6 min, en binômes)</h4>
 <ol class="do"><li><b>Qui a formulé la problématique finale ?</b> Citez la réplique qui le montre.</li><li><b>Qu’a réellement fait Inès ?</b> A-t-elle construit une opposition entre deux idées, ou surtout répondu aux questions ?</li><li><b>À quel moment l’IA commence-t-elle à faire le travail à sa place ?</b> Relevez la phrase exacte.</li><li><b>Comment vérifier si Inès a appris ?</b> Imaginez une petite tâche proche qu’elle devrait réaliser seule, sans IA.</li></ol>
 <h4>Étape 3 · Proposer une aide qui laisse penser </h4>
@@ -591,6 +591,14 @@ $('.sidebar-content a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
 }));
 window.addEventListener('hashchange',()=>focusSection(decodeURIComponent(location.hash.slice(1)),true));
 if(location.hash)focusSection(decodeURIComponent(location.hash.slice(1)),true);
+
+/* À l’impression, ouvrir les parties et activités pour conserver le contenu sur papier. */
+let printDetails=[];
+window.addEventListener('beforeprint',()=>{
+ printDetails=$('details.session-accordion, details.part-accordion, details.activity-accordion, details.butterfly').map(d=>({d,opened:d.open}));
+ printDetails.forEach(x=>x.d.open=true);
+});
+window.addEventListener('afterprint',()=>{printDetails.forEach(x=>x.d.open=x.opened);printDetails=[]});
 
 /* boutons Copier des prompts */
 $$('.prompt .btn.copy').forEach(b=>{if(b.id==='copyRecipe')return;b.addEventListener('click',()=>copy(b.closest('.prompt').querySelector('pre').textContent))});
