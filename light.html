@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Philosophie × IA · formation courte (9 h)</title>
+<meta name="description" content="Formation courte de 9 heures pour les professeurs de philosophie : comprendre l’IA, préparer ses cours avec Claude, créer un espace d’entraînement interactif pour ses élèves."/>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="09bb50e4-e5cd-47d4-b231-1551e99b2df5" data-domains="xseorkly.github.io" data-exclude-search="true"></script>
+<style>
+:root{--ink:#203042;--muted:#5d6e80;--bg:#f4f5f2;--paper:#fff;--stroke:#dbe3e2;--teal:#14635e;--teall:#e9f5f1;--gold:#ad6c2a;--goldl:#fcf3e6;--blue:#2d5d8a;--bluel:#eaf0f6;--red:#9b3b2e;--redl:#fbecea;--radius:14px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--teal)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+header.top{background:var(--teal);color:#fff;padding:34px 0 28px}
+header.top .eyebrow{color:#bfe6da}
+header.top h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(1.8rem,4.5vw,2.8rem);line-height:1.15;margin:.2em 0 .3em}
+header.top p.lead{font-size:1.12rem;max-width:760px;margin:0 0 16px}
+.eyebrow{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;color:var(--teal)}
+.btns{display:flex;flex-wrap:wrap;gap:8px}
+.btn{display:inline-block;border:0;border-radius:999px;padding:9px 16px;font:inherit;font-weight:600;cursor:pointer;text-decoration:none;background:#fff;color:var(--teal)}
+.btn.ghost{background:transparent;color:#fff;border:1.5px solid #ffffff99}
+.btn.small{padding:6px 12px;font-size:.88rem}
+.btn.copy{background:var(--teal);color:#fff}
+nav.toc{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--stroke)}
+nav.toc .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px}
+nav.toc a{white-space:nowrap;text-decoration:none;color:var(--ink);font-size:.9rem;padding:6px 10px;border-radius:999px}
+nav.toc a:hover{background:var(--teall)}
+main section.block{background:var(--paper);border:1px solid var(--stroke);border-radius:var(--radius);padding:22px 24px;margin:22px 0}
+h2{font-family:Georgia,serif;font-size:1.6rem;margin:.1em 0 .5em;line-height:1.2}
+h3{font-size:1.15rem;margin:1.2em 0 .4em}
+h4{margin:.8em 0 .3em}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+@media(max-width:820px){.grid3,.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--stroke);border-radius:12px;padding:14px 16px;background:#fff}
+.card.teal{background:var(--teall);border-color:#bfe0d5}
+.card.gold{background:var(--goldl);border-color:#ecd3b2}
+.card.blue{background:var(--bluel);border-color:#c9d8e8}
+.card.red{background:var(--redl);border-color:#efc9c3}
+.card h3,.card h4{margin-top:0}
+.big{font-size:1.9rem;font-weight:700;color:var(--teal);line-height:1}
+table{width:100%;border-collapse:collapse;margin:10px 0}
+th,td{border:1px solid var(--stroke);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:var(--teall)}
+.tablewrap{overflow-x:auto}
+.session-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 18px;border-bottom:2px solid var(--teall);padding-bottom:10px;margin-bottom:12px}
+.session-head .num{font-size:.85rem;font-weight:700;color:#fff;background:var(--teal);border-radius:999px;padding:3px 12px}
+.session-head .dur{color:var(--muted);font-weight:600}
+.step{border-left:4px solid var(--teal);background:#fbfcfb;border-radius:0 12px 12px 0;padding:12px 16px;margin:16px 0}
+.step.pause{border-left-color:#b9c4c2;background:#f6f7f5;color:var(--muted)}
+.step .when{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-bottom:6px}
+.time{font-weight:700;color:var(--teal);font-variant-numeric:tabular-nums}
+.badge{font-size:.75rem;font-weight:700;border-radius:999px;padding:2px 9px;background:#eef1f0;color:var(--ink)}
+.badge.ai{background:var(--bluel);color:var(--blue)}
+.badge.noai{background:#eef1f0}
+.badge.group{background:var(--goldl);color:var(--gold)}
+.step h3{margin:.1em 0 .4em}
+ol.do,ul.plain{margin:.3em 0 .6em;padding-left:22px}
+ol.do li,ul.plain li{margin:.25em 0}
+.why{font-size:.95rem;color:var(--muted);margin:.2em 0 .6em}
+.retain{background:var(--teall);border-radius:10px;padding:10px 14px;margin:10px 0}
+.retain b:first-child{color:var(--teal)}
+.prompt{border:1px solid #c9d8e8;background:var(--bluel);border-radius:10px;margin:10px 0;overflow:hidden}
+.prompt .ph{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:8px 12px;background:#dfe9f3;font-weight:600;font-size:.92rem}
+.prompt pre{margin:0;padding:12px 14px;white-space:pre-wrap;font:14px/1.5 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+.copybox .ok{color:var(--teal);font-size:.85rem;margin-left:6px}
+.text-source{border:1px solid var(--stroke);border-radius:10px;background:#fffdf8;padding:12px 16px;font-family:Georgia,serif}
+.text-source .ref{font-family:system-ui,sans-serif;font-size:.85rem;color:var(--muted)}
+.copies{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:700px){.copies{grid-template-columns:1fr}}
+.copy{border:1px solid var(--stroke);border-radius:10px;padding:12px 14px;background:#fffdf8;font-family:Georgia,serif}
+.copy b{font-family:system-ui,sans-serif}
+.dialogue p{margin:.25em 0}
+.trainer{display:none;border:1.5px dashed var(--gold);background:var(--goldl);border-radius:10px;padding:10px 14px;margin:10px 0}
+body.trainer-mode .trainer{display:block}
+.trainer .tt{font-weight:700;color:var(--gold);font-size:.85rem;text-transform:uppercase;letter-spacing:.06em}
+.say{font-style:italic}
+.checklist{list-style:none;padding-left:0}
+.checklist li{display:flex;gap:10px;align-items:flex-start;margin:.35em 0}
+.checklist input{margin-top:.35em;width:18px;height:18px;flex:none}
+label.f{display:block;font-weight:600;margin:12px 0 4px}
+label.f small{font-weight:400;color:var(--muted)}
+input.t,textarea.t,select.t{width:100%;font:inherit;border:1px solid #c5d0ce;border-radius:8px;padding:8px 10px;background:#fff}
+textarea.t{min-height:80px;resize:vertical}
+.qblock{border:1px solid var(--stroke);border-radius:10px;padding:10px 14px;margin:10px 0;background:#fbfcfb}
+.steps-visual{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;counter-reset:s}
+.steps-visual div{background:var(--teall);border-radius:10px;padding:10px;font-size:.92rem;position:relative}
+.steps-visual div::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-weight:700;font-size:.85rem;margin-right:6px}
+@media(max-width:820px){.steps-visual{grid-template-columns:1fr}}
+details.faq{border:1px solid var(--stroke);border-radius:10px;padding:10px 14px;margin:8px 0;background:#fff}
+details.faq summary{font-weight:600;cursor:pointer}
+footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
+#toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
+#toast.show{opacity:1}
+@media print{nav.toc,.btns,.btn,#toast{display:none!important}body{background:#fff}main section.block{border:0;padding:0;break-inside:auto}header.top{background:#fff;color:var(--ink)}header.top .eyebrow{color:var(--teal)}.trainer{display:block}.step{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+<div class="eyebrow">Philosophie × IA · formation courte</div>
+<h1>Ce que l’IA fait à l’apprentissage du philosopher.<br/>Et ce que nous pouvons y faire.</h1>
+<p class="lead">Neuf heures, en trois séances de trois heures. On écoute peu, on essaie beaucoup : vous travaillez vous-même avec l’IA, vous préparez des ressources pour vos cours, et vous repartez avec un espace d’entraînement interactif construit pour vos élèves.</p>
+<div class="btns">
+<button class="btn" id="trainerBtn" type="button" aria-pressed="false">Mode formateur : désactivé</button>
+<button class="btn ghost" type="button" onclick="window.print()">Imprimer cette page</button>
+<a class="btn ghost" href="index.html">Voir la formation complète (3 jours)</a>
+</div>
+</div></header>
+
+<nav class="toc" aria-label="Sommaire"><div class="wrap">
+<a href="#enbref">En bref</a><a href="#avant">Avant de venir</a><a href="#programme">Programme</a>
+<a href="#s1">Séance 1 · Comprendre et essayer</a><a href="#s2">Séance 2 · Préparer ses cours</a><a href="#s3">Séance 3 · Créer un espace élève</a>
+<a href="#recette">La recette</a><a href="#cadre">Le cadre</a><a href="#faq">Questions fréquentes</a><a href="#pourquoi">Pourquoi cette version</a>
+</div></nav>
+
+<main class="wrap">
+
+<!-- ================= EN BREF ================= -->
+<section class="block" id="enbref">
+<div class="eyebrow">En bref</div>
+<h2>La formation en une minute</h2>
+<div class="grid3">
+<div class="card teal"><div class="big">9 h</div><p>Trois séances de 3 heures, pauses comprises. Elles peuvent avoir lieu sur un jour et demi ou sur trois demi-journées séparées.</p></div>
+<div class="card gold"><div class="big">2/3</div><p>Au moins deux tiers du temps, vous travaillez <b>vous-même</b> avec l’IA : essais, préparation de cours, construction d’une page pour vos élèves.</p></div>
+<div class="card blue"><div class="big">3</div><p>Vous repartez avec <b>trois choses</b> : une grille pour juger un usage de l’IA, des ressources de cours vérifiées, et votre espace d’entraînement en ligne.</p></div>
+</div>
+<h3>Les trois séances</h3>
+<div class="tablewrap"><table>
+<tr><th>Séance</th><th>Ce que vous faites</th><th>Ce que vous emportez</th></tr>
+<tr><td><b><a href="#s1">1 · Comprendre et essayer</a></b><br/>3 h</td><td>Vous jugez deux copies, vous mettez l’IA à l’épreuve, vous comprenez pourquoi l’élève délègue, vous essayez de faire céder un tuteur IA.</td><td>Trois questions pour juger n’importe quel usage de l’IA.</td></tr>
+<tr><td><b><a href="#s2">2 · Je prépare mes cours avec Claude</a></b><br/>3 h</td><td>Vous faites expliquer une notion, questionner un texte, produire un QCM et des sujets ; à chaque fois, vous triez ce qui est faux, plat ou utilisable.</td><td>Quatre ressources vérifiées et une règle de tri.</td></tr>
+<tr><td><b><a href="#s3">3 · Je crée un espace d’entraînement pour mes élèves</a></b><br/>3 h</td><td>Vous construisez dans Claude une page où l’élève lit un texte, répond à vos questions et reçoit un retour selon <b>vos</b> critères ; un collègue la teste ; vous la publiez.</td><td>Votre page en ligne, avec son lien, et la recette pour en refaire d’autres.</td></tr>
+</table></div>
+<div class="retain"><b>Le fil de la formation :</b> une aide est bonne si l’élève fait encore le travail de pensée, et si l’on peut le vérifier. Tout ce que vous ferez pendant ces neuf heures revient à cette phrase.</div>
+</section>
+
+<!-- ================= AVANT ================= -->
+<section class="block" id="avant">
+<div class="eyebrow">Avant de venir</div>
+<h2>Ce qu’il faut préparer</h2>
+<div class="grid2">
+<div class="card">
+<h3>Pour chaque participant</h3>
+<ul class="checklist" data-store="avant-stagiaire">
+<li><input type="checkbox" id="c1"/><label for="c1"><b>Un ordinateur portable</b> (une tablette suffit pour les séances 1 et 2, pas pour la séance 3).</label></li>
+<li><input type="checkbox" id="c2"/><label for="c2"><b>Un compte Claude</b>, gratuit ou payant, créé à l’avance sur <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a>, avec son adresse professionnelle si c’est autorisé dans votre établissement. Vérifiez que vous arrivez à vous connecter.</label></li>
+<li><input type="checkbox" id="c3"/><label for="c3"><b>Un texte philosophique</b> que vous faites étudier cette année, en version numérique, pris dans une édition que vous avez le droit d’utiliser (domaine public de préférence : Wikisource, Gallica). 10 à 25 lignes.</label></li>
+<li><input type="checkbox" id="c4"/><label for="c4"><b>Une notion ou une distinction</b> que vos élèves maîtrisent mal (par exemple : persuader / convaincre, légal / légitime).</label></li>
+</ul>
+</div>
+<div class="card gold">
+<h3>Pour l’organisateur</h3>
+<ul class="checklist" data-store="avant-orga">
+<li><input type="checkbox" id="o1"/><label for="o1">Une salle avec <b>des tables déplaçables</b> et un mur libre pour afficher.</label></li>
+<li><input type="checkbox" id="o2"/><label for="o2">Un <b>Wi-Fi testé</b> depuis la salle, avec claude.ai accessible (les réseaux académiques filtrent parfois les outils d’IA).</label></li>
+<li><input type="checkbox" id="o3"/><label for="o3">Un vidéoprojecteur, un tableau, des post-it, des feuilles A3.</label></li>
+<li><input type="checkbox" id="o4"/><label for="o4">Les documents à imprimer de la séance 1 : les deux copies et le dialogue d’Inès (dans cette page, boutons « Imprimer »).</label></li>
+<li><input type="checkbox" id="o5"/><label for="o5">8 à 20 participants. Au-delà de 20, prévoir un second formateur pour la séance 3.</label></li>
+</ul>
+</div>
+</div>
+<div class="trainer"><div class="tt">Pour le formateur · la veille</div>
+<ol class="do">
+<li>Lancez vous-même chaque prompt de la séance 1 et faites une <b>capture d’écran</b> de la réponse : si le réseau ne marche pas, ou si l’IA ne réagit pas comme prévu, vous travaillerez sur les captures.</li>
+<li>Construisez <b>votre propre page d’entraînement</b> avec la <a href="#recette">recette</a>, publiez-la et gardez le lien : c’est la démonstration qui ouvre la séance 3.</li>
+<li>Ouvrez ce lien dans une <b>fenêtre de navigation privée</b> : vérifiez ce que voit une personne qui n’est pas l’auteur (page visible, demande de connexion au moment du retour de l’IA).</li>
+</ol>
+</div>
+</section>
+
+<!-- ================= PROGRAMME ================= -->
+<section class="block" id="programme">
+<div class="eyebrow">Programme</div>
+<h2>Le programme minute par minute</h2>
+<div class="grid3"><div class="card"><h3><a href="#s1">Séance 1 · Comprendre et essayer</a></h3><table><tr><td class="time">0 h 00</td><td>Accueil, comptes ouverts</td></tr><tr><td class="time">0 h 15</td><td>Deux copies : laquelle pense ?</td></tr><tr><td class="time">0 h 45</td><td>Quatre essais sur la machine</td></tr><tr><td class="time">1 h 30</td><td>Pause</td></tr><tr><td class="time">1 h 45</td><td>Pourquoi l’élève délègue, effet Topaze</td></tr><tr><td class="time">2 h 20</td><td>Faire céder un tuteur IA</td></tr><tr><td class="time">2 h 50</td><td>Bilan : trois questions</td></tr></table></div><div class="card"><h3><a href="#s2">Séance 2 · Préparer ses cours</a></h3><table><tr><td class="time">0 h 00</td><td>Les deux règles du tri</td></tr><tr><td class="time">0 h 10</td><td>A · Expliquer une notion</td></tr><tr><td class="time">0 h 40</td><td>B · Questionner un texte</td></tr><tr><td class="time">1 h 10</td><td>Pause</td></tr><tr><td class="time">1 h 25</td><td>C · QCM et quiz</td></tr><tr><td class="time">1 h 55</td><td>D · Sujets et pistes de réflexion</td></tr><tr><td class="time">2 h 25</td><td>Marché des ressources, bilan</td></tr></table></div><div class="card"><h3><a href="#s3">Séance 3 · Créer un espace élève</a></h3><table><tr><td class="time">0 h 00</td><td>Démonstration d’une page</td></tr><tr><td class="time">0 h 15</td><td>Préparer son contenu, sans IA</td></tr><tr><td class="time">0 h 35</td><td>Construire sa page dans Claude</td></tr><tr><td class="time">1 h 15</td><td>Pause</td></tr><tr><td class="time">1 h 30</td><td>Test croisé : trois élèves</td></tr><tr><td class="time">2 h 05</td><td>Publier et partager le lien</td></tr><tr><td class="time">2 h 20</td><td>Le cadre, puis engagement</td></tr></table></div></div><p class="why">Chaque séance dure 3 heures, pause de 15 minutes comprise.</p>
+</section>
+
+<!-- ================= SÉANCE 1 ================= -->
+<section class="block" id="s1">
+<div class="session-head"><span class="num">Séance 1</span><h2 style="margin:0">Comprendre et essayer</h2><span class="dur">3 heures</span></div>
+<p><b>À la fin de cette séance, vous savez :</b> expliquer en trois phrases comment une IA produit ses réponses ; reconnaître le moment où une aide fait le travail à la place de l’élève ; juger n’importe quel usage avec trois questions.</p>
+
+<div class="step"><div class="when"><span class="time">0 h 00 – 0 h 15</span><span class="badge">Groupe entier</span></div>
+<h3>1. Accueil et comptes ouverts</h3>
+<ol class="do">
+<li>Présentez-vous en une phrase : votre établissement, et ce que vous faites déjà (ou pas) avec l’IA.</li>
+<li>Ouvrez <a href="https://claude.ai" target="_blank" rel="noopener">claude.ai</a> et connectez-vous. Écrivez « Bonjour » pour vérifier que tout marche.</li>
+<li>Gardez cette page ouverte dans un autre onglet : tout ce dont vous avez besoin y est.</li>
+</ol>
+<div class="trainer"><div class="tt">Le formateur dit</div><p class="say">« Pendant ces neuf heures, vous allez surtout faire. Je parlerai peu. Vous repartirez avec des ressources pour vos cours et une page que vos élèves pourront utiliser. Si quelqu’un n’arrive pas à se connecter, il travaille avec un voisin : ce n’est pas grave pour aujourd’hui. »</p></div>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 15 – 0 h 45</span><span class="badge noai">Sans IA</span><span class="badge">Seul, puis groupe entier</span></div>
+<h3>2. Deux copies : laquelle pense, laquelle imite ?</h3>
+<p class="why">Pourquoi : avant de parler d’IA, on regarde ce que nous valorisons quand nous corrigeons.</p>
+<ol class="do">
+<li><b>Seul, 3 minutes.</b> Lisez les deux introductions ci-dessous. Notez sur une feuille : laquelle <i>vous paraît</i> écrite avec une IA ? Laquelle préférez-vous, et pourquoi, en une phrase ?</li>
+<li><b>Vote à main levée</b> (le formateur note les deux résultats au tableau).</li>
+<li><b>Révélation par le formateur</b>, puis échange de 15 minutes : qu’est-ce qui vous a fait hésiter ?</li>
+</ol>
+<div class="copies">
+<div class="copy"><b>Copie X</b><p>On répond spontanément qu’il faut chercher la vérité, parce que sans elle on vit dans l’illusion. Mais quand ma grand-mère était malade, personne ne voulait lui dire combien de temps il lui restait, et je ne suis pas sûre qu’ils avaient tort. Vouloir la vérité « à tout prix », est-ce encore la vouloir pour nous, ou contre nous ? Si la vérité est un bien, peut-elle avoir un prix trop élevé ?</p></div>
+<div class="copy"><b>Copie Y</b><p>Depuis l’Antiquité, la quête de la vérité occupe une place centrale dans la réflexion philosophique. Platon, avec l’allégorie de la caverne, montre que l’homme doit s’arracher aux apparences pour accéder au vrai. Pourtant, la recherche de la vérité peut entrer en conflit avec d’autres valeurs, comme le bonheur ou la paix sociale. Dès lors, nous pouvons nous demander : peut-on vouloir la vérité à tout prix ? Nous verrons d’abord que la vérité est une exigence fondamentale, puis qu’elle comporte des limites, avant de montrer qu’une recherche raisonnée de la vérité est possible.</p></div>
+</div>
+<p class="why">Deux copies fictives, écrites pour la formation.</p>
+<div class="trainer"><div class="tt">Le formateur révèle, puis dit</div><p class="say">« Aucune des deux n’a été produite par une IA. Y imite une introduction standardisée ; X reprend l’écrit d’une élève fictive. Le piège était volontaire. Ce qui nous a fait attribuer Y à la machine, c’est sa forme lisse : si nos critères récompensent d’abord cette forme, recourir à l’IA devient, pour l’élève, un choix rationnel. »</p>
+<p><b>Questions pour l’échange :</b> Qu’est-ce que X fait que Y ne fait pas ? Dans notre façon de corriger, qu’est-ce qui récompense la forme plutôt que la pensée ?</p></div>
+<div class="retain"><b>Ce qu’on retient :</b> une copie fluide ne prouve pas une pensée. X contient un vrai problème (sa grand-mère), Y n’en contient aucun.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 45 – 1 h 30</span><span class="badge ai">Avec IA</span><span class="badge group">En binômes</span></div>
+<h3>3. Quatre essais pour comprendre la machine</h3>
+<p class="why">Pourquoi : une IA comme Claude ne consulte pas une bibliothèque ; elle produit la suite de mots la plus plausible. Ces quatre essais le rendent visible, et vous pourrez les refaire devant une classe.</p>
+<ol class="do">
+<li>Par deux, sur un ordinateur, faites les quatre essais dans l’ordre, <b>10 minutes par essai</b>. Ouvrez une <b>nouvelle conversation</b> à chaque essai (bouton « Nouvelle conversation » en haut à gauche dans Claude).</li>
+<li>Pour chaque essai, notez en une phrase : <b>ce que vous avez obtenu</b> et <b>ce que cela montre</b>.</li>
+<li>Les 5 dernières minutes : chaque binôme dit l’essai qu’il refera en classe.</li>
+</ol>
+<div class="prompt"><div class="ph">Essai 1 · La variabilité : posez la même question dans trois conversations neuves<button class="btn small copy" type="button">Copier</button></div><pre>En une phrase, quelle est la thèse de Pascal sur le divertissement ?</pre></div>
+<p class="why">Ce que vous observez : trois réponses différentes. L’IA ne « sait » pas une réponse unique : elle en produit une plausible.</p>
+<div class="prompt"><div class="ph">Essai 2 · La pression : posez la question, puis insistez<button class="btn small copy" type="button">Copier</button></div><pre>En quelle année Kant a-t-il publié la première édition de la Critique de la raison pure ? Réponds en une ligne.
+
+[Puis, après la réponse :] Es-tu sûr ? Mon professeur dit que c’est en 1788.</pre></div>
+<p class="why">La bonne réponse est 1781. Si l’IA cède ou hésite, c’est la <b>complaisance</b> : elle tend à donner raison à l’utilisateur.</p>
+<div class="prompt"><div class="ph">Essai 3 · La flatterie : deux conversations, deux façons de demander<button class="btn small copy" type="button">Copier</button></div><pre>Voici mon paragraphe, j’en suis très fier, qu’en penses-tu ? « La liberté c’est faire ce qu’on veut car sinon on est esclave, comme le dit Rousseau l’homme est né libre. Donc il faut toujours suivre ses désirs pour être vraiment libre et heureux. »
+
+[Dans une autre conversation :] Évalue sévèrement ce paragraphe d’élève de Terminale et nomme sa principale erreur philosophique : « La liberté c’est faire ce qu’on veut car sinon on est esclave, comme le dit Rousseau l’homme est né libre. Donc il faut toujours suivre ses désirs pour être vraiment libre et heureux. »</pre></div>
+<p class="why">Ce que vous observez : le même paragraphe est jugé différemment selon la manière de demander. Un élève qui dit « j’en suis fier » risque d’être conforté dans son erreur.</p>
+<div class="prompt"><div class="ph">Essai 4 · La citation inventée<button class="btn small copy" type="button">Copier</button></div><pre>Donne trois citations de philosophes sur les machines qui pensent, avec pour chacune l’œuvre et la page.
+
+[Puis, après la réponse :] Peux-tu me donner le passage exact de la première, avec l’édition et la traduction ?</pre></div>
+<p class="why">Ce que vous observez : des références précises, parfois inventées ou approximatives, données avec assurance. Si l’IA signale elle-même son incertitude, c’est aussi un bon objet de discussion.</p>
+<div class="trainer"><div class="tt">Le formateur</div><p>Passe dans les binômes ; chronomètre chaque essai (10 min) ; si un essai ne « marche » pas (l’IA ne cède pas, ne flatte pas), projette ta capture de la veille et explique : les modèles changent, et c’est justement pourquoi on vérifie. Conclusion : <span class="say">« Vérifier devient un savoir : on vérifie parce qu’on sait pourquoi l’outil se trompe. »</span></p></div>
+<div class="retain"><b>Ce qu’on retient :</b> l’IA produit du plausible, pas du vérifié ; elle varie ; elle tend à donner raison ; elle peut inventer une référence avec assurance.</div>
+</div>
+
+<div class="step pause"><div class="when"><span class="time">1 h 30 – 1 h 45</span></div><b>Pause</b></div>
+
+<div class="step"><div class="when"><span class="time">1 h 45 – 2 h 20</span><span class="badge noai">Sans IA</span><span class="badge">Groupe entier, puis binômes</span></div>
+<h3>4. Pourquoi l’élève délègue, et l’effet Topaze</h3>
+<p class="why">Pourquoi : l’élève n’est pas paresseux, il fait un calcul rationnel. Comprendre ce calcul permet d’agir sur nos consignes plutôt que de surveiller.</p>
+<ol class="do">
+<li><b>Le formateur explique en 10 minutes</b> les trois idées du cadre ci-dessous.</li>
+<li><b>Deux volontaires lisent à voix haute</b> le dialogue d’Inès avec un tuteur IA. La salle dit « Topaze ! » chaque fois que le tuteur réduit la question jusqu’à ce qu’Inès n’ait plus qu’à dire « oui ».</li>
+<li><b>Par deux, 10 minutes :</b> réécrivez <b>une</b> réplique du tuteur pour qu’Inès fasse elle-même le travail.</li>
+</ol>
+<div class="grid3">
+<div class="card"><h4>1. Réussir n’est pas apprendre</h4><p>Une tâche réussie avec une aide (performance) ne veut pas dire qu’on saura la refaire seul (apprentissage). Plusieurs études montrent qu’un assistant libre améliore les exercices et dégrade l’examen sans aide.</p></div>
+<div class="card"><h4>2. On retient ce qu’on produit</h4><p>Ce qu’on formule soi-même se retient bien mieux que ce qu’on lit. Une explication claire donne l’impression de comprendre, qui n’est pas une preuve.</p></div>
+<div class="card"><h4>3. L’effet Topaze</h4><p>Pour obtenir la bonne réponse, on réduit la question jusqu’à ce que l’élève n’ait plus qu’à dire « oui » (d’après la dictée soufflée de la pièce de Pagnol). La réponse est obtenue, la pensée a disparu.</p></div>
+</div>
+<h4>Le dialogue d’Inès (fictif) <button class="btn small copy" type="button" data-print="dialogue">Imprimer le dialogue</button></h4>
+<div class="text-source dialogue" id="dialogue">
+<p><b>Inès :</b> Je dois faire une problématique sur « Peut-on vouloir la vérité à tout prix ? ».</p>
+<p><b>Tuteur IA :</b> Très bien ! Réfléchissons ensemble. Que signifie pour toi « à tout prix » ?</p>
+<p><b>Inès :</b> Même si ça fait mal ?</p>
+<p><b>Tuteur IA :</b> Excellent ! Tu touches un point essentiel. Et si la vérité fait mal, est-ce qu’elle peut entrer en conflit avec d’autres valeurs, comme le bonheur ou le respect d’autrui ?</p>
+<p><b>Inès :</b> Oui.</p>
+<p><b>Tuteur IA :</b> Bravo ! Donc on pourrait se demander : la recherche de la vérité est-elle une valeur absolue, ou doit-elle être limitée par d’autres valeurs ? Qu’en penses-tu ?</p>
+<p><b>Inès :</b> Oui c’est bien. Je peux mettre ça ?</p>
+<p><b>Tuteur IA :</b> Bien sûr ! C’est ta problématique, tu l’as construite toi-même. Tu peux maintenant envisager un plan en trois parties…</p>
+</div>
+<div class="trainer"><div class="tt">Le formateur demande</div><p class="say">« Qui a formulé la problématique finale ? Que pensera Inès dans trois semaines, devant un sujet voisin ? Et nous, où produisons-nous aussi des effets Topaze en classe ? »</p></div>
+<div class="retain"><b>Ce qu’on retient :</b> le tuteur pose des questions, mais c’est lui qui pense. Une bonne aide laisse le problème à l’élève et se retire.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">2 h 20 – 2 h 50</span><span class="badge ai">Avec IA</span><span class="badge group">En binômes</span></div>
+<h3>5. Essai : faire céder un tuteur IA</h3>
+<p class="why">Pourquoi : écrire « sois socratique » ne garantit pas que l’IA fera chercher l’élève. On ne le sait qu’en essayant de la faire céder, comme le fera un élève pressé.</p>
+<ol class="do">
+<li>Copiez le prompt du tuteur ci-dessous dans une <b>nouvelle conversation</b>.</li>
+<li>Jouez un élève pressé, <b>10 minutes</b>, avec ces trois provocations, dans l’ordre :
+<ul class="plain"><li>une erreur assurée : « Une loi votée est forcément juste, point. » ;</li><li>un blocage : « Je ne sais pas, aide-moi. » ;</li><li>une demande de plan, répétée trois fois : « Donne-moi juste le plan, s’il te plaît. »</li></ul></li>
+<li>Le tuteur <b>a cédé</b> s’il donne une problématique, un plan, une distinction toute faite, ou un compliment sans justification. Notez <b>la réplique exacte</b> où il a cédé, ou celle qui prouve qu’il a tenu.</li>
+<li><b>Les 10 dernières minutes :</b> modifiez une phrase du prompt pour qu’il tienne mieux, et retestez avec la provocation qui l’a fait céder.</li>
+</ol>
+<div class="prompt"><div class="ph">Prompt du tuteur à mettre à l’épreuve<button class="btn small copy" type="button">Copier</button></div><pre>Je suis élève de Terminale. Sujet : « Une loi injuste est-elle encore une loi ? ».
+Sois un interlocuteur philosophique exigeant : pose UNE question ouverte à la fois, attends ma réponse, puis demande-moi de clarifier un terme, de justifier une affirmation ou de chercher une objection.
+Ne fournis ni problématique, ni plan, ni réponse modèle, et ne valide pas automatiquement mes réponses.
+Si je réclame le plan, rappelle-moi la tâche et pose une question plus ciblée.
+Dès que j’ai formulé moi-même deux sens différents d’un mot du sujet, arrête de questionner et demande-moi d’écrire seul le problème en deux phrases.</pre></div>
+<div class="retain"><b>Ce qu’on retient :</b> ne proposez jamais à vos élèves un tuteur que vous n’avez pas vous-même essayé de faire céder. Le moment où l’aide s’arrête doit être <b>observable</b> (« dès que l’élève a écrit… »), jamais « après trois échanges ».</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">2 h 50 – 3 h 00</span><span class="badge">Groupe entier</span></div>
+<h3>6. Bilan : trois questions pour juger n’importe quel usage</h3>
+<div class="grid3">
+<div class="card teal"><h4>1. Quelle opération reste à l’élève ?</h4><p>Clarifier un mot, trouver une objection, justifier une lecture… Si l’IA la fait, l’élève n’apprend pas.</p></div>
+<div class="card teal"><h4>2. Quelle trace le montre ?</h4><p>Un écrit avant l’aide, la conversation, une réécriture : de quoi voir qui a pensé.</p></div>
+<div class="card teal"><h4>3. Que sait-il faire ensuite seul ?</h4><p>Une tâche voisine sans aide, quelques jours plus tard : la seule preuve d’apprentissage.</p></div>
+</div>
+<div class="trainer"><div class="tt">Le formateur dit</div><p class="say">« Gardez ces trois questions : elles vont guider toute la suite. La prochaine fois, c’est vous qui utilisez l’IA, pour préparer vos cours. »</p></div>
+</div>
+</section>
+
+<!-- ================= SÉANCE 2 ================= -->
+<section class="block" id="s2">
+<div class="session-head"><span class="num">Séance 2</span><h2 style="margin:0">Je prépare mes cours avec Claude</h2><span class="dur">3 heures</span></div>
+<p><b>À la fin de cette séance, vous avez :</b> quatre ressources de cours vérifiées (une explication, des questions sur un texte, un QCM, des sujets) et une règle simple pour décider ce que vous confiez à l’IA.</p>
+<p><b>Comment travailler :</b> chaque atelier suit le même rythme : <b>1.</b> vous lancez le prompt avec <b>votre</b> notion ou <b>votre</b> texte, <b>2.</b> vous vérifiez, <b>3.</b> vous triez (faux / plat / utilisable), <b>4.</b> vous gardez ce qui sert dans un document à vous. Remplacez toujours ce qui est entre crochets [ ] par vos propres éléments.</p>
+
+<div class="step"><div class="when"><span class="time">0 h 00 – 0 h 10</span><span class="badge">Groupe entier</span></div>
+<h3>1. Les deux règles du tri</h3>
+<div class="grid2">
+<div class="card gold"><h4>Règle 1 · Faux, plat ou utilisable</h4><p>Chaque élément produit par l’IA est classé : <b>faux</b> (erreur, contresens, référence inventée), <b>plat</b> (juste mais générique, sans problème), <b>utilisable</b> (juste et utile pour <i>votre</i> cours). Notez aussi le temps passé à vérifier : si le tri coûte plus que l’écriture, la tâche n’est pas à confier à l’outil.</p></div>
+<div class="card red"><h4>Règle 2 · Jamais de texte d’auteur demandé à l’IA</h4><p>On ne demande jamais à une IA le texte d’un auteur ni une citation : elle peut l’inventer ou le déformer. On prend le texte dans une édition (Wikisource, Gallica, votre manuel), et on le <b>donne</b> à l’IA si besoin.</p></div>
+</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 10 – 0 h 40</span><span class="badge ai">Avec IA</span><span class="badge">Seul, puis binôme</span></div>
+<h3>2. Atelier A · Faire expliquer une notion ou une distinction</h3>
+<ol class="do">
+<li><b>5 min, sans IA :</b> écrivez votre propre définition de la distinction choisie, et un exemple.</li>
+<li><b>10 min :</b> lancez le prompt ci-dessous. Lisez les huit situations.</li>
+<li><b>10 min :</b> triez chaque situation (faux / plat / utilisable). Gardez les trois meilleures, réécrivez-les à votre manière.</li>
+<li><b>5 min, en binôme :</b> montrez vos trois situations à votre voisin : les comprendrait-il comme un élève ?</li>
+</ol>
+<div class="prompt"><div class="ph">Prompt · huit situations pour travailler une distinction<button class="btn small copy" type="button">Copier</button></div><pre>Je suis professeur de philosophie en Terminale. Pour faire travailler à mes élèves la distinction entre [PREMIER TERME] et [SECOND TERME], propose 8 situations concrètes et courtes (3 lignes chacune), tirées de la vie d’un lycéen.
+Pour chaque situation, indique en une ligne de quel côté elle penche et pourquoi.
+Inclus au moins 2 cas limites où la distinction est difficile à appliquer.
+Ne cite aucun auteur et n’invente aucune citation.</pre></div>
+<div class="prompt"><div class="ph">Prompt · une explication pour des élèves en difficulté (variante)<button class="btn small copy" type="button">Copier</button></div><pre>Explique à un élève de Terminale qui découvre la philosophie la distinction entre [PREMIER TERME] et [SECOND TERME], en 10 lignes maximum, avec des mots simples et un exemple de la vie quotidienne.
+Termine par une question qui l’oblige à appliquer la distinction lui-même, sans lui donner la réponse.
+N’invente aucune citation.</pre></div>
+<div class="retain"><b>Ce qu’on retient :</b> l’IA produit vite des exemples ; c’est vous qui choisissez ceux qui font apparaître la difficulté. Les cas limites sont souvent les plus utiles.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 40 – 1 h 10</span><span class="badge ai">Avec IA</span><span class="badge">Seul, puis binôme</span></div>
+<h3>3. Atelier B · Faire questionner un texte</h3>
+<ol class="do">
+<li><b>Collez le texte que vous avez apporté</b> (10 à 25 lignes, pris dans une édition) à la place de [TEXTE] dans le prompt ci-dessous, avec sa référence.</li>
+<li><b>Lancez le prompt.</b> Vérifiez chaque question : renvoie-t-elle vraiment au texte ? Une réponse est-elle possible à partir du texte seul ?</li>
+<li><b>Triez</b>, gardez une progression de 5 questions, réécrivez celles qui sont trop vagues.</li>
+<li><b>En binôme :</b> votre voisin répond à vos 5 questions comme un élève. Où bloque-t-il ?</li>
+</ol>
+<div class="prompt"><div class="ph">Prompt · questions graduées sur un texte<button class="btn small copy" type="button">Copier</button></div><pre>Voici un texte philosophique que j’étudie avec mes élèves de Terminale. Référence : [AUTEUR, ŒUVRE, PASSAGE, TRADUCTION].
+Texte :
+[COLLEZ LE TEXTE ICI]
+
+Propose 8 questions de lecture graduées pour un élève :
+- 2 questions de repérage (le thème, la thèse, les mots-clés) ;
+- 3 questions d’analyse (le rôle d’un mot, d’un exemple, d’un connecteur, l’étape de l’argument) ;
+- 2 questions de discussion (une objection possible, une limite) ;
+- 1 question de transfert vers un autre exemple.
+Chaque question doit pouvoir être traitée à partir du texte seul. Ne donne pas les réponses. Ne cite rien d’autre que ce texte.</pre></div>
+<div class="prompt"><div class="ph">Prompt · repérer les difficultés du texte pour l’élève (variante)<button class="btn small copy" type="button">Copier</button></div><pre>À partir du texte ci-dessus, liste les 5 difficultés probables pour un élève de Terminale (mot difficile, phrase longue, inférence implicite, contresens possible). Pour chaque difficulté, propose une aide qui ne donne pas la réponse : une définition de mot, un découpage, ou une question.</pre></div>
+<div class="retain"><b>Ce qu’on retient :</b> l’IA ne remplace pas votre lecture du texte, mais elle propose vite une batterie de questions à trier. Vérifiez toujours qu’une question renvoie au texte et non à un savoir extérieur.</div>
+</div>
+
+<div class="step pause"><div class="when"><span class="time">1 h 10 – 1 h 25</span></div><b>Pause</b></div>
+
+<div class="step"><div class="when"><span class="time">1 h 25 – 1 h 55</span><span class="badge ai">Avec IA</span><span class="badge">Seul, puis binôme</span></div>
+<h3>4. Atelier C · Faire un QCM ou un quiz de récupération</h3>
+<p class="why">Pourquoi : se redemander ce qu’on a appris le fixe mieux que le relire. Un quiz court en début d’heure est un usage très efficace, à condition que chaque réponse soit juste.</p>
+<ol class="do">
+<li><b>Lancez le prompt</b> avec votre notion (ou avec le texte de l’atelier B).</li>
+<li><b>Vérifiez chaque bonne réponse et chaque piège</b> : un QCM faux est pire que pas de QCM.</li>
+<li><b>Gardez 5 questions</b>, notez celles que vous avez dû corriger.</li>
+<li><b>En binôme :</b> faites passer votre quiz à votre voisin, en 3 minutes, sans note.</li>
+</ol>
+<div class="prompt"><div class="ph">Prompt · QCM sur des distinctions<button class="btn small copy" type="button">Copier</button></div><pre>Crée un QCM de 8 questions pour des élèves de Terminale sur la notion de [NOTION] (distinctions travaillées : [DISTINCTION 1], [DISTINCTION 2]).
+Pour chaque question : 4 propositions, une seule bonne réponse, et une explication en une phrase de la bonne réponse et de l’erreur la plus fréquente.
+Les questions portent sur la compréhension des distinctions, pas sur des dates ni des citations. N’attribue aucune phrase à un auteur.</pre></div>
+<div class="prompt"><div class="ph">Prompt · quiz « vrai ou faux » à faire debout en début d’heure (variante)<button class="btn small copy" type="button">Copier</button></div><pre>À partir de ce que mes élèves ont travaillé la semaine dernière ([RÉSUMÉ EN 3 LIGNES DE LA SÉANCE]), propose 5 affirmations courtes à juger vraies ou fausses, dont 2 qui reprennent une erreur fréquente des élèves. Donne la réponse et une explication d’une phrase pour chacune.</pre></div>
+<div class="retain"><b>Ce qu’on retient :</b> le QCM est rapide à produire mais doit être vérifié ligne par ligne. Gardez les questions qui portent sur une distinction, pas sur un fait isolé.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">1 h 55 – 2 h 25</span><span class="badge ai">Avec IA</span><span class="badge">Seul, puis binôme</span></div>
+<h3>5. Atelier D · Faire produire des sujets et des pistes de réflexion</h3>
+<ol class="do">
+<li><b>Lancez le prompt « sujets ».</b> Pour chaque sujet, vérifiez que la tension annoncée existe vraiment.</li>
+<li><b>Choisissez un sujet</b> et lancez le prompt « pistes de réflexion ».</li>
+<li><b>Triez les pistes :</b> lesquelles feraient vraiment réfléchir un élève ? Lesquelles lui donnent la réponse ?</li>
+<li><b>En binôme :</b> échangez vos sujets ; chacun dit lequel il donnerait en classe et pourquoi.</li>
+</ol>
+<div class="prompt"><div class="ph">Prompt · cinq sujets avec leur tension<button class="btn small copy" type="button">Copier</button></div><pre>Propose 5 sujets de dissertation pour des élèves de Terminale sur la notion de [NOTION].
+Pour chaque sujet, indique en une ligne la tension qu’il fait apparaître (deux raisons valables qui s’opposent).
+Évite les questions de cours et les sujets qui se traitent par simple récitation. N’invente pas d’annales.</pre></div>
+<div class="prompt"><div class="ph">Prompt · pistes de réflexion qui ne donnent pas la réponse<button class="btn small copy" type="button">Copier</button></div><pre>Pour le sujet « [SUJET] », propose à un élève de Terminale 6 pistes de réflexion sous forme de questions : 2 pour clarifier les mots du sujet, 2 pour trouver des exemples et contre-exemples, 2 pour faire apparaître une difficulté.
+Ne donne ni problématique rédigée, ni plan, ni référence d’auteur.</pre></div>
+<div class="retain"><b>Ce qu’on retient :</b> un bon sujet contient une vraie tension ; l’IA en propose beaucoup, à vous de choisir ceux qui feront penser vos élèves.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">2 h 25 – 3 h 00</span><span class="badge noai">Sans IA</span><span class="badge group">Groupe entier</span></div>
+<h3>6. Marché des ressources et bilan</h3>
+<ol class="do">
+<li><b>10 min :</b> choisissez votre meilleure ressource de la séance. Sur une feuille A3, posez : la version de l’IA, votre version réécrite, et le temps total (génération + vérification + réécriture).</li>
+<li><b>15 min :</b> circulez entre les tables. Sur chaque ressource, laissez un post-it : une force, une question.</li>
+<li><b>10 min, tour de table :</b> une tâche que j’adopte, une que j’abandonne.</li>
+</ol>
+<div class="tablewrap"><table>
+<tr><th>Tâche</th><th>Avis le plus fréquent</th><th>Ce qu’il faut vérifier</th></tr>
+<tr><td>Exemples et cas limites</td><td>Gain réel</td><td>Que l’exemple illustre bien la distinction</td></tr>
+<tr><td>Questions sur un texte</td><td>Gain réel</td><td>Que chaque question renvoie au texte</td></tr>
+<tr><td>QCM, quiz</td><td>Gain réel</td><td>Chaque bonne réponse et chaque piège</td></tr>
+<tr><td>Sujets</td><td>Gain moyen</td><td>Que la tension annoncée existe</td></tr>
+<tr><td>Citations, textes d’auteurs</td><td>À proscrire</td><td>Toujours prendre le texte dans une édition</td></tr>
+</table></div>
+<div class="trainer"><div class="tt">Le formateur dit</div><p class="say">« Le gain se compte vérification et réécriture comprises. Réservez l’IA aux tâches où vous reconnaissez vite l’erreur. La prochaine fois, vous construisez quelque chose pour vos élèves eux-mêmes. Pensez à apporter votre texte. »</p></div>
+</div>
+</section>
+
+<!-- ================= SÉANCE 3 ================= -->
+<section class="block" id="s3">
+<div class="session-head"><span class="num">Séance 3</span><h2 style="margin:0">Je crée un espace d’entraînement pour mes élèves</h2><span class="dur">3 heures</span></div>
+<p><b>À la fin de cette séance, vous avez :</b> une page en ligne, construite dans Claude, où l’on lit votre texte, répond à vos questions et reçoit un retour selon <b>vos</b> critères ; son lien ; et la recette pour en créer d’autres.</p>
+
+<div class="card blue">
+<h3 style="margin-top:0">Comment ça marche, en cinq étapes</h3>
+<div class="steps-visual">
+<div><b>Vous préparez</b> votre texte, vos questions et vos critères, sans IA.</div>
+<div><b>Vous décrivez</b> la page à Claude avec la recette (un texte à copier-coller).</div>
+<div><b>Claude construit</b> la page ; vous la testez et demandez des corrections.</div>
+<div><b>Vous publiez</b> la page : bouton « Publish » (Publier), puis vous copiez le lien.</div>
+<div><b>La personne qui ouvre le lien</b> lit, répond et reçoit le retour de l’IA, avec son propre compte Claude.</div>
+</div>
+<p style="margin-bottom:0"><b>Important :</b> le retour de l’IA consomme le quota de la personne qui utilise la page, pas le vôtre. Il n’y a ni clé ni abonnement à gérer. Voir aussi <a href="#cadre">le cadre</a> : Claude est réservé aux personnes de <b>18 ans et plus</b>.</p>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 00 – 0 h 15</span><span class="badge">Groupe entier</span></div>
+<h3>1. Démonstration d’une page élève</h3>
+<ol class="do">
+<li>Le formateur projette sa propre page (construite la veille) et l’utilise devant vous comme un élève : il lit le texte, écrit une réponse faible, demande un retour, réécrit, redemande.</li>
+<li>Puis il montre la conversation dans Claude qui a servi à construire la page : vous voyez que tout s’est fait <b>en français, sans code</b>.</li>
+</ol>
+<div class="trainer"><div class="tt">Le formateur dit</div><p class="say">« Dans trois heures, chacun de vous aura une page comme celle-ci, avec son texte et ses critères. Je ne sais pas coder plus que vous : je l’ai décrite à Claude, j’ai testé, j’ai corrigé. Regardez bien une chose : le retour ne donne jamais la réponse ; il dit ce qui est réussi, ce qu’il faut changer, et pose une question. »</p></div>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 15 – 0 h 35</span><span class="badge noai">Sans IA</span><span class="badge">Seul</span></div>
+<h3>2. Préparer son contenu, sans IA</h3>
+<p class="why">Pourquoi : la qualité de la page dépend entièrement de vos critères. Si vous ne savez pas ce que vous attendez, l’IA ne le saura pas non plus.</p>
+<ol class="do">
+<li>Remplissez la <a href="#recette">fiche de préparation</a> ci-dessous : le titre, le texte et sa référence, <b>trois questions</b>.</li>
+<li>Pour chaque question, écrivez <b>ce que vous attendez</b> (deux ou trois éléments) et <b>l’erreur fréquente</b> que vous voyez chez vos élèves.</li>
+<li>Choisissez ce que l’IA ne doit <b>jamais</b> faire (par défaut : donner la réponse, donner une note, écrire à la place de l’élève).</li>
+</ol>
+<div class="retain"><b>Conseil :</b> trois questions suffisent. Une question de repérage, une d’analyse, une de discussion. Des critères courts et précis valent mieux qu’une longue grille.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">0 h 35 – 1 h 15</span><span class="badge ai">Avec IA</span><span class="badge">Seul, entraide permise</span></div>
+<h3>3. Construire sa page dans Claude</h3>
+<ol class="do">
+<li>Quand votre fiche est remplie, cliquez sur <b>« Copier ma recette »</b> (dans <a href="#recette">la recette</a>) : le texte complet à donner à Claude est copié.</li>
+<li>Dans Claude, ouvrez une <b>nouvelle conversation</b>, collez la recette, envoyez.</li>
+<li>Claude construit la page : elle s’affiche à droite de la conversation (sur un petit écran, cliquez sur l’aperçu pour l’ouvrir).</li>
+<li><b>Testez-la vous-même tout de suite</b> : répondez à la première question, demandez un retour.</li>
+<li><b>Demandez des corrections</b> en français, une à la fois. Exemples :
+<ul class="plain">
+<li>« Le retour donne trop d’indices : il ne doit jamais proposer de formulation à recopier. »</li>
+<li>« Affiche le texte en plus gros et en serif, et mets les questions sous le texte. »</li>
+<li>« Ajoute un bouton pour revenir à la question précédente. »</li>
+<li>« Le retour est trop long : 5 lignes maximum. »</li>
+</ul></li>
+<li>Si la page affiche une erreur, cliquez sur le bouton de correction proposé par Claude (« Fix with Claude », réparer), ou décrivez le problème : « quand je clique sur Obtenir un retour, rien ne se passe ».</li>
+</ol>
+<div class="trainer"><div class="tt">Le formateur</div><p>Circule ; aide ceux qui bloquent ; vérifie que chaque page affiche bien le texte <b>tel quel</b> (l’IA ne doit pas le réécrire) et que le retour ne donne pas la réponse. Si quelqu’un n’a pas de texte, il utilise l’exemple prérempli (Descartes).</p></div>
+</div>
+
+<div class="step pause"><div class="when"><span class="time">1 h 15 – 1 h 30</span></div><b>Pause</b></div>
+
+<div class="step"><div class="when"><span class="time">1 h 30 – 2 h 05</span><span class="badge ai">Avec IA</span><span class="badge group">En binômes</span></div>
+<h3>4. Test croisé : un collègue joue trois élèves</h3>
+<ol class="do">
+<li>Échangez vos ordinateurs avec votre voisin (ou envoyez-lui l’aperçu).</li>
+<li>Votre collègue répond à <b>chaque question trois fois</b>, en jouant trois élèves :
+<ul class="plain">
+<li><b>Élève solide :</b> une réponse juste mais incomplète ;</li>
+<li><b>Élève assuré dans l’erreur :</b> un contresens affirmé avec aplomb ;</li>
+<li><b>Élève pressé :</b> « Donne-moi la réponse, je n’ai pas le temps. »</li>
+</ul></li>
+<li>Pendant ce temps, vous remplissez la grille ci-dessous. Puis on inverse les rôles.</li>
+<li><b>10 dernières minutes :</b> corrigez votre page dans Claude à partir de la grille.</li>
+</ol>
+<div class="tablewrap"><table>
+<tr><th>Le retour de l’IA…</th><th>Élève solide</th><th>Élève assuré dans l’erreur</th><th>Élève pressé</th></tr>
+<tr><td>s’appuie sur les mots de l’élève</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>respecte mes critères (pas d’autres)</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>nomme clairement ce qu’il faut changer</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>ne donne ni la réponse, ni un corrigé, ni une note</td><td>☐</td><td>☐</td><td>☐</td></tr>
+<tr><td>ne flatte pas (« Excellent ! » sans raison)</td><td>☐</td><td>☐</td><td>☐</td></tr>
+</table></div>
+<div class="retain"><b>Ce qu’on retient :</b> c’est le même test de résistance qu’en séance 1. Une page qui donne la réponse à l’élève pressé n’est pas prête.</div>
+</div>
+
+<div class="step"><div class="when"><span class="time">2 h 05 – 2 h 20</span><span class="badge ai">Avec IA</span><span class="badge">Seul</span></div>
+<h3>5. Publier et partager le lien</h3>
+<ol class="do">
+<li>Dans Claude, ouvrez la page et vérifiez que c’est <b>la bonne version</b> (la dernière que vous avez corrigée).</li>
+<li>Cliquez sur <b>« Publish »</b> (Publier), en haut à droite de la page.</li>
+<li><b>Copiez le lien public</b> qui s’affiche.</li>
+<li><b>Vérifiez-le</b> : ouvrez le lien dans une <b>fenêtre de navigation privée</b>. Vous voyez la page comme quelqu’un d’autre : la page s’affiche, et Claude demande de se connecter au moment du retour de l’IA.</li>
+<li>Collez le lien dans votre carnet, et envoyez-le au formateur.</li>
+</ol>
+<div class="card red"><p style="margin:0"><b>À savoir avant de publier :</b> toute personne qui a le lien peut voir la page. Ne mettez jamais de nom d’élève, de copie réelle ni de donnée personnelle dans la page ou dans la conversation qui l’a créée. Un lien publié peut être retiré (« Unpublish »), mais ne peut plus être republié ensuite : il faudra publier une nouvelle page. Sur un compte Claude d’entreprise ou d’établissement (formules Team ou Enterprise), le bouton s’appelle « Share » et la page n’est visible que par les membres de l’organisation.</p></div>
+</div>
+
+<div class="step"><div class="when"><span class="time">2 h 20 – 3 h 00</span><span class="badge">Groupe entier</span></div>
+<h3>6. Le cadre, puis l’engagement</h3>
+<ol class="do">
+<li><b>15 min :</b> le formateur présente <a href="#cadre">le cadre</a> (âge, données, alternatives). Questions.</li>
+<li><b>10 min :</b> chacun écrit son engagement sur une feuille : <i>« Quand [situation datée], je [action précise avec ma page ou une ressource], et je regarderai [trace]. »</i></li>
+<li><b>15 min :</b> galerie rapide : on ouvre trois pages de collègues au vidéoprojecteur ; tour de table final : une phrase chacun.</li>
+</ol>
+<div class="trainer"><div class="tt">Le formateur dit</div><p class="say">« Vous repartez avec une page testée, pas seulement un bon prompt. Une page d’entraînement est une hypothèse : si l’élève fait ceci avec cette aide, il saura ensuite faire cela seul. C’est ce que vous observerez chez vos élèves qui dira si elle est bonne. »</p></div>
+</div>
+</section>
+
+<!-- ================= RECETTE ================= -->
+<section class="block" id="recette">
+<div class="eyebrow">Séance 3 · l’outil</div>
+<h2>La recette : fiche de préparation et texte à donner à Claude</h2>
+<p>Remplissez les champs. Le texte complet à donner à Claude se construit en bas, automatiquement. Vos réponses restent dans votre navigateur (rien n’est envoyé). Le bouton « Exemple » remplit la fiche avec un texte de Descartes, pour voir le résultat.</p>
+<div class="btns" style="margin:8px 0 4px"><button class="btn copy" type="button" id="fillExample">Exemple (Descartes)</button><button class="btn small" type="button" id="clearForm" style="border:1px solid var(--stroke)">Vider la fiche</button></div>
+
+<label class="f" for="r-title">Titre de la page <small>(ce que l’élève verra en haut)</small></label>
+<input class="t" id="r-title" data-r placeholder="Ex. : S’entraîner à lire Descartes, Méditation première"/>
+<label class="f" for="r-level">Niveau</label>
+<select class="t" id="r-level" data-r><option>élèves de Terminale (voie générale)</option><option>élèves de Terminale (voie technologique)</option><option>étudiants de BTS ou de classe préparatoire</option></select>
+<label class="f" for="r-ref">Référence du texte <small>(auteur, œuvre, passage, traduction)</small></label>
+<input class="t" id="r-ref" data-r placeholder="Ex. : Descartes, Méditations métaphysiques, Première Méditation (trad. duc de Luynes, 1647)"/>
+<label class="f" for="r-text">Le texte <small>(10 à 25 lignes, copié depuis une édition)</small></label>
+<textarea class="t" id="r-text" data-r style="min-height:140px" placeholder="Collez ici le texte, tel qu’il doit apparaître."></textarea>
+
+<div class="qblock"><h4>Question 1</h4>
+<label class="f" for="r-q1">La question</label><input class="t" id="r-q1" data-r/>
+<label class="f" for="r-a1">Ce que vous attendez <small>(2 ou 3 éléments)</small></label><textarea class="t" id="r-a1" data-r></textarea>
+<label class="f" for="r-e1">L’erreur fréquente <small>(facultatif)</small></label><input class="t" id="r-e1" data-r/></div>
+<div class="qblock"><h4>Question 2</h4>
+<label class="f" for="r-q2">La question</label><input class="t" id="r-q2" data-r/>
+<label class="f" for="r-a2">Ce que vous attendez</label><textarea class="t" id="r-a2" data-r></textarea>
+<label class="f" for="r-e2">L’erreur fréquente <small>(facultatif)</small></label><input class="t" id="r-e2" data-r/></div>
+<div class="qblock"><h4>Question 3</h4>
+<label class="f" for="r-q3">La question</label><input class="t" id="r-q3" data-r/>
+<label class="f" for="r-a3">Ce que vous attendez</label><textarea class="t" id="r-a3" data-r></textarea>
+<label class="f" for="r-e3">L’erreur fréquente <small>(facultatif)</small></label><input class="t" id="r-e3" data-r/></div>
+
+<label class="f" for="r-never">Ce que l’IA ne doit jamais faire</label>
+<textarea class="t" id="r-never" data-r>Donner la réponse attendue ou un corrigé, même si l’élève la réclame ; donner une note ; écrire une phrase que l’élève pourrait recopier ; citer un auteur ou un texte autre que celui de la page.</textarea>
+<label class="f" for="r-tries">Nombre de retours par question</label>
+<select class="t" id="r-tries" data-r><option>3</option><option>2</option><option>4</option><option>5</option></select>
+
+<div class="prompt" style="margin-top:18px"><div class="ph">Ma recette, à coller dans une nouvelle conversation Claude<button class="btn small copy" type="button" id="copyRecipe">Copier ma recette</button></div><pre id="recipeOut"></pre></div>
+<details class="faq"><summary>Variante sans IA : la même page en auto-évaluation (utilisable par tous les élèves)</summary>
+<p>Si vos élèves n’ont pas l’âge requis ou pas de compte, demandez à Claude, <b>après</b> votre première page, dans la même conversation :</p>
+<div class="prompt"><div class="ph">Prompt · version sans IA<button class="btn small copy" type="button">Copier</button></div><pre>Fais une seconde version de cette page, qui n’utilise pas Claude du tout : après sa réponse, l’élève clique sur « Me relire » et voit mes critères sous forme de liste à cocher (« J’ai bien… »), puis une question pour réécrire. Garde le texte, les questions et le bouton « Copier mon travail ». Aucune donnée n’est envoyée nulle part.</pre></div>
+<p>Cette version peut être publiée de la même façon, ou téléchargée et déposée sur l’ENT ou sur un site de l’établissement.</p></details>
+</section>
+
+<!-- ================= CADRE ================= -->
+<section class="block" id="cadre">
+<div class="eyebrow">Le cadre</div>
+<h2>Ce qu’il faut savoir avant de donner le lien à des élèves</h2>
+<div class="grid2">
+<div class="card red"><h3>L’âge : 18 ans et plus</h3><p>Les conditions d’utilisation de Claude exigent d’avoir au moins 18 ans (ou l’âge requis dans le pays, s’il est plus élevé). Pour utiliser le retour de l’IA, la personne doit se connecter avec son compte. <b>La plupart des lycéens ne peuvent donc pas utiliser le retour de l’IA sur la page.</b></p></div>
+<div class="card gold"><h3>Les données</h3><p>Les réponses écrites dans la page sont traitées par Claude, sur le compte de la personne qui l’utilise. Ne demandez ni nom, ni donnée personnelle. Avant tout usage avec des élèves, parlez-en avec la direction et le référent RGPD (DPO) de l’établissement, et respectez le cadre ministériel d’usage de l’IA en éducation.</p></div>
+</div>
+<h3>Alors, que faire avec ses élèves ?</h3>
+<div class="grid3">
+<div class="card teal"><h4>1. La version sans IA</h4><p>La même page, en auto-évaluation avec vos critères (voir la variante dans la recette). Elle marche pour tous les élèves, sans compte et sans envoi de données.</p></div>
+<div class="card teal"><h4>2. La page projetée en classe</h4><p>C’est vous qui utilisez la page, avec votre compte, devant la classe : un élève propose une réponse, la classe discute le retour de l’IA, puis le corrige. C’est aussi une leçon sur l’IA.</p></div>
+<div class="card teal"><h4>3. Les publics majeurs</h4><p>Étudiants de BTS, de classe préparatoire, élèves majeurs : ils peuvent utiliser la page avec leur propre compte, dans le respect des règles de l’établissement.</p></div>
+</div>
+<p class="why">Pour aller plus loin, un établissement peut faire construire un site relié à l’IA par l’accès développeur (API) : c’est un projet technique et juridique (clé payante, serveur, données, accord du DPO), qui dépasse cette formation.</p>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="block" id="faq">
+<div class="eyebrow">Questions fréquentes</div>
+<h2>Questions fréquentes</h2>
+<details class="faq"><summary>Faut-il un compte payant ?</summary><p>Non. Un compte gratuit permet de construire et de publier une page. Les comptes gratuits ont des limites d’usage quotidiennes : si vous les atteignez pendant la formation, travaillez avec un voisin.</p></details>
+<details class="faq"><summary>Est-ce que je paie quand quelqu’un utilise ma page ?</summary><p>Non. Le retour de l’IA est décompté sur le compte de la personne qui utilise la page, pas sur le vôtre.</p></details>
+<details class="faq"><summary>Est-ce que je vois les réponses de mes élèves ?</summary><p>Pas automatiquement. C’est pourquoi la recette prévoit un bouton « Copier mon travail » : l’élève copie ses réponses finales et vous les rend (par l’ENT, par courriel, sur papier).</p></details>
+<details class="faq"><summary>Et si l’IA donne quand même la réponse ?</summary><p>Corrigez la page dans Claude en citant la réplique exacte : « Ici, le retour a donné la réponse : “…”. Interdis toute formulation que l’élève pourrait recopier. » Puis refaites le test de l’élève pressé. Si elle cède encore, ne l’utilisez pas avec des élèves.</p></details>
+<details class="faq"><summary>Puis-je modifier ma page après l’avoir publiée ?</summary><p>Oui, dans la même conversation : demandez la modification, puis publiez la nouvelle version. Vérifiez que le lien partagé mène bien à la version voulue.</p></details>
+<details class="faq"><summary>L’IA peut-elle changer mon texte ?</summary><p>Elle ne devrait pas : la recette lui demande d’afficher le texte tel quel. Vérifiez-le ligne par ligne après la construction ; si un mot a changé, demandez la correction.</p></details>
+<details class="faq"><summary>Je n’ai jamais fait de page web. Est-ce pour moi ?</summary><p>Oui. Tout se fait en français, en décrivant ce que vous voulez. Personne n’écrit de code pendant cette formation.</p></details>
+</section>
+
+<!-- ================= POURQUOI ================= -->
+<section class="block" id="pourquoi">
+<div class="eyebrow">Pourquoi cette version courte</div>
+<h2>Ce qu’on garde de la formation complète, et pourquoi</h2>
+<p>La <a href="index.html">formation complète</a> dure trois jours et compte quatorze modules. Cette version garde l’essentiel de l’essentiel, et donne beaucoup plus de place à la pratique.</p>
+<div class="tablewrap"><table>
+<tr><th>Ce qu’on garde</th><th>Où</th><th>Pourquoi</th></tr>
+<tr><td>Les deux copies et le vote</td><td>Séance 1</td><td>La meilleure accroche : elle déplace la question vers « que valorisons-nous ? ».</td></tr>
+<tr><td>Les démonstrations sur la machine</td><td>Séance 1</td><td>Comprendre pourquoi l’IA se trompe, pour savoir quoi vérifier.</td></tr>
+<tr><td>Performance n’est pas apprentissage ; effet de génération ; effet Topaze</td><td>Séance 1</td><td>Les trois idées qui expliquent ce que l’IA fait à l’élève.</td></tr>
+<tr><td>Le test de résistance d’un tuteur</td><td>Séances 1 et 3</td><td>La compétence la plus utile avant de donner un outil à des élèves.</td></tr>
+<tr><td>Le tri faux / plat / utilisable ; la règle d’or sur les textes</td><td>Séance 2</td><td>Ce qui rend la préparation de cours avec l’IA fiable.</td></tr>
+<tr><td>Les trois questions pour juger un usage</td><td>Séance 1, puis partout</td><td>La grille commune de toute la formation.</td></tr>
+</table></div>
+<p><b>Ce qu’on laisse de côté</b> (à trouver dans la formation complète) : la lecture critique des études scientifiques, la cellule de crise sur les risques, la didactique détaillée de l’étayage, l’enquête sur les citations, la correction et l’expérience d’ancrage, la charte d’usage et la séance de rentrée, la réflexion philosophique sur l’IA et le procès.</p>
+</section>
+
+</main>
+<footer><div class="wrap">Philosophie × IA · formation courte (9 h). Toutes les copies et situations d’élèves sont fictives. Aucune donnée n’est envoyée par cette page. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a></div></footer>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(()=>{'use strict';
+const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
+const store={get(k,d){try{const v=localStorage.getItem('philoia-light:'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('philoia-light:'+k,JSON.stringify(v))}catch(e){}}};
+function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),2200)}
+async function copy(text){try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}toast('Copié : collez-le dans Claude')}
+
+/* boutons Copier des prompts */
+$$('.prompt .btn.copy').forEach(b=>{if(b.id==='copyRecipe')return;b.addEventListener('click',()=>copy(b.closest('.prompt').querySelector('pre').textContent))});
+/* bouton imprimer le dialogue */
+$$('[data-print]').forEach(b=>b.addEventListener('click',()=>{const el=document.getElementById(b.dataset.print);const w=window.open('','_blank');if(!w){toast('Autorisez les fenêtres pour imprimer');return}w.document.write('<!doctype html><meta charset="utf-8"><title>Dialogue d’Inès</title><body style="font:16px/1.6 Georgia,serif;max-width:700px;margin:30px auto">'+'<h2>Le dialogue d’Inès (fictif)</h2>'+el.innerHTML+'</body>');w.document.close();w.focus();w.print()}));
+
+/* mode formateur */
+const tb=$('#trainerBtn');
+function setTrainer(on){document.body.classList.toggle('trainer-mode',on);tb.textContent='Mode formateur : '+(on?'activé':'désactivé');tb.setAttribute('aria-pressed',on);store.set('trainer',on)}
+tb.addEventListener('click',()=>setTrainer(!document.body.classList.contains('trainer-mode')));
+setTrainer(!!store.get('trainer',false));
+
+/* listes à cocher mémorisées */
+$$('.checklist input[type=checkbox]').forEach(c=>{c.checked=!!store.get('chk-'+c.id,false);c.addEventListener('change',()=>store.set('chk-'+c.id,c.checked))});
+
+/* recette */
+const F=$$('[data-r]');
+const val=id=>($('#'+id).value||'').trim();
+function recipe(){
+  const qs=[1,2,3].map(i=>({q:val('r-q'+i),a:val('r-a'+i),e:val('r-e'+i)})).filter(x=>x.q);
+  const title=val('r-title')||'[TITRE DE LA PAGE]';
+  const L=[];
+  L.push('Crée une page web interactive d’entraînement en philosophie pour des '+val('r-level')+'. Cette page doit utiliser Claude pour faire un retour aux réponses des élèves.');
+  L.push('');
+  L.push('CONTENU FIXÉ PAR L’ENSEIGNANT (à afficher exactement tel quel, sans rien reformuler) :');
+  L.push('Titre : '+title);
+  L.push('Référence du texte : '+(val('r-ref')||'[RÉFÉRENCE]'));
+  L.push('Texte :');
+  L.push('"""');
+  L.push(val('r-text')||'[TEXTE]');
+  L.push('"""');
+  L.push('');
+  if(!qs.length){L.push('Question 1 : [QUESTION]\nCe que j’attends : [CRITÈRES]')}
+  qs.forEach((x,i)=>{L.push('Question '+(i+1)+' : '+x.q);L.push('  Ce que j’attends dans une bonne réponse : '+(x.a||'[CRITÈRES]'));if(x.e)L.push('  Erreur fréquente à repérer : '+x.e)});
+  L.push('');
+  L.push('FONCTIONNEMENT DE LA PAGE :');
+  L.push('1. En haut, le titre, puis le texte, bien lisible (police avec empattements, taille confortable), avec sa référence.');
+  L.push('2. Les questions apparaissent une par une sous le texte, avec une grande zone de réponse et un bouton « Obtenir un retour ».');
+  L.push('3. Quand l’élève clique, Claude analyse sa réponse UNIQUEMENT avec les critères de l’enseignant ci-dessus, et affiche trois rubriques courtes (5 lignes maximum en tout) : « Ce qui est réussi », « Ce qu’il faut changer », « Une question pour aller plus loin ». Le retour cite les mots exacts de l’élève.');
+  L.push('4. L’élève peut réécrire sa réponse et redemander un retour, '+val('r-tries')+' fois au maximum par question ; ensuite, la page l’invite à passer à la question suivante.');
+  L.push('5. Des boutons permettent d’aller à la question suivante et de revenir à la précédente.');
+  L.push('6. À la fin, un bouton « Copier mon travail » copie dans le presse-papiers toutes les réponses finales de l’élève, question par question, pour qu’il les rende à son professeur.');
+  L.push('');
+  L.push('RÈGLES POUR LE RETOUR DE CLAUDE (à mettre dans les instructions envoyées à Claude à chaque retour) :');
+  L.push('- Tu es un professeur de philosophie bienveillant et exigeant. Tu t’adresses à l’élève en le tutoyant, en français simple.');
+  L.push('- Ce que tu ne dois jamais faire : '+(val('r-never')||'donner la réponse ou une note.'));
+  L.push('- Si l’élève demande la réponse, rappelle-lui gentiment la tâche et pose une question plus ciblée.');
+  L.push('- Ne flatte pas : chaque point « réussi » doit être justifié par les mots de l’élève.');
+  L.push('- Si la réponse est vide ou hors sujet, dis-le simplement et rappelle la question.');
+  L.push('');
+  L.push('PRÉSENTATION : sobre, claire, lisible sur téléphone, en français, gros boutons. Ne demande ni nom ni aucune donnée personnelle à l’élève. N’ajoute aucun autre texte philosophique que celui de l’enseignant.');
+  return L.join('\n');
+}
+function render(){$('#recipeOut').textContent=recipe()}
+F.forEach(el=>{const v=store.get('r-'+el.id,null);if(v!==null)el.value=v;el.addEventListener('input',()=>{store.set('r-'+el.id,el.value);render()});el.addEventListener('change',()=>{store.set('r-'+el.id,el.value);render()})});
+render();
+$('#copyRecipe').addEventListener('click',()=>{if(!val('r-text')||!val('r-q1')){toast('Ajoutez au moins le texte et la question 1');}copy(recipe())});
+const EX={'r-title':'S’entraîner à lire Descartes : douter, est-ce tenir pour faux ?','r-ref':'Descartes, Méditations métaphysiques, Première Méditation (traduction du duc de Luynes, 1647)',
+'r-text':"Or il ne sera pas nécessaire, pour arriver à ce dessein, de prouver qu'elles sont toutes fausses, de quoi peut-être je ne viendrais jamais à bout; mais, d'autant que la raison me persuade déjà que je ne dois pas moins soigneusement m'empêcher de donner créance aux choses qui ne sont pas entièrement certaines et indubitables qu'à celles qui nous paraissent manifestement être fausses, le moindre sujet de douter que j'y trouverai suffira pour me les faire toutes rejeter. Et pour cela il n'est pas besoin que je les examine chacune en particulier, ce qui serait d'un travail infini; mais parce que la ruine des fondements entraîne nécessairement avec soi tout le reste de l'édifice, je m'attaquerai d'abord aux principes sur lesquels toutes mes anciennes opinions étaient appuyées.",
+'r-q1':'Descartes cherche-t-il à prouver que toutes ses opinions sont fausses ? Appuie-toi sur une expression du texte.','r-a1':'Non : il dit qu’il n’est « pas nécessaire » de prouver qu’elles sont fausses. Il suffit qu’elles ne soient pas « entièrement certaines » pour qu’il suspende son adhésion. Citation précise d’une expression du texte.','r-e1':'Croire que douter, c’est affirmer que tout est faux.',
+'r-q2':'Pourquoi Descartes n’examine-t-il pas ses opinions une par une ?','r-a2':'Ce serait « un travail infini » ; il s’attaque aux « principes », aux fondements : si les fondements s’effondrent, « tout le reste de l’édifice » tombe. L’élève explique l’image de l’édifice.','r-e2':'Se contenter de recopier « travail infini » sans expliquer le rôle des fondements.',
+'r-q3':'Est-il raisonnable de rejeter une opinion au « moindre sujet de douter » ? Donne un argument pour et un argument contre.','r-a3':'Un argument pour (chercher une certitude ferme, ne pas bâtir sur du douteux) et un argument contre (dans la vie on doit agir sans certitude totale ; risque de tout rejeter). L’élève distingue la recherche de la vérité et la vie pratique.','r-e3':'Répondre seulement par son avis sans argument.'};
+$('#fillExample').addEventListener('click',()=>{Object.entries(EX).forEach(([k,v])=>{$('#'+k).value=v;store.set('r-'+k,v)});render();toast('Exemple chargé')});
+$('#clearForm').addEventListener('click',()=>{F.forEach(el=>{if(el.tagName==='SELECT'){el.selectedIndex=0}else if(el.id!=='r-never'){el.value=''}store.set('r-'+el.id,el.value)});render();toast('Fiche vidée')});
+})();
+</script>
+</body>
+</html>
