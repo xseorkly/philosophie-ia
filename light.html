@@ -1260,7 +1260,7 @@ if(v==='ZESE2027'){m.textContent='Ouverture du cahier du formateur mis à jour.'
 /* ===== Réponses des participants : saisie, envoi au Drive du formateur, synthèse ===== */
 (()=>{'use strict';
 /* Adresse /exec du script Google Apps Script (à renseigner après déploiement). */
-const ENDPOINT='';
+const ENDPOINT='https://script.google.com/macros/s/AKfycbyG6tSGRUsJ-GonUPCqAXM7_dS83bmIcdNExS041jd8TvkF6MFm0zUok7QwsNr0_zd4/exec';
 
 const P='philoia-light:';
 const get=(k,d)=>{try{const v=localStorage.getItem(P+k);return v===null?d:JSON.parse(v)}catch(e){return d}};
