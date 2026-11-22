@@ -97,6 +97,24 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 .fbar .btn{padding:6px 12px;font-size:.88rem}#fMsg{color:#ffd7a8}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media print{.fbox{display:none}}
 footer .fbox{margin-top:12px;font-size:.88rem}
+footer .synth{margin-top:14px;border-top:1px solid #d6e0dd;padding-top:10px}
+footer .synth-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+footer .synth input,footer .synth select{padding:6px 10px;border-radius:6px;border:1px solid #9bb3af;font:inherit}
+footer .synth textarea{width:100%;font:inherit;font-size:.85rem;border:1px solid #9bb3af;border-radius:6px;padding:8px;margin-top:6px}
+.id-grid{display:flex;flex-wrap:wrap;gap:14px;margin:10px 0}
+.id-grid label{display:flex;flex-direction:column;gap:4px;font-weight:700;font-size:.92rem;flex:1 1 220px}
+.id-grid input{font:inherit;font-weight:400;padding:8px 10px;border:1px solid #b9cbc7;border-radius:8px}
+.answer{margin:16px 0 6px;padding:12px 14px;border:1px dashed #12615b;border-radius:10px;background:#f3faf8}
+.answer label{display:block;font-weight:700;margin-bottom:6px}
+.answer-tag{display:block;font-size:.78rem;font-weight:600;color:#12615b;text-transform:uppercase;letter-spacing:.03em;margin-bottom:2px}
+.answer textarea{width:100%;box-sizing:border-box;font:inherit;line-height:1.5;padding:8px 10px;border:1px solid #b9cbc7;border-radius:8px;background:#fff;resize:vertical}
+.answer-state{display:block;color:#5e6b77;font-size:.8rem;min-height:1em;margin-top:2px}
+.send-box{margin:22px 0 4px;padding:14px 16px;border-radius:12px;background:#e9f5f1;border:1px solid #bfdcd4}
+.send-box p{margin:4px 0}
+main .btn,footer .btn{background:var(--teal);color:#fff;border:1.5px solid var(--teal)}
+main .btn.ghost,footer .btn.ghost{background:#fff;color:var(--teal);border:1.5px solid var(--teal)}
+.send-status{font-weight:600;color:#12615b}
+@media print{.send-box,.answer-state{display:none}.answer textarea{border:1px solid #999}}
 footer .fbox summary{cursor:pointer;display:inline-block}
 footer .fbox form{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:8px}
 footer .fbox input{padding:6px 10px;border-radius:6px;border:1px solid #9bb3af;font:inherit;width:170px}
@@ -250,7 +268,7 @@ section.session-block{padding:0!important;overflow:visible}
  <button type="button" id="navToggle" class="nav-toggle" aria-controls="navContent" aria-expanded="false"><span aria-hidden="true">☰</span> Sommaire des séances <span class="nav-toggle-mark" aria-hidden="true">▾</span></button>
  <nav id="navContent" class="sidebar-content" aria-label="Sommaire détaillé">
   <div class="sidebar-header"><strong>Philosophie × IA</strong><small>4 séances · 7 h</small></div>
-  <div class="sidebar-quick"><a href="#enbref">Présentation</a><a href="#programme">Programme</a><a href="#avant">Préparation</a></div>
+  <div class="sidebar-quick"><a href="#enbref">Présentation</a><a href="#programme">Programme</a><a href="#avant">Préparation</a><a href="#identite">Mon identifiant</a></div>
   <details class="nav-group" data-session="s1" open><summary>1 · Une machine qui parle peut-elle penser ?</summary><div class="nav-sub">
    <a href="#s1">Voir la séance 1</a>
    <a class="nav-activity" href="#s1-a1" title="1. Écrire d’abord, sans IA">1. Écrire d’abord, sans IA</a>
@@ -316,12 +334,17 @@ section.session-block{padding:0!important;overflow:visible}
 <a class="nav-activity" href="#s5-a7" title="7. Débattre : une IA peut-elle vraiment juger une copie ?">7. Débattre : une IA peut-elle vraiment juger une copie ?</a>
 <a class="nav-bilan" href="#bilan-s5">🦋 Bilan séance 5</a>
 </div></details>
-  <div class="sidebar-quick sidebar-bottom"><a href="#faq">Questions fréquentes</a></div>
+  <div class="sidebar-quick sidebar-bottom"><a href="#cloture">Clôture</a><a href="#faq">Questions fréquentes</a></div>
  </nav>
 </aside>
 <main class="wrap content-main">
 
 <section class="block" id="enbref"><div class="eyebrow">En bref</div><h2>Quatre séances, puis un atelier d’approfondissement facultatif</h2><div class="grid3"><div class="card teal"><div class="big">7 h</div><p>Formation effective, à laquelle s’ajoutent deux pauses de 15 minutes : <b>7 h 30 au total</b> hors éventuel déjeuner.</p></div><div class="card gold"><div class="big">4 séances</div><p>Penser, comprendre, concevoir et encadrer les usages de l’IA en philosophie.</p></div><div class="card blue"><div class="big">3 productions</div><p>Une séquence de cours construite à partir de vos documents, un prompt de tuteur conversationnel testé et une charte à coélaborer avec vos élèves.</p></div></div><div class="retain"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</div></section>
+<section class="block" id="identite"><div class="eyebrow">Vos réponses</div><h2>Votre identifiant pour la formation</h2>
+<p>Tout au long des séances, des zones <b>« ✍️ Votre réponse »</b> vous permettent d’écrire directement dans le site. Vos réponses sont enregistrées dans ce navigateur, puis <b>transmises au formateur</b> quand vous cliquez sur « Envoyer mes réponses de la séance », en fin de séance. Le formateur s’en sert pour préparer un retour au groupe, éventuellement avec l’aide d’une IA.</p>
+<div class="id-grid"><label>Prénom ou pseudonyme<input id="idNom" type="text" maxlength="60" autocomplete="off" placeholder="ex. Camille"/></label><label>Numéro de groupe ou de binôme<input id="idGroupe" type="text" maxlength="30" autocomplete="off" placeholder="ex. 3"/></label></div>
+<p class="why">Un pseudonyme suffit. N’écrivez dans les zones de réponse <b>aucune donnée personnelle</b>, ni sur vous, ni sur des élèves, et aucun extrait de copie. Si vous travaillez en binôme sur un seul ordinateur, un seul envoi suffit pour les réponses communes.</p>
+</section>
 <section class="block" id="avant"><div class="eyebrow">Avant de venir</div><h2>Votre préparation</h2><ul class="checklist"><li><input id="c1" type="checkbox"/><label for="c1">Un ordinateur portable et un accès Internet.</label></li><li><input id="c2" type="checkbox"/><label for="c2">Un accès à au moins une IA générative autorisée : ChatGPT, Claude ou Gemini. Un compte gratuit suffit pour la plupart des activités, mais ses limites d’usage (nombre de messages, de projets, de fichiers) peuvent se faire sentir en séance 3.</label></li><li><input id="c3" type="checkbox"/><label for="c3">Pour la séance 3, en fichiers : votre progression annuelle, une séquence existante, un ou deux extraits de textes référencés, deux ou trois sujets de bac et une fiche méthode.</label></li><li><input id="c4" type="checkbox"/><label for="c4">Pour l’atelier facultatif (séance 5) : quatre copies authentiques et anonymisées, avec leurs notes et appréciations conservées à part.</label></li></ul></section>
 <section class="block" id="programme"><div class="eyebrow">Programme</div><h2>Quatre séances · 7 h de formation + deux pauses de 15 minutes</h2><div class="tablewrap"><table><tr><th>Séance</th><th>Objectif</th><th>Durée</th></tr><tr><td><a href="#s1">1 · Philosopher</a></td><td>Une machine qui parle peut-elle penser ?</td><td>1 h 15</td></tr><tr><td><a href="#s2a">2 · Partie 1</a></td><td>Comprendre les effets de l’IA sur l’apprentissage</td><td>1 h 15</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 1 · 15 min, entre les deux parties de la séance 2</b></td></tr><tr><td><a href="#s2b">2 · Partie 2</a></td><td>Configurer et tester un tuteur philosophique dans l’IA de votre choix</td><td>1 h 45</td></tr><tr><td><a href="#s3">3 · Construire</a></td><td>Créer un projet documentaire (ChatGPT, Claude ou Gemini), puis une séquence de philosophie et ses supports</td><td>1 h 45</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 2 · 15 min</b></td></tr><tr><td><a href="#s4">4 · Encadrer</a></td><td>Charte à construire avec les élèves</td><td>1 h</td></tr><tr><th colspan="2">Total du parcours principal, hors pauses</th><th>7 h</th></tr><tr><td><a href="#s5">5 · Atelier complémentaire</a></td><td>Tester et calibrer une IA sur de vraies copies authentiques, puis questionner le jugement</td><td>+ 1 h 30</td></tr></table></div><p class="why">Avec les deux pauses : 7 h 30 de présence, hors éventuel déjeuner. Les durées des sous-activités restent indicatives, mais le total des séances est conservé. Un <b>atelier complémentaire facultatif d’1 h 30</b> sur l’évaluation est proposé après la séance 4, soit <b>8 h 30 hors pauses si les cinq séances sont suivies</b>.</p></section>
 <section class="block session-block" id="s1"><details class="session-accordion" id="session-toggle-s1" open><summary class="session-toggle"><span class="session-num">Séance 1</span><span class="session-name">Une machine qui parle peut-elle penser ?</span><span class="session-duration">1 h 15</span></summary><div class="session-body">
@@ -1059,6 +1082,10 @@ Termine en répondant : « Cette expérience suffit-elle à faire de l’IA u
 </div></details>
 
 </div></details></section>
+<section class="block" id="cloture"><div class="eyebrow">Fin de journée · environ 5 min</div><h2>Clôture de la formation</h2>
+<div class="cloture-body"><p>Avant de partir, prenez cinq minutes pour répondre à ces trois questions. Vos réponses aident le formateur à faire le bilan de la journée et à améliorer la formation.</p></div>
+<div class="cloture-send"></div>
+</section>
 <!-- ================= FAQ ================= -->
 <section class="block" id="faq"><div class="eyebrow">Questions fréquentes</div><h2>Questions fréquentes</h2>
 <details class="faq"><summary>Le générateur crée-t-il automatiquement un tuteur ?</summary><p><b>Non.</b> Il produit les instructions pédagogiques du tuteur. Vous les collez dans une conversation ChatGPT, Claude ou Gemini, ou dans les instructions d’un projet (ChatGPT, Claude) ou d’un Gem (Gemini).</p></details>
@@ -1077,7 +1104,8 @@ Termine en répondant : « Cette expérience suffit-elle à faire de l’IA u
 </main>
 </div><!-- fin page-layout -->
 <footer><div class="wrap">Philosophie × IA · quatre séances (7 h hors pauses) + un atelier complémentaire de 1 h 30. Les dialogues pédagogiques illustrés sont fictifs ; l’atelier complémentaire étudie uniquement des copies authentiques et anonymisées. Les générateurs de prompts ne transmettent pas les champs remplis à un serveur ; l’utilisation de liens et d’outils externes obéit à leurs propres règles de traitement des données. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a>
-<details class="fbox"><summary>🔒 Espace formateur</summary><form id="fForm" autocomplete="off"><label class="sr" for="fPwd">Mot de passe</label><input id="fPwd" type="password" placeholder="Mot de passe" /><button class="btn small" type="submit">Ouvrir le cahier du formateur (PDF)</button><span id="fMsg" role="status"></span></form></details></div></footer>
+<details class="fbox"><summary>🔒 Espace formateur</summary><form id="fForm" autocomplete="off"><label class="sr" for="fPwd">Mot de passe</label><input id="fPwd" type="password" placeholder="Mot de passe" /><button class="btn small" type="submit">Ouvrir le cahier du formateur (PDF)</button><span id="fMsg" role="status"></span></form>
+<div class="synth"><p><b>Synthèse des réponses des participants</b></p><div class="synth-row"><input id="synthCode" type="password" placeholder="Code d’accès aux réponses" autocomplete="off"/><select id="synthSeance" aria-label="Séance"><option value="S1">Séance 1</option><option value="S2">Séance 2</option><option value="S3">Séance 3</option><option value="S4">Séance 4</option><option value="S5">Séance 5</option><option value="FIN">Clôture</option><option value="ALL">Toute la formation</option></select><button type="button" class="btn small" id="synthBtn">Préparer le prompt de synthèse</button></div><p id="synthMsg" role="status" aria-live="polite"></p><textarea id="synthOut" rows="8" readonly placeholder="Le prompt de synthèse apparaîtra ici."></textarea><p><button type="button" class="btn small" id="synthCopy">Copier le prompt</button></p></div></details></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -1228,5 +1256,142 @@ $$('.checklist input[type=checkbox]').forEach(c=>{c.checked=!!store.get('chk-'+c
 </script>
 <script>(function(){var f=document.getElementById('fForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('fPwd').value.trim(),m=document.getElementById('fMsg');
 if(v==='ZESE2027'){m.textContent='Ouverture du cahier du formateur mis à jour.';window.open('cahier-formateur-light.pdf','_blank');}else{m.textContent='Mot de passe incorrect.';}});})();</script>
+<script>
+/* ===== Réponses des participants : saisie, envoi au Drive du formateur, synthèse ===== */
+(()=>{'use strict';
+/* Adresse /exec du script Google Apps Script (à renseigner après déploiement). */
+const ENDPOINT='https://script.google.com/macros/s/AKfycbyG6tSGRUsJ-GonUPCqAXM7_dS83bmIcdNExS041jd8TvkF6MFm0zUok7QwsNr0_zd4/exec';
+
+const P='philoia-light:';
+const get=(k,d)=>{try{const v=localStorage.getItem(P+k);return v===null?d:JSON.parse(v)}catch(e){return d}};
+const set=(k,v)=>{try{localStorage.setItem(P+k,JSON.stringify(v))}catch(e){}};
+const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const say=m=>{const t=$('#toast');if(!t)return;t.textContent=m;t.classList.add('show');clearTimeout(say._t);say._t=setTimeout(()=>t.classList.remove('show'),2600)};
+async function copyText(text,msg){try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}say(msg)}
+
+const SEANCES={S1:'Séance 1 · Une machine qui parle peut-elle penser ?',S2:'Séance 2 · Apprentissage et tuteur',S3:'Séance 3 · Construire ses séquences',S4:'Séance 4 · Charte co-construite',S5:'Séance 5 · Évaluer avec l’IA',FIN:'Clôture de la formation'};
+
+/* Inventaire des questions ouvertes : où placer la zone, intitulé, aide à la saisie. */
+const Q=[
+ {id:'S1-A1',s:'S1',at:'#s1-a1',act:'S1 · Activité 1 · Écrire d’abord, sans IA',q:'Écrit initial : une machine qui parle peut-elle penser ? (trois phrases)',who:'individuel'},
+ {id:'S1-A2',s:'S1',at:'#s1-a2',act:'S1 · Activité 2 · Quatre philosophes face à l’IA',q:'Votre philosophe : son idée principale, un exemple lié à l’IA, une objection',who:'groupe',ph:'Philosophe : …\nIdée principale : …\nExemple : …\nObjection : …'},
+ {id:'S1-A3',s:'S1',at:'#s1-a3',act:'S1 · Activité 3 · Confronter notre philosophe à une IA',q:'Mise en commun : ce que l’IA a répondu, ce que votre philosophe permet de répondre, la question qui demeure',who:'groupe',ph:'L’IA a répondu que…\nNotre philosophe nous aide à répondre que…\nMais une question demeure : …'},
+ {id:'S1-A4',s:'S1',at:'#s1-a4',act:'S1 · Activité 4 · Discussion à visée philosophique',q:'Trace écrite collective de la discussion',who:'groupe',ph:'Nous distinguons maintenant…\nUn argument important est…\nUne difficulté demeure…'},
+ {id:'S1-A5a',s:'S1',at:'#s1-a5',act:'S1 · Activité 5 · Ce que je pensais, ce que je pense maintenant',q:'Le mot que vous définiriez autrement et l’évolution de votre position',who:'individuel'},
+ {id:'S1-A5b',s:'S1',at:'#s1-a5',act:'S1 · Activité 5 · Ce que je pensais, ce que je pense maintenant',q:'Votre réponse argumentée (trois ou quatre phrases)',who:'individuel',ph:'Je distingue… / À mon avis… parce que… / On pourrait cependant m’objecter que…'},
+ {id:'S1-A5c',s:'S1',at:'#s1-a5',act:'S1 · Activité 5 · Ce que je pensais, ce que je pense maintenant',q:'Votre consigne de classe (10 minutes, sans IA) et son critère de réussite',who:'individuel'},
+ {id:'S2-P1-A1a',s:'S2',at:'#s2a-a1',act:'S2 partie 1 · Activité 1 · Deux copies : laquelle pense, laquelle imite ?',q:'Vos deux votes (copie qui paraît assistée par IA ; copie la plus philosophique), avec une raison pour chacun',who:'individuel'},
+ {id:'S2-P1-A1b',s:'S2',at:'#s2a-a1',act:'S2 partie 1 · Activité 1 · Deux copies : laquelle pense, laquelle imite ?',q:'Deux critères concrets pour évaluer une introduction sans vous limiter à son style',who:'individuel'},
+ {id:'S2-P1-A2a',s:'S2',at:'#s2a-a2',act:'S2 partie 1 · Activité 2 · Deux expériences sur les limites',q:'Test du roseau pensant : auteur et œuvre donnés par l’IA ; a-t-elle cédé face à l’autorité du professeur ?',who:'binôme'},
+ {id:'S2-P1-A2b',s:'S2',at:'#s2a-a2',act:'S2 partie 1 · Activité 2 · Deux expériences sur les limites',q:'Test des citations : citation proposée, référence annoncée, réponse à la demande de vérification, conclusion (vérifiée / inexacte / non vérifiée)',who:'binôme'},
+ {id:'S2-P1-A3a',s:'S2',at:'#s2a-a3',act:'S2 partie 1 · Activité 3 · L’échange d’Inès',q:'Analyse de ce que reçoit Inès (étape 2) et votre question d’aide réécrite (étape 3)',who:'binôme'},
+ {id:'S2-P1-A3b',s:'S2',at:'#s2a-a3',act:'S2 partie 1 · Activité 3 · L’échange d’Inès',q:'Votre test réel (étape 4) : une phrase exacte de l’IA et votre conclusion sur l’aide apportée',who:'binôme'},
+ {id:'S2-P1-A4',s:'S2',at:'#s2a-a4',act:'S2 partie 1 · Activité 4 · Tester et améliorer une IA qui accompagne',q:'Bilan en quatre phrases',who:'binôme',ph:'Notre élève simulé était…\nAu départ, l’IA a répondu… (citation exacte)\nNous avons ajouté l’instruction… ; lors du nouveau test, l’IA a…\nLe travail intellectuel qui reste à l’élève est… ; nous pourrions le vérifier en…'},
+ {id:'S2-P1-B',s:'S2',at:'#bilan-papillon .butterfly-body',act:'S2 partie 1 · Bilan',q:'Votre phrase de bilan sur le futur tuteur',who:'binôme',ph:'Notre futur outil aidera les élèves à…, mais il ne devra jamais…'},
+ {id:'S2-P2-A1',s:'S2',at:'#s2b-a1',act:'S2 partie 2 · Activité 1 · Définir le rôle du tuteur',q:'Sujet choisi, objectif du tuteur et deux règles pédagogiques',who:'binôme'},
+ {id:'S2-P2-A4',s:'S2',at:'#s2b-a4',act:'S2 partie 2 · Activité 4 · Trois nouveaux comportements d’élève',q:'Test retenu, phrase exacte du tuteur et analyse : aide-t-elle l’élève à raisonner ?',who:'binôme'},
+ {id:'S2-P2-A5',s:'S2',at:'#s2b-a5',act:'S2 partie 2 · Activité 5 · Améliorer les instructions',q:'Règle modifiée et effet observé lors du nouveau test',who:'binôme'},
+ {id:'S2-P2-B',s:'S2',at:'#bilan-s2b .butterfly-body',act:'S2 partie 2 · Bilan',q:'Votre conclusion sur le tuteur',who:'binôme',ph:'Notre tuteur réussit à…\nNous avons dû corriger…\nAvant un usage avec des élèves, nous devons vérifier…'},
+ {id:'S3-A4',s:'S3',at:'#s3-a4',act:'S3 · Activité 4 · Construire votre première séquence',q:'Votre séquence : notion et question, ce que l’IA a bien fait, la correction ciblée que vous avez demandée',who:'individuel'},
+ {id:'S3-A5',s:'S3',at:'#s3-a5',act:'S3 · Activité 5 · Décliner la séquence en supports',q:'Un point réutilisable, une erreur à corriger, une limite de l’IA à connaître',who:'individuel'},
+ {id:'S4-A1',s:'S4',at:'#s4-a1',act:'S4 · Activité 1 · Poser les bonnes questions',q:'Objectif positif de la future charte et deux questions ouvertes pour les élèves',who:'binôme'},
+ {id:'S4-A2',s:'S4',at:'#s4-a2',act:'S4 · Activité 2 · Trois modèles de charte',q:'Quel usage favorise réellement l’apprentissage selon la tâche ? Deux situations de désaccord à soumettre aux élèves',who:'binôme'},
+ {id:'S4-A3',s:'S4',at:'#s4-a3',act:'S4 · Activité 3 · Prompts pour animer la co-construction',q:'Les trois questions et les deux situations que vous utiliserez en classe',who:'binôme'},
+ {id:'S4-A4',s:'S4',at:'#s4-a4',act:'S4 · Activité 4 · Séance de 55 minutes',q:'Une objection, apparue dans la simulation, qui oblige à revoir une règle trop générale',who:'binôme'},
+ {id:'S4-A5',s:'S4',at:'#s4-a5',act:'S4 · Activité 5 · Préparer la rédaction de la charte',q:'Comment consulterez-vous vos élèves (débat, amendements, adoption, révision) ?',who:'binôme'},
+ {id:'S5-A6',s:'S5',at:'#s5-a6',act:'S5 · Activité 6 · Comparer les jugements',q:'Deux observations sur les écarts entre l’IA et la correction humaine (sans recopier de copie)',who:'binôme'},
+ {id:'S5-A7',s:'S5',at:'#s5-a7',act:'S5 · Activité 7 · Une IA peut-elle juger une copie ?',q:'Une utilité constatée, une limite observée, une condition non négociable pour un usage professionnel',who:'binôme'},
+ {id:'FIN-1',s:'FIN',at:'#cloture .cloture-body',act:'Clôture de la formation',q:'Ce que je retiens de la formation',who:'individuel'},
+ {id:'FIN-2',s:'FIN',at:'#cloture .cloture-body',act:'Clôture de la formation',q:'Ce que je vais tester en classe dans les prochaines semaines',who:'individuel'},
+ {id:'FIN-3',s:'FIN',at:'#cloture .cloture-body',act:'Clôture de la formation',q:'Ce qui m’a manqué, ou ce que je changerais dans la formation',who:'individuel'}
+];
+const WHO={individuel:'réponse individuelle',groupe:'réponse du groupe',binôme:'réponse du binôme'};
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+/* Identité */
+function who(){return get('who',{nom:'',groupe:''})}
+function paintWho(){const w=who();$$('.who-name').forEach(el=>el.textContent=w.nom?(w.nom+(w.groupe?' · groupe '+w.groupe:'')):'identifiant non renseigné')}
+const nom=$('#idNom'),grp=$('#idGroupe');
+if(nom&&grp){const w=who();nom.value=w.nom;grp.value=w.groupe;
+ const save=()=>{set('who',{nom:nom.value.trim().slice(0,60),groupe:grp.value.trim().slice(0,30)});paintWho()};
+ nom.addEventListener('input',save);grp.addEventListener('input',save)}
+
+/* Zones de réponse */
+Q.forEach(q=>{
+ let host=document.querySelector(q.at);if(!host)return;
+ if(host.matches('details'))host=host.querySelector(':scope > .step')||host;
+ const box=document.createElement('div');box.className='answer';box.dataset.q=q.id;
+ box.innerHTML='<label for="rep-'+q.id+'"><span class="answer-tag">✍️ Votre réponse · '+esc(WHO[q.who])+'</span>'+esc(q.q)+'</label><textarea id="rep-'+q.id+'" rows="4" placeholder="'+esc(q.ph||'Écrivez ici votre réponse…')+'"></textarea><small class="answer-state" aria-live="polite"></small>';
+ host.appendChild(box);
+ const ta=box.querySelector('textarea'),st=box.querySelector('.answer-state');
+ ta.value=get('rep:'+q.id,'');
+ const mark=()=>{st.textContent=ta.value.trim()?'Enregistré dans ce navigateur':'';};mark();
+ ta.addEventListener('input',()=>{set('rep:'+q.id,ta.value);mark();refresh(q.s)});
+});
+
+/* Boîte d’envoi en fin de séance */
+const SEND_AT={S1:'#session-toggle-s1 > .session-body',S2:'#session-toggle-s2 > .session-body',S3:'#session-toggle-s3 > .session-body',S4:'#session-toggle-s4 > .session-body',S5:'#session-toggle-s5 > .session-body',FIN:'#cloture .cloture-send'};
+Object.entries(SEND_AT).forEach(([s,sel])=>{
+ const host=$(sel);if(!host)return;
+ const box=document.createElement('div');box.className='send-box';box.dataset.seance=s;
+ box.innerHTML='<p><b>Fin de '+(s==='FIN'?'la formation':'la séance')+' :</b> envoyez vos réponses au formateur. <span class="send-count"></span></p><p class="send-who">Envoi au nom de : <b class="who-name"></b> · <a href="#identite">modifier</a></p><p class="send-actions"><button type="button" class="btn send-btn">Envoyer mes réponses '+(s==='FIN'?'de clôture':'de la séance')+'</button> <button type="button" class="btn ghost small copy-mine">Copier mes réponses</button></p><p class="send-status" role="status" aria-live="polite"></p>';
+ host.appendChild(box);
+ box.querySelector('.send-btn').addEventListener('click',()=>send(s,box));
+ box.querySelector('.copy-mine').addEventListener('click',()=>copyText(mine(s),'Vos réponses sont copiées'));
+ refresh(s);
+});
+function answers(s){return Q.filter(q=>q.s===s).map(q=>({id:q.id,activite:q.act,question:q.q,texte:(get('rep:'+q.id,'')||'').trim()})).filter(r=>r.texte)}
+function mine(s){const w=who();return [SEANCES[s],'Participant : '+(w.nom||'—')+(w.groupe?' · groupe '+w.groupe:''),''].concat(answers(s).map(r=>r.activite+'\n'+r.question+'\n'+r.texte+'\n')).join('\n')}
+function refresh(s){const box=document.querySelector('.send-box[data-seance="'+s+'"]');if(!box)return;
+ const n=answers(s).length,t=Q.filter(q=>q.s===s).length;box.querySelector('.send-count').textContent=n+' zone'+(n>1?'s':'')+' remplie'+(n>1?'s':'')+' sur '+t+'.';
+ const last=get('sent:'+s,null);if(last&&!box.dataset.busy)box.querySelector('.send-status').textContent='Dernier envoi : '+last+'. Vous pouvez renvoyer : le formateur gardera votre dernière version.';}
+paintWho();
+async function send(s,box){
+ const status=box.querySelector('.send-status'),w=who(),rep=answers(s);
+ if(!w.nom){status.textContent='Indiquez d’abord votre prénom ou pseudonyme en haut de la page.';location.hash='#identite';return}
+ if(!rep.length){status.textContent='Aucune réponse à envoyer pour l’instant.';return}
+ if(!ENDPOINT){status.textContent='L’envoi n’est pas encore activé sur ce site. Vos réponses restent enregistrées dans ce navigateur : utilisez « Copier mes réponses ».';return}
+ box.dataset.busy='1';status.textContent='Envoi en cours…';
+ const payload={seance:s,participant:w.nom,groupe:w.groupe,envoi:new Date().toISOString(),reponses:rep};
+ try{
+  const r=await fetch(ENDPOINT,{method:'POST',body:JSON.stringify(payload)});
+  let ok=r.ok;try{const j=await r.json();ok=!!j.ok}catch(_){}
+  if(!ok)throw new Error('refus');
+  const when=new Date().toLocaleTimeString('fr-FR',{hour:'2-digit',minute:'2-digit'});
+  set('sent:'+s,when+' ('+rep.length+' réponse'+(rep.length>1?'s':'')+')');
+  status.textContent='Envoyé à '+when+' : '+rep.length+' réponse'+(rep.length>1?'s':'')+'. Merci !';say('Réponses envoyées au formateur');
+ }catch(e){status.textContent='L’envoi a échoué (connexion ?). Vos réponses sont toujours enregistrées : réessayez, ou utilisez « Copier mes réponses ».'}
+ finally{delete box.dataset.busy}
+}
+
+/* Espace formateur : récupérer les réponses et préparer le prompt de synthèse */
+const sb=$('#synthBtn');
+if(sb)sb.addEventListener('click',async()=>{
+ const code=$('#synthCode').value.trim(),s=$('#synthSeance').value,out=$('#synthOut'),msg=$('#synthMsg');
+ if(!ENDPOINT){msg.textContent='Le script de collecte n’est pas encore relié au site.';return}
+ if(!code){msg.textContent='Saisissez le code d’accès aux réponses.';return}
+ msg.textContent='Récupération des réponses…';
+ try{
+  const r=await fetch(ENDPOINT+'?action=export&seance='+encodeURIComponent(s)+'&code='+encodeURIComponent(code));
+  const j=await r.json();
+  if(!j.ok){msg.textContent=j.error==='code'?'Code d’accès incorrect.':'Erreur du script : '+(j.error||'inconnue');return}
+  /* garder la dernière version de chaque réponse (même participant, même question) */
+  const last={};j.rows.forEach(x=>{const k=x.participant+'|'+x.groupe+'|'+x.id;if(!last[k]||String(x.recu)>=String(last[k].recu))last[k]=x});
+  const rows=Object.values(last);
+  if(!rows.length){msg.textContent='Aucune réponse reçue pour cette sélection.';out.value='';return}
+  const people=[...new Set(rows.map(x=>x.participant+'|'+x.groupe))];
+  const alias=k=>'Participant '+(people.indexOf(k)+1);
+  const order=Q.map(q=>q.id),byQ={};
+  rows.sort((a,b)=>order.indexOf(a.id)-order.indexOf(b.id)).forEach(x=>{(byQ[x.id]=byQ[x.id]||{act:x.activite,q:x.question,items:[]}).items.push('- '+alias(x.participant+'|'+x.groupe)+(x.groupe?' (groupe '+x.groupe+')':'')+' : '+String(x.texte).replace(/\s*\n\s*/g,' / '))});
+  const label=s==='ALL'?'toute la formation':SEANCES[s];
+  const intro='Tu es mon assistant de formateur. J’anime une formation « Philosophie × IA » destinée à des professeurs de philosophie de lycée. Voici les réponses écrites par les participants pour : '+label+'. Les participants sont désignés par un numéro ; ne cherche pas à les identifier.\n\n'+
+  'À partir de ces réponses UNIQUEMENT :\n1. Pour chaque activité, résume en quelques lignes les idées principales, les convergences et les désaccords.\n2. Repère les représentations de l’IA ou de l’apprentissage qui me paraissent à reprendre (confusions, idées naïves, inquiétudes) et les réponses particulièrement fécondes, en les reformulant sans nommer personne.\n3. Propose les 5 points que je devrais reprendre dans un retour oral de 10 minutes au groupe, dans l’ordre où je les présenterais.\n4. Propose 3 questions pour relancer la discussion et 2 ajustements possibles pour la séance suivante.\nN’invente aucune réponse ; signale les activités où les réponses sont trop peu nombreuses pour conclure. Rédige en français, de façon concise et directement utilisable.\n\nRÉPONSES ('+people.length+' participant'+(people.length>1?'s':'')+', '+rows.length+' réponses)\n';
+  out.value=intro+Object.values(byQ).map(g=>'\n=== '+g.act+'\nQuestion : '+g.q+'\n'+g.items.join('\n')).join('\n');
+  msg.textContent=rows.length+' réponses de '+people.length+' participant'+(people.length>1?'s':'')+' : prompt prêt à copier dans Claude, ChatGPT ou Gemini.';
+ }catch(e){msg.textContent='Impossible de joindre le script (connexion ou adresse /exec).'}
+});
+const sc=$('#synthCopy');if(sc)sc.addEventListener('click',()=>{const v=$('#synthOut').value;if(v)copyText(v,'Prompt de synthèse copié')});
+})();
+</script>
 </body>
 </html>
