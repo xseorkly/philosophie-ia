@@ -411,47 +411,28 @@ Je peux défendre mon travail sans cet outil.</pre></div></div>
 <label class="f" for="r-a3">Ce que vous attendez</label><textarea class="t" id="r-a3" data-r></textarea>
 <label class="f" for="r-e3">L’erreur fréquente <small>(facultatif)</small></label><input class="t" id="r-e3" data-r/></div>
 
-<label class="f" for="r-never">Ce que l’IA ne doit jamais faire</label>
-<textarea class="t" id="r-never" data-r>Donner la réponse attendue ou un corrigé, même si l’élève la réclame ; donner une note ; écrire une phrase que l’élève pourrait recopier ; citer un auteur ou un texte autre que celui de la page.</textarea>
-<label class="f" for="r-tries">Nombre de retours par question</label>
+<label class="f" for="r-never">Ce que le retour à l’élève ne doit jamais faire</label>
+<textarea class="t" id="r-never" data-r>Donner un corrigé prêt à recopier ; afficher automatiquement les critères avant la première réponse ; attribuer une note ; transmettre des réponses à une IA ou un service extérieur.</textarea>
+<label class="f" for="r-tries">Nombre maximal de relectures par question</label>
 <select class="t" id="r-tries" data-r><option>3</option><option>2</option><option>4</option><option>5</option></select>
 
 <div class="prompt" style="margin-top:18px"><div class="ph">Ma recette, à coller dans ChatGPT ou Claude<button class="btn small copy" type="button" id="copyRecipe">Copier ma recette</button></div><pre id="recipeOut"></pre></div>
-<details class="faq"><summary>Variante sans IA : la même page avec autoévaluation (utilisable par tous les élèves)</summary>
-<p>Si vos élèves n’ont pas l’âge requis ou n’ont pas de compte, demandez à Claude, <b>après</b> votre première page, dans la même conversation :</p>
-<div class="prompt"><div class="ph">Prompt · version sans IA<button class="btn small copy" type="button">Copier</button></div><pre>Fais une seconde version de cette page, qui n’utilise pas Claude du tout : après sa réponse, l’élève clique sur « Me relire » et voit mes critères sous forme de liste à cocher (« J’ai bien… »), puis une question pour l’aider à réécrire. Garde le texte, les questions et le bouton « Copier mon travail ». Aucune donnée n’est envoyée nulle part.</pre></div>
-<p>Cette version peut être publiée de la même façon, ou téléchargée et déposée sur l’ENT ou sur un site de l’établissement.</p></details>
+<details class="faq"><summary>Pourquoi la page n’utilise-t-elle pas directement ChatGPT ou Claude pendant que l’élève travaille ?</summary><p>ChatGPT ou Claude vous aident à <b>créer</b> la page. Ensuite, votre page autonome permet à l’élève d’écrire, d’utiliser une grille de critères, de réécrire et de copier son travail, sans compte ni connexion à une IA. <b>Pour un véritable retour conversationnel produit par un modèle dans la page</b>, il faudrait une intégration spécifique autorisée par l’établissement, un service serveur ou une plateforme qui offre cette fonctionnalité, une protection des données et le respect des conditions d’âge. <b>Ne mettez jamais une clé API dans un fichier HTML distribué aux élèves.</b></p></details>
 </section>
 
 <!-- ================= CADRE ================= -->
-<section class="block" id="cadre">
-<div class="eyebrow">Le cadre</div>
-<h2>Ce qu’il faut savoir avant de donner le lien à des élèves</h2>
-<div class="grid2">
-<div class="card red"><h3>L’âge : 18 ans et plus</h3><p>Les conditions d’utilisation de Claude exigent d’avoir au moins 18 ans (ou l’âge requis dans le pays, s’il est plus élevé). Pour utiliser le retour de l’IA, la personne doit se connecter à son compte. <b>La plupart des lycéens ne peuvent donc pas utiliser le retour de l’IA sur la page.</b></p></div>
-<div class="card gold"><h3>Les données</h3><p>Les réponses saisies dans la page peuvent être transmises à Claude et traitées dans le cadre du compte de la personne qui utilise cette fonctionnalité. Ne demandez ni nom ni donnée personnelle. Avant tout usage avec des élèves, parlez-en avec la direction et le référent RGPD (DPO) de l’établissement, et respectez le cadre ministériel d’usage de l’IA en éducation.</p></div>
-</div>
-<h3>Alors, que faire avec ses élèves ?</h3>
-<div class="grid3">
-<div class="card teal"><h4>1. La version sans IA</h4><p>La même page, en autoévaluation à partir de vos critères (voir la variante dans la recette). Elle fonctionne pour tous les élèves, sans compte et sans envoi de données.</p></div>
-<div class="card teal"><h4>2. La page projetée en classe</h4><p>C’est vous qui utilisez la page, avec votre compte, devant la classe : un élève propose une réponse, la classe discute du retour de l’IA, puis le corrige. C’est aussi une leçon sur l’IA.</p></div>
-<div class="card teal"><h4>3. Les publics majeurs</h4><p>Étudiants de BTS, de classe préparatoire, élèves majeurs : ils peuvent utiliser la page avec leur propre compte, dans le respect des règles de l’établissement.</p></div>
-</div>
-<p class="why">Pour aller plus loin, un établissement peut faire construire un site relié à l’IA par l’accès développeur (API) : c’est un projet technique et juridique (clé payante, serveur, données, accord du DPO), qui dépasse cette formation.</p>
-</section>
+<section class="block" id="cadre"><div class="eyebrow">Le cadre</div><h2>Avant de donner la page à des élèves</h2>
+<div class="grid2"><div class="card teal"><h3>Une page autonome, sans compte d’IA</h3><p>Dans ce parcours, l’IA est utilisée <b>par l’enseignant pour construire la page</b>. Les élèves utilisent ensuite une autoévaluation à partir des critères pédagogiques, sans dialogue automatique avec ChatGPT ou Claude. Vérifiez effectivement que le fichier n’envoie pas de réponses et ne contient aucun suivi.</p></div><div class="card gold"><h3>Accès, droits et données</h3><p>Avant diffusion, faites vérifier le support par l’établissement : droits des extraits, hébergement, accessibilité, protection des données et absence d’informations personnelles. Un outil conversationnel externe utilisé directement par des mineurs soulève des conditions d’âge, d’autorisation et de traitement des données spécifiques ; ne les présumez pas satisfaites.</p></div></div>
+<div class="retain"><b>À privilégier :</b> un fichier HTML autonome ou un support hébergé sur un espace de l’établissement, avec une tâche écrite sans IA à la fin. Un lien partagé vers un Site ou un artefact peut être utile, mais son accès dépend des paramètres de la plateforme et des règles de l’établissement.</div></section>
 
 <!-- ================= FAQ ================= -->
-<section class="block" id="faq">
-<div class="eyebrow">Questions fréquentes</div>
-<h2>Questions fréquentes</h2>
-<details class="faq"><summary>Faut-il un compte payant ?</summary><p>Non. Un compte gratuit permet de construire et de publier une page. Les comptes gratuits sont soumis à des limites d’utilisation : si vous les atteignez pendant la formation, travaillez avec un voisin.</p></details>
-<details class="faq"><summary>Est-ce que je paie quand quelqu’un utilise ma page ?</summary><p>Non. Le retour de l’IA est imputé au compte de la personne qui utilise la page, pas sur le vôtre.</p></details>
-<details class="faq"><summary>Est-ce que je vois les réponses de mes élèves ?</summary><p>Pas automatiquement. C’est pourquoi la recette prévoit un bouton « Copier mon travail » : l’élève copie ses réponses finales et vous les rend (par l’ENT, par courriel, sur papier).</p></details>
-<details class="faq"><summary>Et si l’IA donne quand même la réponse ?</summary><p>Corrigez la page dans Claude en citant la réplique exacte : « Ici, le retour a donné la réponse : “…”. Interdis toute formulation que l’élève pourrait recopier. » Puis refaites le test de l’élève pressé. Si l’IA cède encore, n’utilisez pas la page avec des élèves.</p></details>
-<details class="faq"><summary>Puis-je modifier ma page après l’avoir publiée ?</summary><p>Oui, dans la même conversation : demandez la modification, puis publiez la nouvelle version. Vérifiez que le lien partagé mène bien à la version voulue.</p></details>
-<details class="faq"><summary>L’IA peut-elle changer mon texte ?</summary><p>Elle ne devrait pas : la recette lui demande d’afficher le texte tel quel. Vérifiez-le ligne par ligne après la construction ; si un mot a changé, demandez la correction.</p></details>
-<details class="faq"><summary>Je n’ai jamais fait de page web. Est-ce pour moi ?</summary><p>Oui. Tout se fait en français, en décrivant ce que vous voulez. Personne n’écrit de code pendant cette formation.</p></details>
-</section>
+<section class="block" id="faq"><div class="eyebrow">Questions fréquentes</div><h2>Questions fréquentes</h2>
+<details class="faq"><summary>Dois-je utiliser ChatGPT ET Claude ?</summary><p>Non. Choisissez <b>un seul outil</b>. La fiche de création fonctionne avec les deux. ChatGPT Sites dépend de l’accès au mode Work et aux fonctionnalités Sites ; Claude peut créer des artefacts selon les capacités activées sur le compte.</p></details>
+<details class="faq"><summary>Faut-il un compte payant pour créer ou publier ?</summary><p>Les offres diffèrent selon la plateforme et l’organisation. <b>ChatGPT Sites</b> est destiné aux comptes et espaces de travail éligibles ; Claude propose des artefacts avec des possibilités de partage qui varient selon le forfait. Si votre compte ne permet pas l’option souhaitée, demandez <b>un fichier HTML autonome</b> et testez-le localement.</p></details>
+<details class="faq"><summary>Est-ce que l’élève dialogue automatiquement avec ChatGPT ou Claude ?</summary><p><b>Non dans la version autonome.</b> La page affiche des questions et des critères de relecture définis par l’enseignant. Pour proposer un véritable dialogue avec un modèle, il faut un dispositif distinct, approuvé et conforme aux exigences de protection des élèves.</p></details>
+<details class="faq"><summary>Comment vérifier la page ?</summary><p>Testez une réponse incomplète, une réponse erronée et une réponse vide ; contrôlez la navigation, la réécriture et le bouton « Copier mon travail ». Inspectez aussi l’absence d’envoi de données et la fidélité du texte d’origine.</p></details>
+<details class="faq"><summary>Puis-je diffuser la page aux élèves ?</summary><p>Après vérification de la sécurité, des droits sur le texte et des règles de l’établissement. Privilégiez une diffusion via l’ENT ou un support institutionnel, avec aucune donnée personnelle nécessaire.</p></details>
+<details class="faq"><summary>Je ne sais pas coder. Est-ce possible ?</summary><p>Oui. La fiche génère une demande de création en français. Vous devez surtout <b>tester les fonctionnalités réellement obtenues</b> et demander des corrections précises. Une démonstration d’IA ne garantit pas qu’une page fonctionne.</p></details></section>
 
 <!-- ================= POURQUOI ================= -->
 <section class="block" id="pourquoi"><div class="eyebrow">Choix pédagogiques</div><h2>Articulation avec la formation longue</h2><p>Les séances 1 et 4 adaptent les modules 11 et 10 de la <a href="index.html">formation complète</a>. La version courte préserve l’expérimentation, les critères d’apprentissage et la construction d’un outil utilisable, puis pose le cadre d’usage à élaborer avec les élèves.</p><p>Pour approfondir l’évaluation, la différenciation, la didactique et les références de recherche, consultez le <a href="index.html">parcours complet</a>, le <a href="glossaire.html">glossaire</a> et les <a href="sources.html">sources</a>.</p></section>
@@ -480,44 +461,42 @@ $$('.checklist input[type=checkbox]').forEach(c=>{c.checked=!!store.get('chk-'+c
 const F=$$('[data-r]');
 const val=id=>($('#'+id).value||'').trim();
 function recipe(){
-  const qs=[1,2,3].map(i=>({q:val('r-q'+i),a:val('r-a'+i),e:val('r-e'+i)})).filter(x=>x.q);
-  const title=val('r-title')||'[TITRE DE LA PAGE]';
-  const L=[];
-  L.push('Crée une page web interactive d’entraînement en philosophie pour des '+val('r-level')+'. Cette page doit utiliser Claude pour commenter les réponses des élèves.');
-  L.push('');
-  L.push('CONTENU FIXÉ PAR L’ENSEIGNANT (à afficher exactement tel quel, sans rien reformuler) :');
-  L.push('Titre : '+title);
-  L.push('Référence du texte : '+(val('r-ref')||'[RÉFÉRENCE]'));
-  L.push('Texte :');
-  L.push('"""');
-  L.push(val('r-text')||'[TEXTE]');
-  L.push('"""');
-  L.push('');
-  if(!qs.length){L.push('Question 1 : [QUESTION]\nCe que j’attends : [CRITÈRES]')}
-  qs.forEach((x,i)=>{L.push('Question '+(i+1)+' : '+x.q);L.push('  Ce que j’attends dans une bonne réponse : '+(x.a||'[CRITÈRES]'));if(x.e)L.push('  Erreur fréquente à repérer : '+x.e)});
-  L.push('');
-  L.push('FONCTIONNEMENT DE LA PAGE :');
-  L.push('1. En haut, le titre, puis le texte, bien lisible (police avec empattements, taille confortable), avec sa référence.');
-  L.push('2. Les questions apparaissent une par une sous le texte, avec une grande zone de réponse et un bouton « Obtenir un retour ».');
-  L.push('3. Quand l’élève clique, Claude analyse sa réponse UNIQUEMENT avec les critères de l’enseignant ci-dessus, et affiche trois rubriques courtes (5 lignes maximum en tout) : « Ce qui est réussi », « Ce qu’il faut changer », « Une question pour aller plus loin ». Le retour cite les mots exacts de l’élève.');
-  L.push('4. L’élève peut réécrire sa réponse et redemander un retour, '+val('r-tries')+' fois au maximum par question ; ensuite, la page l’invite à passer à la question suivante.');
-  L.push('5. Des boutons permettent d’aller à la question suivante et de revenir à la précédente.');
-  L.push('6. À la fin, un bouton « Copier mon travail » copie dans le presse-papiers toutes les réponses finales de l’élève, question par question, pour qu’il les rende à son professeur.');
-  L.push('');
-  L.push('RÈGLES POUR LE RETOUR DE CLAUDE (à mettre dans les instructions envoyées à Claude à chaque retour) :');
-  L.push('- Tu es un professeur de philosophie bienveillant et exigeant. Tu t’adresses à l’élève en le tutoyant, en français simple.');
-  L.push('- Ce que tu ne dois jamais faire : '+(val('r-never')||'donner la réponse ou une note.'));
-  L.push('- Si l’élève demande la réponse, rappelle-lui gentiment la tâche et pose une question plus ciblée.');
-  L.push('- Ne flatte pas : chaque point « réussi » doit être justifié par les mots de l’élève.');
-  L.push('- Si la réponse est vide ou hors sujet, dis-le simplement et rappelle la question.');
-  L.push('');
-  L.push('PRÉSENTATION : sobre, claire, lisible sur téléphone, en français, gros boutons. Ne demande ni nom ni aucune donnée personnelle à l’élève. N’ajoute aucun autre texte philosophique que celui de l’enseignant.');
-  return L.join('\n');
+ const qs=[1,2,3].map(i=>({q:val('r-q'+i),a:val('r-a'+i),e:val('r-e'+i)})).filter(x=>x.q);
+ const L=[];
+ L.push('Je suis professeur de philosophie. Crée une page web interactive d’entraînement destinée à des '+val('r-level')+'.');
+ L.push('La page doit être AUTONOME et réellement fonctionnelle : un seul fichier HTML contenant son CSS et son JavaScript, sans bibliothèque externe, sans API, sans clé secrète, sans appel à Claude, ChatGPT ou à un autre modèle lorsque l’élève utilise la page.');
+ L.push('Si tu peux créer un site ou un artefact interactif, montre un aperçu ; sinon, fournis le code HTML complet prêt à enregistrer sous le nom entrainement-philo.html.');
+ L.push('');
+ L.push('CONTENUS FOURNIS PAR L’ENSEIGNANT (à reproduire fidèlement, sans inventer ni compléter) :');
+ L.push('Titre : '+(val('r-title')||'[TITRE À COMPLÉTER]'));
+ L.push('Référence de l’extrait : '+(val('r-ref')||'[RÉFÉRENCE À COMPLÉTER]'));
+ L.push('Texte exact :');
+ L.push('"""'+(val('r-text')||'[COLLER UN EXTRAIT VÉRIFIÉ]')+'"""');
+ if(!qs.length){L.push('Question 1 : [QUESTION À COMPLÉTER]');L.push('Critères : [À COMPLÉTER]')}
+ qs.forEach((x,i)=>{L.push('Question '+(i+1)+' : '+x.q);L.push('Critères d’autoévaluation : '+(x.a||'[CRITÈRES À COMPLÉTER]'));if(x.e)L.push('Erreur fréquente : '+x.e)});
+ L.push('');
+ L.push('FONCTIONNEMENT INTERACTIF :');
+ L.push('1. Afficher le titre, le passage exact et sa référence, avec une mise en page sobre et accessible sur mobile.');
+ L.push('2. Présenter les questions une à une. Pour chaque question, l’élève écrit d’abord sa réponse dans une grande zone de saisie. Les critères ne doivent pas apparaître avant une première tentative.');
+ L.push('3. Après avoir écrit, l’élève clique sur « Me relire » : afficher UNIQUEMENT les critères de l’enseignant sous forme de cases à cocher et une question de relance, sans corrigé ni rédaction automatique.');
+ L.push('4. Permettre à l’élève d’améliorer lui-même sa réponse et de revoir les critères jusqu’à '+val('r-tries')+' fois. Préserver les réponses pendant la navigation entre questions dans la session en cours.');
+ L.push('5. Prévoir « Question précédente », « Question suivante » et « Copier mon travail », ce dernier réunissant les réponses finales dans le presse-papiers avec numéro et texte de chaque question.');
+ L.push('6. Pour une réponse vide, afficher un message clair au lieu de présenter un faux retour. Le dispositif ne doit pas prétendre comprendre ou noter sémantiquement la production de l’élève : son autoévaluation est guidée par les critères affichés.');
+ L.push('');
+ L.push('INTERDICTIONS ET SÉCURITÉ :');
+ L.push('- Ne donne pas de corrigé complet ni de texte recopiable à la place de l’élève. '+(val('r-never')||''));
+ L.push('- Aucun nom, connexion, compte ni donnée personnelle demandés à l’élève.');
+ L.push('- Aucun appel réseau pour transmettre les réponses, aucune API ni service de suivi. Aucun service externe, analytics ou bibliothèque distante.');
+ L.push('- Échappe/affiche les textes saisis sans les exécuter comme du HTML ; n’utilise pas de code dynamique non fiable.');
+ L.push('- N’invente aucune citation, page ou référence. Reproduis le texte et les questions exactement.');
+ L.push('');
+ L.push('VÉRIFICATION AVANT REMISE : teste que le texte, les trois questions, les champs de réponse, les critères différés, la réécriture, les boutons de navigation et la copie fonctionnent. Explique brièvement comment ouvrir et tester la page. Signale les limites éventuelles.');
+ return L.join('\n');
 }
 function render(){$('#recipeOut').textContent=recipe()}
 F.forEach(el=>{const v=store.get('r-'+el.id,null);if(v!==null)el.value=v;el.addEventListener('input',()=>{store.set('r-'+el.id,el.value);render()});el.addEventListener('change',()=>{store.set('r-'+el.id,el.value);render()})});
 render();
-$('#copyRecipe').addEventListener('click',()=>{if(!val('r-text')||!val('r-q1')){toast('Ajoutez au moins le texte et la question 1');}copy(recipe())});
+$('#copyRecipe').addEventListener('click',()=>{if(!val('r-text')||!val('r-q1')){toast('Ajoutez au moins le texte et la question 1');return}copy(recipe())});
 const EX={'r-title':'S’entraîner à lire Descartes : douter, est-ce tenir pour faux ?','r-ref':'Descartes, Méditations métaphysiques, Première Méditation (traduction du duc de Luynes, 1647)',
 'r-text':"Or il ne sera pas nécessaire, pour arriver à ce dessein, de prouver qu'elles sont toutes fausses, de quoi peut-être je ne viendrais jamais à bout ; mais, d'autant que la raison me persuade déjà que je ne dois pas moins soigneusement m'empêcher de donner créance aux choses qui ne sont pas entièrement certaines et indubitables qu'à celles qui nous paraissent manifestement être fausses, le moindre sujet de douter que j'y trouverai suffira pour me les faire toutes rejeter. Et pour cela il n'est pas besoin que je les examine chacune en particulier, ce qui serait d'un travail infini ; mais parce que la ruine des fondements entraîne nécessairement avec soi tout le reste de l'édifice, je m'attaquerai d'abord aux principes sur lesquels toutes mes anciennes opinions étaient appuyées.",
 'r-q1':'Descartes cherche-t-il à prouver que toutes ses opinions sont fausses ? Appuie-toi sur une expression du texte.','r-a1':'Non : il dit qu’il n’est « pas nécessaire » de prouver qu’elles sont fausses. Il suffit qu’elles ne soient pas « entièrement certaines » pour qu’il suspende son adhésion. L’élève cite précisément une expression du texte.','r-e1':'Croire que douter, c’est affirmer que tout est faux.',
