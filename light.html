@@ -99,7 +99,7 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 </style>
 </head>
 <body>
-<div class="fbar"><div class="wrap"><form id="fForm" autocomplete="off"><span class="fbar-l">🔒 Espace formateur</span><label class="sr" for="fPwd">Mot de passe</label><input id="fPwd" type="password" placeholder="Mot de passe" /><button class="btn" type="submit">Ouvrir le cahier du formateur (PDF)</button><span id="fMsg" role="status"></span></form></div></div>
+<div class="fbar"><div class="wrap"><form id="fForm" autocomplete="off"><span class="fbar-l">🔒 Espace formateur</span><label class="sr" for="fPwd">Mot de passe</label><input id="fPwd" type="password" placeholder="Mot de passe" /><button class="btn" type="submit">Ouvrir le cahier du formateur (5 séances, PDF)</button><span id="fMsg" role="status"></span></form></div></div>
 <header class="top"><div class="wrap">
 <div class="eyebrow">Philosophie × IA · formation courte</div>
 <h1>Philosophie × IA : penser, comprendre, concevoir et encadrer.</h1>
@@ -296,6 +296,6 @@ $('#clearForm').addEventListener('click',()=>{F.forEach(el=>{if(el.tagName==='SE
 })();
 </script>
 <script>(function(){var f=document.getElementById('fForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('fPwd').value.trim(),m=document.getElementById('fMsg');
-if(v==='ZESE2027'){m.textContent='Le PDF s’ouvre ; il redemandera le même mot de passe.';window.open('cahier-formateur-light.pdf','_blank');}else{m.textContent='Mot de passe incorrect.';}});})();</script>
+if(v==='ZESE2027'){m.textContent='Ouverture du cahier du formateur mis à jour.';window.open('cahier-formateur-light.pdf','_blank');}else{m.textContent='Mot de passe incorrect.';}});})();</script>
 </body>
 </html>
