@@ -930,7 +930,7 @@ En haut du document, écris « PROJET DE CHARTE À RELIRE AVEC LES ÉLÈVES 
 <h4>Organisez quatre documents, avec des codes non identifiants</h4>
 <div class="tablewrap"><table><thead><tr><th>Code</th><th>Document authentique</th><th>Usage dans l’expérience</th></tr></thead><tbody>
 <tr><td><b>A1 – A2</b></td><td>Copies avec évaluations humaines déjà connues de l’enseignant</td><td>Exemples de référence pour le <b>calibrage</b></td></tr>
-<tr><td><b>B1 – B2</b></td><td>Autres copies non annotées, jamais montrées pendant le calibrage</td><td><b>Test à l’aveugle</b> ; notes humaines gardées secrètes jusqu’à la fin</td></tr>
+<tr><td><b>B1 – B2</b></td><td>Autres copies non annotées, jamais montrées pendant le calibrage</td><td><b>Test à l’aveugle</b>, lues deux fois par l’IA : avant puis après calibrage ; notes humaines gardées secrètes jusqu’à la fin</td></tr>
 </tbody></table></div>
 <p><b>Si vous n’avez pas quatre copies :</b> utilisez le corpus authentique disponible pour étudier les critères et discuter la méthode, mais ne prétendez pas avoir validé la fiabilité ou le calibrage sur des copies indépendantes. <b>Ne faites pas générer de fausses copies pour combler le manque.</b></p>
 <div class="retain"><b>Production :</b> une sélection de vraies copies A1/A2 et B1/B2, avec sujet et grilles, dont l’anonymisation a été vérifiée.</div>
@@ -944,13 +944,13 @@ En haut du document, écris « PROJET DE CHARTE À RELIRE AVEC LES ÉLÈVES 
 <div class="retain"><b>Production :</b> une grille de lecture rédigée par le professeur, plus le sujet et les copies de référence sélectionnées.</div>
 </div></details>
 
-<details class="activity-accordion" id="s5-a3"><summary class="activity-toggle"><span class="activity-title">3. Tester l’IA sans calibrage : première lecture à l’aveugle</span><span class="activity-time">Environ 15 min</span></summary><div class="step">
-<p><b>Première expérience :</b> ouvrez une conversation <b>neuve</b> dans l’IA générative autorisée de votre choix. Ne lui donnez <b>ni copie corrigée, ni appréciation, ni note humaine</b>. Envoyez votre sujet et une copie <b>authentique et anonymisée</b> non annotée. Vous cherchez à observer ce que l’outil fait spontanément, avant toute calibration.</p>
+<details class="activity-accordion" id="s5-a3"><summary class="activity-toggle"><span class="activity-title">3. Tester l’IA sans calibrage : première lecture de B1 et B2</span><span class="activity-time">Environ 15 min</span></summary><div class="step">
+<p><b>Première expérience :</b> ouvrez une conversation <b>neuve</b> dans l’IA générative autorisée de votre choix. Ne lui donnez <b>ni copie corrigée, ni appréciation, ni note humaine</b>. Envoyez votre sujet et la copie de contrôle <b>B1</b>, authentique, anonymisée et non annotée, puis <b>B2</b> dans la même conversation. Vous cherchez à observer ce que l’outil fait spontanément, avant toute calibration. <b>Pourquoi B1 et B2, et pas A1 ?</b> Ce sont ces deux copies que l’IA relira après calibrage, à l’activité 5 : seule une comparaison sur les mêmes copies permet de savoir si le calibrage réduit l’écart avec la note humaine.</p>
 <div class="prompt"><div class="ph">Prompt 1 · Première lecture expérimentale, sans calibration<button class="btn small copy" type="button">Copier</button></div><pre>Je suis professeur de philosophie en terminale. Je conduis un TEST de correction comparative, non une notation réelle d’élève. Le document joint est une COPIE AUTHENTIQUE ANONYMISÉE. Si le fichier n’est pas lisible, signale-le, sans compléter ni inventer les passages manquants.
 
 Sujet : [COLLER LE SUJET EXACT OU LA RÉFÉRENCE VÉRIFIÉE].
 Type : [DISSERTATION / EXPLICATION DE TEXTE]. Niveau et voie : [PRÉCISER].
-ID d’essai sans identité : [A1].
+ID d’essai sans identité : [B1, puis B2].
 Copie : [JOINDRE LE FICHIER OU COLLER LE TEXTE ANONYMISÉ].
 
 À ce stade, je ne fournis NI ma correction NI ma note ni mes exemples de calibrage. Fais une première lecture à l’aveugle. Fournis :
@@ -961,8 +961,8 @@ Copie : [JOINDRE LE FICHIER OU COLLER LE TEXTE ANONYMISÉ].
 5. Les points dont tu n’es pas sûr et les informations manquantes.
 
 Tu ne décides d’aucune note réelle. N’invente aucun extrait et ne déduis aucune caractéristique personnelle de l’élève.</pre></div>
-<ol class="do"><li><b>5 min :</b> personnalisez les champs, envoyez le sujet et une copie <b>anonymisée</b>.</li><li><b>5 min :</b> lisez l’analyse de l’IA : quels passages cite-t-elle ? distingue-t-elle les notions et arguments ? invente-t-elle des éléments ?</li><li><b>5 min :</b> conservez sa première appréciation et son estimation <b>indicative uniquement</b>, sans dévoiler la correction humaine si elle existe. Notez au moins une erreur ou incertitude.</li></ol>
-<div class="retain"><b>Production :</b> une première analyse non calibrée, datée et identifiable uniquement par un code de copie.</div>
+<ol class="do"><li><b>5 min :</b> personnalisez les champs, envoyez le sujet et la copie <b>B1</b> ; une fois la réponse obtenue, envoyez <b>B2</b> avec la même consigne.</li><li><b>5 min :</b> lisez les analyses : quels passages l’IA cite-t-elle ? distingue-t-elle les notions et arguments ? invente-t-elle des éléments ?</li><li><b>5 min :</b> reportez les deux estimations dans la colonne <b>« IA avant calibrage »</b> du tableau de l’activité 6, sans dévoiler la correction humaine. Notez au moins une erreur ou incertitude.</li></ol>
+<div class="retain"><b>Production :</b> deux analyses non calibrées (B1, B2), datées et identifiables uniquement par un code de copie.</div>
 </div></details>
 
 <details class="activity-accordion" id="s5-a4"><summary class="activity-toggle"><span class="activity-title">4. Calibrer l’assistance avec des copies de référence</span><span class="activity-time">Environ 20 min</span></summary><div class="step">
@@ -985,16 +985,16 @@ TA MISSION :
 NE reproduis pas le nom de l’élève. Ne prétends pas avoir été entraîné ou modifié dans tes poids : il s’agit d’une calibration CONTEXTUELLE dans cette conversation ou ce projet, pas d’un nouveau modèle fiable de notation.
 
 Termine par un protocole court et lisible que je pourrai TESTER sur des copies authentiques de contrôle que tu n’as pas encore vues.</pre></div>
-<ol class="do"><li><b>5 min :</b> chargez les critères et le texte de l’épreuve dans une conversation ou un projet de test.</li><li><b>7 min :</b> fournissez les vraies copies <b>A1/A2</b> et leurs appréciations humaines.</li><li><b>5 min :</b> demandez à l’IA de réécrire sa méthode d’analyse et d’expliquer les exemples qu’elle a compris.</li><li><b>3 min :</b> discutez en binômes : l’IA reproduit-elle les critères, la forme des appréciations ou la qualité du jugement ? Quel biais pourrait produire l’apprentissage sur seulement deux copies ?</li></ol>
+<ol class="do"><li><b>5 min :</b> créez un <b>projet</b> (ChatGPT, Claude) ou un <b>Gem</b> (Gemini) de test, distinct de la conversation de l’activité 3, et chargez-y les critères et le texte de l’épreuve. Le calibrage y reste disponible d’une conversation à l’autre.</li><li><b>7 min :</b> fournissez les vraies copies <b>A1/A2</b> et leurs appréciations humaines.</li><li><b>5 min :</b> demandez à l’IA de réécrire sa méthode d’analyse et d’expliquer les exemples qu’elle a compris.</li><li><b>3 min :</b> discutez en binômes : l’IA reproduit-elle les critères, la forme des appréciations ou la qualité du jugement ? Quel biais pourrait produire l’apprentissage sur seulement deux copies ?</li></ol>
 <p class="why"><b>Point critique :</b> deux exemples ne démontrent pas qu’une IA est « calibrée » comme un correcteur fiable. Ils peuvent seulement orienter temporairement ses réponses. Conservez une version non calibrée et une version avec critères pour comparer.</p>
 <div class="retain"><b>Production :</b> une consigne de correction contextualisée et une liste de limites du calibrage.</div>
 </div></details>
 
-<details class="activity-accordion" id="s5-a5"><summary class="activity-toggle"><span class="activity-title">5. Tester sur de nouvelles copies non annotées</span><span class="activity-time">Environ 15 min</span></summary><div class="step">
-<p><b>Place aux vraies copies de contrôle B1/B2 :</b> elles n’ont pas servi à l’étape 4 et leurs notes humaines sont <b>cachées à l’IA</b> pendant cette étape. Utilisez idéalement les mêmes sujets et des copies de niveaux variés ; évitez de choisir exclusivement d’excellentes copies.</p>
+<details class="activity-accordion" id="s5-a5"><summary class="activity-toggle"><span class="activity-title">5. Relire B1 et B2 après calibrage</span><span class="activity-time">Environ 15 min</span></summary><div class="step">
+<p><b>Les mêmes copies de contrôle B1/B2, relues avec le calibrage :</b> elles n’ont pas servi d’exemples à l’étape 4 et leurs notes humaines restent <b>cachées à l’IA</b>. Travaillez dans le projet ou le Gem calibré, et non dans la conversation de l’activité 3. Utilisez idéalement les mêmes sujets et des copies de niveaux variés ; évitez de choisir exclusivement d’excellentes copies.</p>
 <div class="prompt"><div class="ph">Prompt 3 · Test à l’aveugle après calibrage<button class="btn small copy" type="button">Copier</button></div><pre>TEST À L’AVEUGLE APRÈS CALIBRAGE — PHILOSOPHIE TERMINALE.
 
-Tu as reçu auparavant les critères de relecture et des copies de RÉFÉRENCE A1/A2. Voici maintenant une NOUVELLE copie authentique de contrôle, ID [B1], anonymisée. Elle n’a pas été utilisée dans les exemples de calibrage.
+Tu as reçu auparavant les critères de relecture et des copies de RÉFÉRENCE A1/A2. Voici maintenant une copie authentique de contrôle, ID [B1], anonymisée. Elle n’a pas été utilisée dans les exemples de calibrage. Ne tiens compte d’aucune lecture antérieure de cette copie.
 
 Sujet : [SUJET EXACT].
 Fichier ou texte : [JOINDRE LA COPIE B1 ANONYMISÉE ET NON ANNOTÉE].
@@ -1008,29 +1008,29 @@ Sans demander ma note et sans inventer de texte absent :
 - signale les passages ou critères où ton jugement est fragile.
 
 N’essaie pas de retrouver une correction publiée en ligne. N’attribue aucune note réelle. Arrête-toi après cette copie ; j’ouvrirai ensuite ma fiche de comparaison humaine.</pre></div>
-<ol class="do"><li><b>5 min :</b> présentez la copie B1 non annotée et anonymisée ; recueillez la proposition de l’IA.</li><li><b>5 min :</b> faites le même test avec B2, en conservant la même consigne. Si possible, recommencez une des copies dans une nouvelle conversation avec les mêmes instructions pour observer les variations.</li><li><b>5 min :</b> vérifiez que l’IA cite le texte exact des copies, ne confond pas les sujets et ne révèle aucune note de référence qu’elle ne devrait pas connaître.</li></ol>
-<div class="retain"><b>Production :</b> deux analyses expérimentales sur des copies authentiques inédites pour l’IA, sans décision d’évaluation.</div>
+<ol class="do"><li><b>5 min :</b> présentez la copie B1 non annotée et anonymisée ; recueillez la proposition de l’IA.</li><li><b>5 min :</b> faites le même test avec B2, en conservant la même consigne. Reportez les deux estimations dans la colonne <b>« IA après calibrage »</b>. Si possible, relancez une des copies dans une nouvelle conversation <b>du même projet ou Gem</b> pour observer les variations.</li><li><b>5 min :</b> vérifiez que l’IA cite le texte exact des copies, ne confond pas les sujets et ne révèle aucune note de référence qu’elle ne devrait pas connaître.</li></ol>
+<div class="retain"><b>Production :</b> deux analyses calibrées de B1 et B2, à comparer aux deux analyses non calibrées de l’activité 3, sans décision d’évaluation.</div>
 </div></details>
 
 <details class="activity-accordion" id="s5-a6"><summary class="activity-toggle"><span class="activity-title">6. Comparer les jugements et mesurer les écarts</span><span class="activity-time">Environ 10 min</span></summary><div class="step">
 <p><b>Ouvrez seulement maintenant</b> vos notes et appréciations humaines concernant les copies B1/B2. Le but n’est pas de démontrer que l’enseignant possède la « note vraie », mais de repérer ce que l’IA a bien ou mal compris et si elle peut réellement faire gagner du temps.</p>
-<div class="tablewrap"><table class="philo-score-table"><thead><tr><th>Copie</th><th>Estimation IA /20</th><th>Note humaine /20</th><th>Écart et observation</th></tr></thead><tbody>
-<tr><td><b>B1</b></td><td><input id="s5-ia-b1" inputmode="decimal" placeholder="—" aria-label="Estimation expérimentale IA B1"></td><td><input id="s5-hu-b1" inputmode="decimal" placeholder="—" aria-label="Note humaine B1"></td><td><input id="s5-ob-b1" placeholder="Accord, contresens, référence…" aria-label="Observation B1"></td></tr>
-<tr><td><b>B2</b></td><td><input id="s5-ia-b2" inputmode="decimal" placeholder="—" aria-label="Estimation expérimentale IA B2"></td><td><input id="s5-hu-b2" inputmode="decimal" placeholder="—" aria-label="Note humaine B2"></td><td><input id="s5-ob-b2" placeholder="Accord, contresens, référence…" aria-label="Observation B2"></td></tr>
+<div class="tablewrap"><table class="philo-score-table"><thead><tr><th>Copie</th><th>IA avant calibrage /20</th><th>IA après calibrage /20</th><th>Note humaine /20</th><th>Écart et observation</th></tr></thead><tbody>
+<tr><td><b>B1</b></td><td><input id="s5-av-b1" inputmode="decimal" placeholder="—" aria-label="Estimation IA avant calibrage B1"></td><td><input id="s5-ia-b1" inputmode="decimal" placeholder="—" aria-label="Estimation IA après calibrage B1"></td><td><input id="s5-hu-b1" inputmode="decimal" placeholder="—" aria-label="Note humaine B1"></td><td><input id="s5-ob-b1" placeholder="Accord, contresens, référence…" aria-label="Observation B1"></td></tr>
+<tr><td><b>B2</b></td><td><input id="s5-av-b2" inputmode="decimal" placeholder="—" aria-label="Estimation IA avant calibrage B2"></td><td><input id="s5-ia-b2" inputmode="decimal" placeholder="—" aria-label="Estimation IA après calibrage B2"></td><td><input id="s5-hu-b2" inputmode="decimal" placeholder="—" aria-label="Note humaine B2"></td><td><input id="s5-ob-b2" placeholder="Accord, contresens, référence…" aria-label="Observation B2"></td></tr>
 </tbody></table></div>
 <p><button type="button" class="btn copy" id="copyS5Scores">Copier le tableau de comparaison (sans données d’identité)</button></p>
 <p class="why"><b>Les champs ci-dessus sont locaux au navigateur :</b> n’y saisissez jamais de noms, de numéros de candidat, de détails personnels ni de copies. Les notes sont <b>des valeurs de test</b>, pas des décisions réelles. Deux copies ne permettent pas de mesurer une fiabilité statistique.</p>
 <div class="prompt"><div class="ph">Prompt 4 · Analyser les accords et les écarts de correction<button class="btn small copy" type="button">Copier</button></div><pre>Nous avons évalué à l’aveugle les copies authentiques B1 et B2 dans un test local pédagogique. Les notes, appréciations et arguments qui suivent ont été attribués par des ENSEIGNANTS. Tes propres suggestions ne sont que des hypothèses à confronter à leur jugement.
 
 Tableau comparatif :
-[ID | NOTATION HUMAINE (CACHÉE PENDANT LE TEST) | ESTIMATION IA | APPRÉCIATION HUMAINE | OBSERVATIONS ET PREUVES TEXTUELLES]
+[ID | ESTIMATION IA AVANT CALIBRAGE | ESTIMATION IA APRÈS CALIBRAGE | NOTATION HUMAINE (CACHÉE PENDANT LE TEST) | APPRÉCIATION HUMAINE | OBSERVATIONS ET PREUVES TEXTUELLES]
 [COLLER LES LIGNES SANS AUCUNE DONNÉE IDENTIFIANTE].
 
 Analyse ce tableau sans prétendre découvrir la « bonne note ». Indique :
 1. Les accords sur les FORCES et les DIFFICULTÉS des copies, indépendamment du chiffre ;
 2. Les désaccords de jugement et leur importance pédagogique ;
 3. Les citations ou références inventées, mal reconnues ou mal interprétées ;
-4. Si la différence de notes s’est réduite ou non par rapport à la première passe, sachant que l’échantillon est TROP PETIT pour établir une fiabilité générale ;
+4. Pour chaque copie, si l’écart avec la note humaine s’est réduit ou non entre la lecture avant calibrage et la lecture après calibrage, et si les APPRÉCIATIONS se sont rapprochées, sachant que l’échantillon est TROP PETIT pour établir une fiabilité générale ;
 5. Les usages d’assistance qui paraissent pertinents et ceux qui demandent une vigilance accrue.
 
 Termine en répondant : « Cette expérience suffit-elle à faire de l’IA un correcteur autonome ? » (non : justification fondée sur les limites observées et sur le cadre de responsabilité de l’enseignant).</pre></div>
@@ -1052,7 +1052,7 @@ Termine en répondant : « Cette expérience suffit-elle à faire de l’IA u
 <p><b>Ouverture :</b> « Une machine qui propose une appréciation a-t-elle exercé un jugement, ou a-t-elle seulement produit un texte ressemblant à celui d’un correcteur ? »</p></div>
 </div>
 <p><b>Références pour encadrer cette expérimentation :</b> <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL – IA, copies et responsabilité de l’enseignant</a> · <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">Cadre national d’usage de l’IA en éducation</a> · <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3" target="_blank" rel="noopener">Règlement européen sur l’IA – systèmes éducatifs d’évaluation</a>.</p>
-<div class="session-bilan" id="bilan-s5"><details class="butterfly"><summary><span aria-hidden="true">🦋</span> Bilan · Calibrer une assistance n’est pas déléguer son jugement <small>Cliquer pour déplier</small></summary><div class="butterfly-body"><p class="why"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</p> <div class="philo-pipeline"><div><b>Copies réelles</b><span>Authentiques, anonymisées, références séparées</span></div><span aria-hidden="true">→</span><div><b>Première analyse</b><span>Sans notes ni exemples</span></div><span aria-hidden="true">→</span><div><b>Calibration</b><span>Critères et copies de référence</span></div><span aria-hidden="true">→</span><div><b>Contrôle à l’aveugle</b><span>Nouvelles copies, comparaison humaine</span></div></div>
+<div class="session-bilan" id="bilan-s5"><details class="butterfly"><summary><span aria-hidden="true">🦋</span> Bilan · Calibrer une assistance n’est pas déléguer son jugement <small>Cliquer pour déplier</small></summary><div class="butterfly-body"><p class="why"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</p> <div class="philo-pipeline"><div><b>Copies réelles</b><span>Authentiques, anonymisées, références séparées</span></div><span aria-hidden="true">→</span><div><b>Première analyse</b><span>B1 et B2, sans notes ni exemples</span></div><span aria-hidden="true">→</span><div><b>Calibration</b><span>Critères et copies de référence</span></div><span aria-hidden="true">→</span><div><b>Contrôle à l’aveugle</b><span>B1 et B2 relues, avant/après comparés à la note humaine</span></div></div>
 <div class="retain"><b>À retenir :</b> un bon commentaire généré ne constitue pas une décision fiable. <b>Le professeur demeure responsable de la correction et de la note</b> ; la valeur de l’IA s’éprouve dans ses arguments, ses erreurs et son apport réel aux apprentissages.</div>
 </div></details></div>
 <div class="retain"><b>Production finale :</b> votre protocole de test, un mini-tableau d’observations tirées de vraies copies et une réponse argumentée à cette question : <b>« L’IA peut-elle assister mon jugement sans prétendre le remplacer ? »</b></div>
@@ -1202,9 +1202,9 @@ if(philoCopy)philoCopy.addEventListener('click',()=>{
 const compareS5=$('#copyS5Scores');
 if(compareS5)compareS5.addEventListener('click',()=>{
  const val=id=>{const el=$('#'+id);return el?el.value.trim():''};
- const out=['COMPARAISON EXPÉRIMENTALE — NE CONTIENT AUCUNE IDENTITÉ','Code | IA indicative /20 | Référence humaine /20 | Observation',
- 'B1 | '+val('s5-ia-b1')+' | '+val('s5-hu-b1')+' | '+val('s5-ob-b1'),
- 'B2 | '+val('s5-ia-b2')+' | '+val('s5-hu-b2')+' | '+val('s5-ob-b2'),
+ const out=['COMPARAISON EXPÉRIMENTALE — NE CONTIENT AUCUNE IDENTITÉ','Code | IA avant calibrage /20 | IA après calibrage /20 | Référence humaine /20 | Observation',
+ 'B1 | '+val('s5-av-b1')+' | '+val('s5-ia-b1')+' | '+val('s5-hu-b1')+' | '+val('s5-ob-b1'),
+ 'B2 | '+val('s5-av-b2')+' | '+val('s5-ia-b2')+' | '+val('s5-hu-b2')+' | '+val('s5-ob-b2'),
  'Ces essais ne valent ni notation effective ni validation statistique.'].join('\n');
  copy(out,'Tableau de comparaison copié');
 });
