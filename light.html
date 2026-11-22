@@ -126,6 +126,62 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 .butterfly-axis span{font-weight:700}
 @media(max-width:700px){.butterfly-wings{grid-template-columns:1fr}.butterfly-wing,.butterfly-wing:last-child{border-radius:14px;min-height:auto}.butterfly-axis{border-radius:12px}.butterfly>summary small{margin-left:0}}
 @media print{.butterfly-body{display:block!important}}
+
+/* Sommaire latéral, navigation et sections accordéon */
+.page-layout{width:min(1430px,100%);margin:auto;padding:0 12px;display:grid;grid-template-columns:286px minmax(0,1fr);column-gap:20px;align-items:start}
+.content-main.wrap{min-width:0;width:100%;max-width:none;padding:0 0 20px}
+.side-nav{position:sticky;top:12px;align-self:start;max-height:calc(100vh - 24px);overflow-y:auto;overscroll-behavior:contain;background:var(--paper);border:1px solid var(--stroke);border-radius:14px;margin-top:22px;box-shadow:0 6px 20px #2030420a}
+.sidebar-content{padding:9px 0 14px}.sidebar-header{padding:13px 16px 12px;border-bottom:1px solid var(--stroke);display:grid;gap:2px;color:var(--teal)}
+.sidebar-header small{color:var(--muted);font-size:.79rem}.sidebar-quick{display:flex;flex-wrap:wrap;gap:3px;padding:10px 12px}
+.sidebar-quick a{padding:4px 7px;font-size:.8rem;border-radius:5px;background:#f2f6f4;color:var(--ink);text-decoration:none}
+.nav-group{border-top:1px solid var(--stroke)}.nav-group summary,.nav-nested summary{cursor:pointer;list-style:none;position:relative;padding:11px 28px 11px 13px;font-weight:700;font-size:.91rem;line-height:1.35}
+.nav-nested summary{padding:9px 23px 9px 12px;font-weight:650;font-size:.85rem;background:#f5f9f7}
+.nav-group summary::-webkit-details-marker,.nav-nested summary::-webkit-details-marker{display:none}
+.nav-group summary::after,.nav-nested summary::after{content:"▸";position:absolute;right:12px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.nav-group[open]>summary::after,.nav-nested[open]>summary::after{content:"▾"}
+.nav-group summary:hover,.nav-nested summary:hover{background:var(--teall)}.nav-sub{padding:0 10px 10px 17px;display:grid;gap:1px}
+.nav-nested>.nav-sub{padding:0 4px 8px 12px}
+.sidebar-content a{border-radius:6px;text-decoration:none;color:var(--ink);font-size:.83rem;line-height:1.35;padding:6px 7px}
+.sidebar-content a:hover,.sidebar-content a:focus-visible{background:var(--teall);color:var(--teal)}
+.sidebar-content a.nav-activity{padding-left:14px;color:var(--muted);font-size:.8rem}
+.sidebar-content a.nav-bilan{background:#fff6e9;color:#80500e;font-weight:650}
+.sidebar-content a[aria-current="location"]{background:var(--teall);font-weight:700;color:var(--teal)}
+.nav-toggle{display:none}
+section.session-block{padding:0!important;overflow:visible}
+.session-toggle,.part-toggle,.activity-toggle{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;position:relative}
+.session-toggle::-webkit-details-marker,.part-toggle::-webkit-details-marker,.activity-toggle::-webkit-details-marker{display:none}
+.session-toggle::after,.part-toggle::after,.activity-toggle::after{content:"▸";color:var(--teal);font-size:1.14rem;margin-left:3px}
+.session-accordion[open]>.session-toggle::after,.part-accordion[open]>.part-toggle::after,.activity-accordion[open]>.activity-toggle::after{content:"▾"}
+.session-toggle{padding:19px 22px;border-radius:14px;background:#f4faf7;flex-wrap:wrap}
+.session-num{font-size:.83rem;font-weight:750;color:#fff;background:var(--teal);border-radius:999px;padding:3px 11px}
+.session-name{font-family:Georgia,serif;font-size:1.38rem;font-weight:700;line-height:1.3;flex:1;min-width:185px}
+.session-duration{font-weight:650;color:var(--muted);white-space:nowrap}
+.session-body{padding:10px 23px 22px}
+.part-accordion{border:1px solid #bcdcd1;border-radius:12px;margin:16px 0;background:#fafffc;scroll-margin-top:24px}
+.part-toggle{padding:13px 16px;background:#eaf5f0;border-radius:12px;flex-wrap:wrap}
+.part-toggle>span:first-child{flex:1;min-width:180px;font-weight:650}
+.part-duration{font-size:.84rem;color:var(--teal);font-weight:700}
+.part-body{padding:10px 15px}
+.activity-accordion{margin:10px 0;border:1px solid var(--stroke);border-radius:10px;overflow:hidden;background:#fff;scroll-margin-top:24px}
+.activity-toggle{padding:12px 14px;background:#f9fbfa;gap:10px}
+.activity-accordion[open]>.activity-toggle{background:var(--teall);border-bottom:1px solid #cee6db}
+.activity-title{flex:1;font-weight:650;line-height:1.4}
+.activity-time{color:var(--muted);white-space:nowrap;font-size:.83rem}
+.activity-accordion>.step{margin:0;padding:14px 17px;border-radius:0;border-left:0}
+.session-bilan{margin:18px 0;scroll-margin-top:24px}
+.page-layout section.block,.page-layout details[id]{scroll-margin-top:24px}
+@media(max-width:940px){
+ .page-layout{display:block;padding:0 10px}
+ .side-nav{position:sticky;top:0;z-index:40;margin:0 -10px;max-height:calc(80vh);overflow-y:auto;border-radius:0;box-shadow:0 5px 12px #20304212}
+ .nav-toggle{display:flex;align-items:center;gap:12px;width:100%;border-radius:0;padding:11px 18px;font-size:.93rem;background:#fff;color:var(--teal);text-align:left}
+ .nav-toggle-mark{margin-left:auto}
+ .sidebar-content{display:none;border-top:1px solid var(--stroke)}
+ .side-nav.mobile-open .sidebar-content{display:block}
+ .content-main.wrap{padding:0 4px}
+ .page-layout section.block,.page-layout details[id]{scroll-margin-top:56px}
+}
+@media(max-width:520px){.session-toggle{padding:14px}.session-name{font-size:1.1rem}.session-body{padding:8px 12px 17px}.part-body{padding:8px}.activity-toggle{padding:10px}.activity-time{font-size:.75rem}}
+@media print{.side-nav{display:none!important}.page-layout{display:block;width:100%}.activity-accordion>.step,.session-body,.part-body{display:block!important}}
 </style>
 </head>
 <body>
@@ -140,9 +196,63 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 </div>
 </div></header>
 
-<nav class="toc" aria-label="Sommaire"><div class="wrap"><a href="#enbref">En bref</a><a href="#avant">À préparer</a><a href="#programme">Programme</a><a href="#s1">1 · Philosopher</a><a href="#s2a">2.1 · Comprendre</a><a href="#s2b">2.2 · Construire</a><a href="#s3">3 · Préparer</a><a href="#s4">4 · Charte</a><a href="#recette">Générateur de tuteur</a><a href="#cadre">Cadre</a><a href="#faq">FAQ</a></div></nav>
-
-<main class="wrap">
+<div class="page-layout">
+<aside class="side-nav" aria-label="Navigation dans la formation">
+ <button type="button" id="navToggle" class="nav-toggle" aria-controls="navContent" aria-expanded="false"><span aria-hidden="true">☰</span> Sommaire des séances <span class="nav-toggle-mark" aria-hidden="true">▾</span></button>
+ <nav id="navContent" class="sidebar-content" aria-label="Sommaire détaillé">
+  <div class="sidebar-header"><strong>Philosophie × IA</strong><small>4 séances · 7 h</small></div>
+  <div class="sidebar-quick"><a href="#enbref">Présentation</a><a href="#programme">Programme</a><a href="#avant">Préparation</a></div>
+  <details class="nav-group" open><summary>1 · Une machine peut-elle penser ?</summary><div class="nav-sub">
+   <a href="#s1">Voir la séance 1</a>
+   <a class="nav-activity" href="#s1-a1" title="1. Écrire d’abord, sans IA">1. Écrire d’abord, sans IA</a>
+<a class="nav-activity" href="#s1-a2" title="2. Quatre philosophes face à l’IA">2. Quatre philosophes face à l’IA</a>
+<a class="nav-activity" href="#s1-a3" title="3. Mettre notre philosophe à l’épreuve de Claude">3. Mettre notre philosophe à l’épreuve de Claude</a>
+<a class="nav-activity" href="#s1-a4" title="4. Discussion à visée philosophique : une machine qui parle pense-t-elle ?">4. Discussion à visée philosophique : une machine qui parle pense-t-elle ?</a>
+<a class="nav-activity" href="#s1-a5" title="5. Ce que je pensais, ce que je pense maintenant : passer du débat à une activité de classe">5. Ce que je pensais, ce que je pense maintenant : passer du débat à une activité de classe</a>
+   <a class="nav-bilan" href="#bilan-s1">🦋 Bilan séance 1</a>
+  </div></details>
+  <details class="nav-group" open><summary>2 · Apprentissage et tuteur</summary><div class="nav-sub">
+   <a href="#s2">Vue d’ensemble</a>
+   <details class="nav-nested" open><summary>Partie 1 · Comprendre</summary><div class="nav-sub">
+    <a href="#s2a">Voir la partie 1</a>
+    <a class="nav-activity" href="#s2a-a1" title="1. Deux copies : laquelle pense, laquelle imite ?">1. Deux copies : laquelle pense, laquelle imite ?</a>
+<a class="nav-activity" href="#s2a-a2" title="2. Deux expériences pour comprendre les limites">2. Deux expériences pour comprendre les limites</a>
+<a class="nav-activity" href="#s2a-a3" title="3. Analyser l’échange d’Inès avec une IA, puis améliorer l’aide">3. Analyser l’échange d’Inès avec une IA, puis améliorer l’aide</a>
+<a class="nav-activity" href="#s2a-a4" title="4. Tester et améliorer une IA qui accompagne un élève">4. Tester et améliorer une IA qui accompagne un élève</a>
+    <a class="nav-bilan" href="#bilan-papillon">🦋 Bilan-papillon</a>
+   </div></details>
+   <details class="nav-nested"><summary>Partie 2 · Créer un tuteur</summary><div class="nav-sub">
+    <a href="#s2b">Voir la partie 2</a>
+    <a class="nav-activity" href="#s2b-a1" title="1. Définir le rôle du tuteur avant de toucher à ChatGPT">1. Définir le rôle du tuteur avant de toucher à ChatGPT</a>
+<a class="nav-activity" href="#s2b-a2" title="2. Remplir le générateur HTML de prompt">2. Remplir le générateur HTML de prompt</a>
+<a class="nav-activity" href="#s2b-a3" title="3. Activer le tuteur dans ChatGPT : deux situations à distinguer">3. Activer le tuteur dans ChatGPT : deux situations à distinguer</a>
+<a class="nav-activity" href="#s2b-a4" title="4. Tester trois comportements avec de vrais échanges">4. Tester trois comportements avec de vrais échanges</a>
+<a class="nav-activity" href="#s2b-a5" title="5. Améliorer les instructions et vérifier le partage">5. Améliorer les instructions et vérifier le partage</a>
+<a class="nav-activity" href="#s2b-a6" title="6. Présenter le tuteur et son effet sur l’apprentissage">6. Présenter le tuteur et son effet sur l’apprentissage</a>
+    <a class="nav-bilan" href="#bilan-s2b">🦋 Bilan partie 2</a>
+    <a href="#recette">Générateur de tuteur</a>
+   </div></details>
+  </div></details>
+  <details class="nav-group"><summary>3 · Préparer ses cours</summary><div class="nav-sub">
+   <a href="#s3">Voir la séance 3</a>
+   <a class="nav-activity" href="#s3-a1" title="1. Trois propositions d’IA : laquelle garder pour préparer son cours ?">1. Trois propositions d’IA : laquelle garder pour préparer son cours ?</a>
+<a class="nav-activity" href="#s3-a2" title="2. Atelier central : travailler un texte">2. Atelier central : travailler un texte</a>
+<a class="nav-activity" href="#s3-a3" title="3. Atelier au choix : notion ou sujet">3. Atelier au choix : notion ou sujet</a>
+<a class="nav-activity" href="#s3-a4" title="4. Vérifier, sélectionner et réécrire">4. Vérifier, sélectionner et réécrire</a>
+<a class="nav-activity" href="#s3-a5" title="5. Marché des ressources">5. Marché des ressources</a>
+  </div></details>
+  <details class="nav-group"><summary>4 · Charte d’utilisation</summary><div class="nav-sub">
+   <a href="#s4">Voir la séance 4</a>
+   <a class="nav-activity" href="#s4-a1" title="1. Partir du tuteur conversationnel créé">1. Partir du tuteur conversationnel créé</a>
+<a class="nav-activity" href="#s4-a2" title="2. Définir des niveaux d’usage">2. Définir des niveaux d’usage</a>
+<a class="nav-activity" href="#s4-a3" title="3. Simuler une coélaboration avec les élèves">3. Simuler une coélaboration avec les élèves</a>
+<a class="nav-activity" href="#s4-a4" title="4. Rédiger une charte provisoire">4. Rédiger une charte provisoire</a>
+<a class="nav-activity" href="#s4-a5" title="5. Programmer la séance avec les élèves">5. Programmer la séance avec les élèves</a>
+  </div></details>
+  <div class="sidebar-quick sidebar-bottom"><a href="#cadre">Cadre d’utilisation</a><a href="#faq">Questions fréquentes</a><a href="#pourquoi">Ressources</a></div>
+ </nav>
+</aside>
+<main class="wrap content-main">
 
 <section class="block" id="enbref"><div class="eyebrow">En bref</div><h2>Un parcours en quatre séances</h2><div class="grid3"><div class="card teal"><div class="big">7 h</div><p>Formation effective, à laquelle s’ajoutent deux pauses de 15 minutes : <b>7 h 30 au total</b> hors éventuel déjeuner.</p></div><div class="card gold"><div class="big">4</div><p>Questionner, comprendre, expérimenter, concevoir et encadrer les usages de l’IA.</p></div><div class="card blue"><div class="big">3</div><p>Repartir avec des ressources vérifiées, un prompt de tuteur conversationnel testé et une charte à coélaborer.</p></div></div><div class="retain"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</div></section>
 <section class="block" id="avant"><div class="eyebrow">Avant de venir</div><h2>Votre préparation</h2><ul class="checklist"><li><input id="c1" type="checkbox"/><label for="c1">Un ordinateur portable et un accès Internet.</label></li><li><input id="c2" type="checkbox"/><label for="c2">Un accès autorisé à ChatGPT pour tester le tuteur (la création et le partage de nouveaux GPT nécessitent des permissions spécifiques).</label></li><li><input id="c3" type="checkbox"/><label for="c3">Un texte philosophique de 10 à 25 lignes, tiré d’une édition vérifiée et autorisée.</label></li><li><input id="c4" type="checkbox"/><label for="c4">Une distinction difficile pour vos élèves et un exemple de devoir à discuter.</label></li></ul></section>
@@ -449,6 +559,7 @@ Je peux défendre mon travail sans cet outil.</pre></div></div></details>
 <section class="block" id="pourquoi"><div class="eyebrow">Choix pédagogiques</div><h2>Articulation avec la formation longue</h2><p>Les séances 1 et 4 adaptent les modules 11 et 10 de la <a href="index.html">formation complète</a>. La version courte préserve l’expérimentation, les critères d’apprentissage et la construction d’un outil utilisable, puis pose le cadre d’usage à élaborer avec les élèves.</p><p>Pour approfondir l’évaluation, la différenciation, la didactique et les références de recherche, consultez le <a href="index.html">parcours complet</a>, le <a href="glossaire.html">glossaire</a> et les <a href="sources.html">sources</a>.</p></section>
 
 </main>
+</div><!-- fin page-layout -->
 <footer><div class="wrap">Philosophie × IA · quatre séances (7 h hors pauses). Toutes les copies et situations d’élèves sont fictives. Le générateur de prompt HTML ne transmet pas les champs remplis à un serveur ; l’utilisation de liens et d’outils externes obéit à leurs propres règles de traitement des données. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
@@ -458,6 +569,28 @@ const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const store={get(k,d){try{const v=localStorage.getItem('philoia-light:'+k);return v===null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('philoia-light:'+k,JSON.stringify(v))}catch(e){}}};
 function toast(m){const t=$('#toast');t.textContent=m;t.classList.add('show');clearTimeout(toast._t);toast._t=setTimeout(()=>t.classList.remove('show'),2200)}
 async function copy(text){try{await navigator.clipboard.writeText(text)}catch(e){const ta=document.createElement('textarea');ta.value=text;document.body.appendChild(ta);ta.select();try{document.execCommand('copy')}catch(_){}ta.remove()}toast('Copié : à coller dans ChatGPT ou Claude')}
+
+
+/* Navigation latérale, sections et activités dépliables */
+const side=$('.side-nav'),navToggle=$('#navToggle');
+function mobileMenu(open){if(!side||!navToggle)return;side.classList.toggle('mobile-open',open);navToggle.setAttribute('aria-expanded',String(open))}
+if(navToggle)navToggle.addEventListener('click',()=>mobileMenu(!side.classList.contains('mobile-open')));
+function focusSection(id,scroll){
+ const dest=document.getElementById(id);if(!dest)return;
+ if(dest.matches('section.session-block')){const d=dest.querySelector(':scope > details.session-accordion');if(d)d.open=true}
+ if(dest.classList.contains('session-bilan')||id==='bilan-papillon'){const d=dest.querySelector('details.butterfly');if(d)d.open=true}
+ let parent=dest;while(parent){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement}
+ const navlinks=$('.sidebar-content a[href^="#"]');navlinks.forEach(l=>l.removeAttribute('aria-current'));
+ const matching=navlinks.find(l=>l.getAttribute('href')==='#'+id);
+ if(matching){matching.setAttribute('aria-current','location');let p=matching.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement}}
+ if(scroll)requestAnimationFrame(()=>dest.scrollIntoView({behavior:'smooth',block:'start'}));
+}
+$('.sidebar-content a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+ const id=a.getAttribute('href').slice(1);if(!document.getElementById(id))return;
+ e.preventDefault();history.pushState(null,'','#'+id);focusSection(id,true);mobileMenu(false);
+}));
+window.addEventListener('hashchange',()=>focusSection(decodeURIComponent(location.hash.slice(1)),true));
+if(location.hash)focusSection(decodeURIComponent(location.hash.slice(1)),true);
 
 /* boutons Copier des prompts */
 $$('.prompt .btn.copy').forEach(b=>{if(b.id==='copyRecipe')return;b.addEventListener('click',()=>copy(b.closest('.prompt').querySelector('pre').textContent))});
