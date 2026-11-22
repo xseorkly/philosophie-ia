@@ -636,12 +636,12 @@ function focusSection(id,scroll){
  if(dest.matches('section.session-block')){const d=dest.querySelector(':scope > details.session-accordion');if(d)d.open=true}
  if(dest.classList.contains('session-bilan')||id==='bilan-papillon'){const d=dest.querySelector('details.butterfly');if(d)d.open=true}
  let parent=dest;while(parent){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement}
- const navlinks=$('.sidebar-content a[href^="#"]');navlinks.forEach(l=>l.removeAttribute('aria-current'));
+ const navlinks=$$('.sidebar-content a[href^="#"]');navlinks.forEach(l=>l.removeAttribute('aria-current'));
  const matching=navlinks.find(l=>l.getAttribute('href')==='#'+id);
  if(matching){matching.setAttribute('aria-current','location');let p=matching.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement}}
  if(scroll)requestAnimationFrame(()=>dest.scrollIntoView({behavior:'smooth',block:'start'}));
 }
-$('.sidebar-content a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+$$('.sidebar-content a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
  const id=a.getAttribute('href').slice(1);if(!document.getElementById(id))return;
  e.preventDefault();history.pushState(null,'','#'+id);focusSection(id,true);mobileMenu(false);
 }));
@@ -649,9 +649,9 @@ window.addEventListener('hashchange',()=>focusSection(decodeURIComponent(locatio
 if(location.hash)focusSection(decodeURIComponent(location.hash.slice(1)),true);
 
 /* Suivi automatique du titre actif dans le sommaire latéral */
-const sideGroups=$('.sidebar-content .nav-group[data-session]');
-const sideParts=$('.sidebar-content .nav-nested[data-part]');
-const sideLinks=$('.sidebar-content a[href^="#"]');
+const sideGroups=$$('.sidebar-content .nav-group[data-session]');
+const sideParts=$$('.sidebar-content .nav-nested[data-part]');
+const sideLinks=$$('.sidebar-content a[href^="#"]');
 let lastSideSession='',lastSidePart='',sideScheduled=false;
 function markCurrent(id){
  const el=document.getElementById(id);if(!el)return;
@@ -685,7 +685,7 @@ function visibleNearTop(elems,y){
 function updateCurrentReading(){
  if(side&&side.classList.contains('mobile-open'))return;
  const y=Math.min(170,Math.max(95,window.innerHeight*.23));
- const session=visibleNearTop($('section.session-block'),y);if(!session)return;
+ const session=visibleNearTop($$('section.session-block'),y);if(!session)return;
  const part=session.id==='s2'?visibleNearTop([...session.querySelectorAll('details.part-accordion')],y):null;
  const scope=part||session;
  const item=visibleNearTop([...scope.querySelectorAll('details.activity-accordion, .session-bilan, #bilan-papillon')],y);
@@ -697,7 +697,7 @@ function scheduleCurrentReading(){
 }
 window.addEventListener('scroll',scheduleCurrentReading,{passive:true});
 window.addEventListener('resize',scheduleCurrentReading);
-$('.session-accordion, .part-accordion, .activity-accordion').forEach(d=>d.addEventListener('toggle',scheduleCurrentReading));
+$$('.session-accordion, .part-accordion, .activity-accordion').forEach(d=>d.addEventListener('toggle',scheduleCurrentReading));
 sideLinks.forEach(link=>link.addEventListener('click',()=>markCurrent(link.getAttribute('href').slice(1))));
 window.addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.slice(1));if(document.getElementById(id))markCurrent(id)});
 window.addEventListener('load',()=>{if(location.hash){const id=decodeURIComponent(location.hash.slice(1));if(document.getElementById(id))markCurrent(id)}else scheduleCurrentReading()});
@@ -705,7 +705,7 @@ window.addEventListener('load',()=>{if(location.hash){const id=decodeURIComponen
 /* À l’impression, ouvrir les parties et activités pour conserver le contenu sur papier. */
 let printDetails=[];
 window.addEventListener('beforeprint',()=>{
- printDetails=$('details.session-accordion, details.part-accordion, details.activity-accordion, details.butterfly').map(d=>({d,opened:d.open}));
+ printDetails=$$('details.session-accordion, details.part-accordion, details.activity-accordion, details.butterfly').map(d=>({d,opened:d.open}));
  printDetails.forEach(x=>x.d.open=true);
 });
 window.addEventListener('afterprint',()=>{printDetails.forEach(x=>x.d.open=x.opened);printDetails=[]});
