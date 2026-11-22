@@ -1,13 +1,51 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" width="1200" height="820" role="img" aria-labelledby="titre description">
-<title id="titre">Exemple hypothétique : la réponse directe d'une IA non configurée comme tuteur</title>
-<desc id="description">Inès ouvre une conversation neuve et demande simplement de l’aide sur sa dissertation. Sans recevoir de règles pédagogiques de la part de son professeur, l’IA lui propose immédiatement une problématique et un plan. Ce scénario est inventé pour l’analyse et n’est pas le résultat d’un test réel.</desc>
-<rect width="1200" height="820" fill="#f6f7f9"/>
-<rect x="22" y="18" width="1156" height="774" rx="22" fill="#fff" stroke="#d9dee8" stroke-width="2"/>
-<g font-family="Arial,Helvetica,sans-serif">
-<text x="66" y="68" font-size="29" font-weight="700" fill="#1c303e">Exemple de conversation avec une IA générative</text>
-<text x="66" y="99" font-size="18" fill="#586e79">Conversation nouvelle • Aucun prompt de tutorat fourni au préalable</text>
-<path d="M43 124H1158" stroke="#e3e8ea" stroke-width="2"/>
-<rect x="220" y="191" width="922" height="145" rx="18" fill="#e9ebff"/><circle cx="78" cy="218" r="21" fill="#a3ace8"/><text x="78" y="225" text-anchor="middle" fill="#fff" font-size="20">●</text><text x="113" y="227" fill="#172334" font-weight="700" font-size="23">Inès</text><text x="243" y="227" font-size="18.2" fill="#182a37">Bonjour, je suis en terminale et mon professeur m’a donné une dissertation de philosophie sur</text><text x="243" y="255" font-size="18.2" fill="#182a37">« Peut-on vouloir la vérité à tout prix ? ». Je ne sais pas comment trouver une problématique.</text><text x="243" y="283" font-size="18.2" fill="#182a37">J’ai compris qu’il faut parler de la vérité, mais je ne vois pas encore quelle difficulté le sujet soulève.</text><text x="243" y="311" font-size="18.2" fill="#182a37">Est-ce que tu peux m’aider à commencer ?</text><rect x="220" y="338" width="922" height="370" rx="18" fill="#f1f4f6"/><circle cx="78" cy="365" r="21" fill="#3c9882"/><text x="78" y="372" text-anchor="middle" fill="#fff" font-size="20">✦</text><text x="113" y="374" fill="#172334" font-weight="700" font-size="23">IA</text><text x="243" y="374" font-size="18.2" fill="#182a37">Bien sûr ! Voici une problématique possible pour ta dissertation :</text><text x="243" y="402" font-size="18.2" fill="#182a37">« La recherche de la vérité doit-elle être poursuivie sans limite, même lorsque sa découverte</text><text x="243" y="430" font-size="18.2" fill="#182a37">risque de nous faire souffrir ou de bouleverser nos convictions ? »</text><text x="243" y="486" font-size="18.2" fill="#182a37">Tu peux construire ta réflexion en trois temps :</text><text x="243" y="514" font-size="18.2" fill="#182a37">1. Pourquoi voulons-nous connaître la vérité ?</text><text x="243" y="542" font-size="18.2" fill="#182a37">2. Pourquoi certaines vérités peuvent-elles nous faire hésiter à les découvrir ?</text><text x="243" y="570" font-size="18.2" fill="#182a37">3. Comment concilier la recherche de la vérité et ses conséquences ?</text><text x="243" y="626" font-size="18.2" fill="#182a37">Pour ton introduction, tu pourrais partir d’une situation où découvrir la vérité est douloureux.</text>
-<text x="66" y="756" font-size="17" fill="#5f6c77" font-style="italic">Scénario fictif : réponse directe possible, non observée lors d'un test réel.</text>
-</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1410 1252" width="1410" height="1252" role="img" aria-labelledby="titre description">
+<title id="titre">Inès demande de l’aide à une IA sans tuteur configuré</title>
+<desc id="description">Simulation pédagogique fictive : après une demande d’aide d’Inès sur une dissertation de terminale, une IA non configurée propose spontanément une problématique, un plan, des exemples d’introduction, des transitions, une conclusion et même une dissertation complète. Ce n’est pas une véritable capture d’écran ni un résultat garanti.</desc>
+<rect width="1410" height="1252" rx="20" fill="#f4f6fa"/>
+<rect x="22" y="20" width="1366" height="1194" rx="22" fill="#fff" stroke="#dce1ea" stroke-width="2"/>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="60" y="43" width="62" height="62" rx="17" fill="#867dd7"/>
+<text x="91" y="87" font-size="35" text-anchor="middle" fill="#fff">✦</text>
+<text x="149" y="76" font-size="31" font-weight="700" fill="#1c2736">Conversation avec une IA générative</text>
+<text x="150" y="108" font-size="22" fill="#697586">Nouvelle conversation — aucun tuteur configuré</text>
+<path d="M55 128H1353" stroke="#e4e9ef" stroke-width="2"/>
+<circle cx="85" cy="183" r="23" fill="#aaa6e9"/>
+<text x="85" y="191" font-size="23" text-anchor="middle" fill="#fff">●</text>
+<text x="125" y="193" font-weight="700" font-size="25" fill="#1e2734">Inès</text>
+<rect x="220" y="156" width="1148" height="178" rx="22" fill="#e9e9ff"/>
+<text x="243" y="192" font-size="21" fill="#1e2734">Bonjour, je suis en terminale et mon professeur m’a donné une dissertation de philosophie sur</text>
+<text x="243" y="222" font-size="21" fill="#1e2734">« Peut-on vouloir la vérité à tout prix ? ». Je ne sais pas comment trouver une problématique.</text>
+<text x="243" y="252" font-size="21" fill="#1e2734">J’ai compris qu’il faut parler de la vérité, mais je ne vois pas encore quelle difficulté le sujet soulève.</text>
+<text x="243" y="282" font-size="21" fill="#1e2734">Est-ce que tu peux m’aider à commencer ?</text>
+<circle cx="85" cy="388" r="23" fill="#398f7c"/>
+<text x="85" y="396" font-size="25" text-anchor="middle" fill="#fff">✦</text>
+<text x="125" y="399" font-weight="700" font-size="26" fill="#1e2734">IA</text>
+<rect x="220" y="360" width="1148" height="752" rx="22" fill="#ecf6f2"/>
+<text x="244" y="397" font-size="20.5" font-weight="700" fill="#1a2931">Bien sûr, je peux t’aider ! Voici une première proposition pour ta dissertation :</text>
+
+<text x="244" y="461" font-size="20.5" font-weight="700" fill="#1a2931">• Une problématique possible :</text>
+<text x="244" y="493" font-size="20.5" fill="#1a2931">La recherche de la vérité doit-elle toujours primer, même si elle risque de nous faire souffrir</text>
+<text x="244" y="525" font-size="20.5" fill="#1a2931">ou de bouleverser nos convictions ?</text>
+
+<text x="244" y="589" font-size="20.5" font-weight="700" fill="#1a2931">• Un plan en trois parties :</text>
+<text x="244" y="621" font-size="20.5" fill="#1a2931">1. La vérité comme valeur fondamentale : vouloir savoir favorise la connaissance, la liberté et l’autonomie.</text>
+<text x="244" y="653" font-size="20.5" fill="#1a2931">2. Les limites du désir de vérité : certaines découvertes peuvent faire souffrir ou créer des conflits.</text>
+<text x="244" y="685" font-size="20.5" fill="#1a2931">3. Une position nuancée : rechercher la vérité avec discernement, selon les situations et leurs effets.</text>
+
+<text x="244" y="749" font-size="20.5" font-weight="700" fill="#1a2931">Je peux aussi t’aider à rédiger ton introduction.</text>
+<text x="244" y="781" font-size="20.5" fill="#1a2931">Je peux te proposer plusieurs exemples d’introduction, avec une accroche, une définition des mots,</text>
+<text x="244" y="813" font-size="20.5" fill="#1a2931">l’annonce d’une problématique et celle du plan. Tu n’auras qu’à choisir celle qui te convient.</text>
+
+<text x="244" y="877" font-size="20.5" font-weight="700" fill="#1a2931">Et si tu veux aller plus loin, je peux également :</text>
+<text x="244" y="909" font-size="20.5" fill="#1a2931">• développer chacun des arguments philosophiques avec des exemples précis ;</text>
+<text x="244" y="941" font-size="20.5" fill="#1a2931">• rédiger les transitions entre les trois parties ;</text>
+<text x="244" y="973" font-size="20.5" fill="#1a2931">• écrire une conclusion structurée qui répond à la problématique ;</text>
+<text x="244" y="1005" font-size="20.5" fill="#1a2931">• ou même produire un exemple complet de dissertation pour t’aider à terminer ton devoir.</text>
+
+<text x="244" y="1069" font-size="20.5" font-weight="700" fill="#1a2931">Dis-moi ce que tu préfères : une introduction rédigée, un plan détaillé ou le devoir complet ?</text>
+<rect x="56" y="1144" width="1300" height="55" rx="14" fill="#fff" stroke="#ccd5df" stroke-width="2"/>
+<text x="88" y="1179" font-size="22" fill="#7a8595">Écrire un message…</text>
+<rect x="1288" y="1151" width="50" height="40" rx="12" fill="#857dd7"/>
+<text x="1313" y="1180" text-anchor="middle" fill="#fff" font-size="26">➤</text>
+<text x="705" y="1230" text-anchor="middle" font-size="19" font-style="italic" fill="#536477">Simulation pédagogique fictive — pas une véritable capture d’écran ni une réponse garantie.</text>
+</g></svg>
