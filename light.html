@@ -221,6 +221,11 @@ section.session-block{padding:0!important;overflow:visible}
 .philo-pipeline>div span{font-size:.86rem;color:var(--muted)}
 .philo-pipeline>span{align-self:center;color:var(--teal);font-weight:800}
 @media(max-width:680px){.philo-pipeline>span{display:none}.philo-pipeline>div{flex-basis:100%}}
+
+/* Champ d'observation sans identité - séance optionnelle 5 */
+.philo-score-table input{width:100%;min-width:90px;padding:7px;border:1px solid var(--stroke);border-radius:6px;font:inherit}
+.philo-score-table td{min-width:100px}
+.philo-score-table td:last-child{min-width:180px}
 </style>
 </head>
 <body>
@@ -295,14 +300,25 @@ section.session-block{padding:0!important;overflow:visible}
 <a class="nav-bilan" href="#bilan-s4">🦋 Bilan séance 4</a>
 <a href="generateur-charte-philosophie.html" target="_blank" rel="noopener">Générateur de charte</a>
 </div></details>
+<details class="nav-group" data-session="s5"><summary>5 · Évaluer avec l’IA (option)</summary><div class="nav-sub">
+<a href="#s5">Voir la séance 5 · complémentaire</a>
+<a class="nav-activity" href="#s5-a1" title="1. Réunir des copies authentiques et sécuriser leur utilisation">1. Réunir des copies authentiques et sécuriser leur utilisation</a>
+<a class="nav-activity" href="#s5-a2" title="2. Construire une grille et un protocole d’observation">2. Construire une grille et un protocole d’observation</a>
+<a class="nav-activity" href="#s5-a3" title="3. Tester l’IA sans calibrage : première lecture à l’aveugle">3. Tester l’IA sans calibrage : première lecture à l’aveugle</a>
+<a class="nav-activity" href="#s5-a4" title="4. Calibrer l’assistance avec des copies de référence">4. Calibrer l’assistance avec des copies de référence</a>
+<a class="nav-activity" href="#s5-a5" title="5. Tester sur de nouvelles copies non annotées">5. Tester sur de nouvelles copies non annotées</a>
+<a class="nav-activity" href="#s5-a6" title="6. Comparer les jugements et mesurer les écarts">6. Comparer les jugements et mesurer les écarts</a>
+<a class="nav-activity" href="#s5-a7" title="7. Débattre : une IA peut-elle vraiment juger une copie ?">7. Débattre : une IA peut-elle vraiment juger une copie ?</a>
+<a class="nav-bilan" href="#bilan-s5">🦋 Bilan séance 5</a>
+</div></details>
   <div class="sidebar-quick sidebar-bottom"><a href="#cadre">Cadre d’utilisation</a><a href="#faq">Questions fréquentes</a></div>
  </nav>
 </aside>
 <main class="wrap content-main">
 
-<section class="block" id="enbref"><div class="eyebrow">En bref</div><h2>Un parcours en quatre séances</h2><div class="grid3"><div class="card teal"><div class="big">7 h</div><p>Formation effective, à laquelle s’ajoutent deux pauses de 15 minutes : <b>7 h 30 au total</b> hors éventuel déjeuner.</p></div><div class="card gold"><div class="big">4</div><p>Questionner, comprendre, expérimenter, concevoir et encadrer les usages de l’IA.</p></div><div class="card blue"><div class="big">3</div><p>Repartir avec des ressources vérifiées, un prompt de tuteur conversationnel testé et une charte à coélaborer.</p></div></div><div class="retain"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</div></section>
+<section class="block" id="enbref"><div class="eyebrow">En bref</div><h2>Quatre séances, puis un atelier d’approfondissement facultatif</h2><div class="grid3"><div class="card teal"><div class="big">7 h</div><p>Formation effective, à laquelle s’ajoutent deux pauses de 15 minutes : <b>7 h 30 au total</b> hors éventuel déjeuner.</p></div><div class="card gold"><div class="big">4</div><p>Questionner, comprendre, expérimenter, concevoir et encadrer les usages de l’IA.</p></div><div class="card blue"><div class="big">3</div><p>Repartir avec des ressources vérifiées, un prompt de tuteur conversationnel testé et une charte à coélaborer.</p></div></div><div class="retain"><b>Fil conducteur :</b> une aide est pertinente si elle laisse à l’élève une véritable opération de pensée, observable et transférable sans IA.</div></section>
 <section class="block" id="avant"><div class="eyebrow">Avant de venir</div><h2>Votre préparation</h2><ul class="checklist"><li><input id="c1" type="checkbox"/><label for="c1">Un ordinateur portable et un accès Internet.</label></li><li><input id="c2" type="checkbox"/><label for="c2">Un accès autorisé à ChatGPT pour tester le tuteur (la création et le partage de nouveaux GPT nécessitent des permissions spécifiques).</label></li><li><input id="c3" type="checkbox"/><label for="c3">Un texte philosophique de 10 à 25 lignes, tiré d’une édition vérifiée et autorisée.</label></li><li><input id="c4" type="checkbox"/><label for="c4">Une distinction difficile pour vos élèves et un exemple de devoir à discuter.</label></li></ul></section>
-<section class="block" id="programme"><div class="eyebrow">Programme</div><h2>Quatre séances · 7 h de formation + deux pauses de 15 minutes</h2><div class="tablewrap"><table><tr><th>Séance</th><th>Objectif</th><th>Durée</th></tr><tr><td><a href="#s1">1 · Philosopher</a></td><td>Une machine qui parle peut-elle penser ?</td><td>1 h 15</td></tr><tr><td><a href="#s2a">2 · Partie 1</a></td><td>Comprendre les effets de l’IA sur l’apprentissage</td><td>1 h 15</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 1 · 15 min, entre les deux parties de la séance 2</b></td></tr><tr><td><a href="#s2b">2 · Partie 2</a></td><td>Configurer et tester un tuteur philosophique sur ChatGPT</td><td>1 h 45</td></tr><tr><td><a href="#s3">3 · Construire</a></td><td>Créer un projet documentaire ChatGPT ou Claude, puis une séquence de philosophie et ses supports</td><td>1 h 45</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 2 · 15 min</b></td></tr><tr><td><a href="#s4">4 · Encadrer</a></td><td>Charte à construire avec les élèves</td><td>1 h</td></tr><tr><th colspan="2">Total hors pauses</th><th>7 h</th></tr></table></div><p class="why">Avec les deux pauses : 7 h 30 de présence, hors éventuel déjeuner. Les durées des sous-activités restent indicatives, mais le total des séances est conservé. La séance 2 regroupe désormais l’ancienne séance sur l’apprentissage et l’atelier de création.</p></section>
+<section class="block" id="programme"><div class="eyebrow">Programme</div><h2>Quatre séances · 7 h de formation + deux pauses de 15 minutes</h2><div class="tablewrap"><table><tr><th>Séance</th><th>Objectif</th><th>Durée</th></tr><tr><td><a href="#s1">1 · Philosopher</a></td><td>Une machine qui parle peut-elle penser ?</td><td>1 h 15</td></tr><tr><td><a href="#s2a">2 · Partie 1</a></td><td>Comprendre les effets de l’IA sur l’apprentissage</td><td>1 h 15</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 1 · 15 min, entre les deux parties de la séance 2</b></td></tr><tr><td><a href="#s2b">2 · Partie 2</a></td><td>Configurer et tester un tuteur philosophique sur ChatGPT</td><td>1 h 45</td></tr><tr><td><a href="#s3">3 · Construire</a></td><td>Créer un projet documentaire ChatGPT ou Claude, puis une séquence de philosophie et ses supports</td><td>1 h 45</td></tr><tr><td colspan="3" style="background:var(--goldl)"><b>Pause 2 · 15 min</b></td></tr><tr><td><a href="#s4">4 · Encadrer</a></td><td>Charte à construire avec les élèves</td><td>1 h</td></tr><tr><th colspan="2">Total du parcours principal, hors pauses</th><th>7 h</th></tr><tr><td><a href="#s5">5 · Atelier complémentaire</a></td><td>Tester et calibrer une IA sur de vraies copies authentiques, puis questionner le jugement</td><td>+ 1 h 30</td></tr></table></div><p class="why">Avec les deux pauses : 7 h 30 de présence, hors éventuel déjeuner. Les durées des sous-activités restent indicatives, mais le total des séances est conservé. La séance 2 regroupe désormais l’ancienne séance sur l’apprentissage et l’atelier de création. Un <b>atelier complémentaire facultatif d’1 h 30</b> sur l’évaluation est proposé après la séance 4, soit <b>8 h 30 hors pauses si les cinq séances sont suivies</b>.</p></section>
 <section class="block session-block" id="s1"><details class="session-accordion" id="session-toggle-s1" open><summary class="session-toggle"><span class="session-num">Séance 1</span><span class="session-name">Une machine qui parle peut-elle penser ?</span><span class="session-duration">1 h 15</span></summary><div class="session-body"><p><b>À la fin de cette séance, vous serez capables de :</b> formuler un problème philosophique, confronter les arguments de quatre penseurs et préparer une activité de débat en classe.</p><details class="activity-accordion" id="s1-a1" open><summary class="activity-toggle"><span class="activity-title">1. Écrire d’abord, sans IA</span><span class="activity-time">Environ 10 min</span></summary><div class="step"><p>Répondez individuellement en trois phrases : <b>« Une machine qui répond à tout peut-elle penser ? »</b> Conservez votre écrit initial pour le bilan.</p></div></details>
 <details class="activity-accordion" id="s1-a2"><summary class="activity-toggle"><span class="activity-title">2. Quatre philosophes face à l’IA</span><span class="activity-time">Environ 20 min</span></summary><div class="step"><p><b>Votre mission (environ 20 minutes) :</b> par petits groupes, choisissez <b>un philosophe</b> parmi les quatre présentés ci-dessous. Lisez la courte présentation de sa pensée, puis répondez ensemble aux trois questions suivantes :</p><ol class="do"><li><b>Quelle est son idée principale ?</b> Reformulez-la avec vos propres mots, en une phrase.</li><li><b>Comment cette idée peut-elle nous aider à réfléchir à l’IA ?</b> Donnez un exemple concret, en une ou deux phrases.</li><li><b>Quelle question ou quelle objection peut-on lui opposer aujourd’hui ?</b> Formulez une limite ou un désaccord possible.</li></ol><p><b>Pour terminer :</b> désignez un rapporteur. Chaque groupe présente ses trois réponses oralement en une minute. <b>Aucune recherche extérieure n’est nécessaire :</b> les informations utiles sont dans les quatre encadrés.</p><div class="grid2"><div class="card"><b>Platon, <i>Phèdre</i></b><p>Une technique peut donner l’apparence du savoir au lieu de le développer.</p></div><div class="card"><b>Descartes, <i>Discours de la méthode</i>, V</b><p>Le langage est-il un signe suffisant de pensée ?</p></div><div class="card"><b>Alan Turing (1950)</b><p>Un dialogue indiscernable du dialogue humain prouve-t-il la pensée ?</p></div><div class="card"><b>John Searle (1980)</b><p>Manipuler des symboles signifie-t-il comprendre ?</p></div></div><p class="why">Les encadrés reformulent des idées philosophiques pour lancer la discussion ; ils ne reproduisent pas des citations littérales.</p></div></details>
 <details class="activity-accordion" id="s1-a3"><summary class="activity-toggle"><span class="activity-title">3. Confronter notre philosophe à une IA générative</span><span class="activity-time">Environ 20 min</span></summary><div class="step">
@@ -892,6 +908,157 @@ En haut du document, écris « PROJET DE CHARTE À RELIRE AVEC LES ÉLÈVES ». 
 </div></details>
 
 </div></details></section>
+<section class="block session-block" id="s5"><details class="session-accordion" id="session-toggle-s5">
+<summary class="session-toggle"><span class="session-num">Séance 5 · Complémentaire</span><span class="session-name">Évaluer avec l’IA : tester, calibrer, comparer et questionner</span><span class="session-duration">1 h 30</span></summary>
+<div class="session-body">
+<p><b>Votre mission :</b> éprouver ce que peut réellement faire une IA générative lorsqu’on lui fournit <b>une grille d’évaluation et de véritables copies d’élèves</b>. Vous allez faire une première correction expérimentale, tenter un <b>calibrage contextuel</b> avec des copies déjà évaluées, puis comparer son analyse à une correction humaine, avant de débattre du jugement philosophique.</p>
+<div class="retain"><b>Deux règles de l’atelier :</b> <b>aucune copie fictive ou inventée par l’IA</b> ; <b>aucune décision de note ni de correction réelle confiée à l’IA</b>. Les estimations éventuellement demandées servent exclusivement à l’expérience. Les notes officielles et les appréciations définitives relèvent de l’enseignant. Cet atelier est un <b>module complémentaire de 1 h 30</b> aux quatre séances de 7 h du parcours principal.</div>
+<div class="card gold"><h3>Avant de venir : apportez un petit corpus réel</h3>
+<p>Vous pouvez apporter <b>4 à 6 copies authentiques de philosophie</b>, par exemple <b>deux copies non annotées</b> pour les tests et <b>deux copies déjà évaluées</b> avec les notes et appréciations de référence, ainsi que <b>le sujet exact et votre grille d’observation</b>. Prévoyez, lorsque cela est possible, un exemplaire sans annotations pour chaque copie évaluée : la note reste cachée pendant le test. <b>Ne mélangez pas les copies utilisées pour calibrer et les copies nouvelles de contrôle.</b></p>
+<p>Les copies doivent être <b>réellement anonymisées</b>, et non simplement privées du nom : retirer les noms, numéros, établissements, métadonnées, détails personnels du texte et tout indice de réidentification ; prudence particulière avec l’écriture manuscrite et les annotations. <b>Avant d’envoyer quoi que ce soit à ChatGPT, Claude ou un autre service externe, vérifiez avec votre établissement/DPO que le traitement et les droits de réutilisation sont autorisés</b>. Sans cette validation, travaillez localement sur les copies avec les collègues et ne transmettez au service que des critères ou consignes sans données d’élèves.</p></div>
+
+<details class="activity-accordion" id="s5-a1"><summary class="activity-toggle"><span class="activity-title">1. Réunir des copies authentiques et sécuriser leur utilisation</span><span class="activity-time">Environ 10 min</span></summary><div class="step">
+<h4>Deux façons d’obtenir de vraies copies</h4>
+<div class="grid2">
+<div class="card teal"><h4>Option A · Vos propres copies d’élèves</h4>
+<p>Apportez des copies <b>authentiques</b> issues de vos évaluations, avec le sujet exact. Préparez des versions <b>non annotées</b> pour les tests et des appréciations / notes <b>séparées</b> pour la comparaison. N’utilisez que des documents dont l’analyse dans l’outil choisi est autorisée par votre établissement ; conservez la correspondance entre les copies et leurs notes <b>hors du service d’IA</b> jusqu’à la comparaison.</p></div>
+<div class="card blue"><h4>Option B · Des copies réelles publiées en ligne</h4>
+<p>Vous pouvez consulter <a href="https://explorationsphilosophiques.weebly.com/les-meilleures-copies.html" target="_blank" rel="noopener">Les meilleures copies — Explorations philosophiques</a> : copies scannées d’élèves, avec notes, en terminale générale et technologique. Le <a href="https://pedagogie.ac-amiens.fr/philosophie/category/en-classe/la-dissertation/" target="_blank" rel="noopener">site académique d’Amiens</a> présente également un travail sur des <b>extraits authentiques de copies d’élèves</b>.</p>
+<p><b>Attention :</b> ces liens sont donnés pour <b>consulter des copies authentiques</b>. Leur mise en ligne ne constitue pas à elle seule une autorisation de les importer dans une IA tierce ou de les republier. Contrôlez l’autorisation, les droits, l’anonymisation et la présence éventuelle de noms dans les fichiers.</p></div>
+</div>
+<h4>Organisez quatre documents, avec des codes non identifiants</h4>
+<div class="tablewrap"><table><thead><tr><th>Code</th><th>Document authentique</th><th>Usage dans l’expérience</th></tr></thead><tbody>
+<tr><td><b>A1 – A2</b></td><td>Copies avec évaluations humaines déjà connues de l’enseignant</td><td>Exemples de référence pour le <b>calibrage</b></td></tr>
+<tr><td><b>B1 – B2</b></td><td>Autres copies non annotées, jamais montrées pendant le calibrage</td><td><b>Test à l’aveugle</b> ; notes humaines gardées secrètes jusqu’à la fin</td></tr>
+</tbody></table></div>
+<p><b>Si vous n’avez pas quatre copies :</b> utilisez le corpus authentique disponible pour étudier les critères et discuter la méthode, mais ne prétendez pas avoir validé la fiabilité ou le calibrage sur des copies indépendantes. <b>Ne faites pas générer de fausses copies pour combler le manque.</b></p>
+<div class="retain"><b>Production :</b> une sélection de vraies copies A1/A2 et B1/B2, avec sujet et grilles, et une décision explicite concernant l’autorisation de traitement.</div>
+</div></details>
+
+<details class="activity-accordion" id="s5-a2"><summary class="activity-toggle"><span class="activity-title">2. Construire une grille et un protocole d’observation</span><span class="activity-time">Environ 10 min</span></summary><div class="step">
+<p>La philosophie ne se corrige pas comme un QCM. <b>Relisez vos critères</b> et, si vous travaillez avec des sujets de bac, les textes officiels de l’épreuve. Depuis la session 2027, l’évaluation au bac général reste <b>globale</b> et les compétences sont appréciées dans leur ensemble : une liste de critères ne constitue pas un calcul automatique de note.</p>
+<p><b>Sources :</b> <a href="https://www.education.gouv.fr/bo/2026/Special4/MENE2622661N" target="_blank" rel="noopener">Bac général – épreuve de philosophie 2027</a> · <a href="https://www.education.gouv.fr/bo/2026/Hebdo4/MENE2622663N" target="_blank" rel="noopener">Bac technologique – épreuve de philosophie 2027</a>.</p>
+<ol class="do"><li>Identifiez le <b>sujet exact</b> des copies et les compétences visées.</li><li>Retenez des <b>repères qualitatifs</b> : compréhension du sujet, construction du problème, qualité des arguments, objections, lecture d’un texte si pertinent, structure et expression.</li><li>Indiquez ce que vous observez dans les copies <b>par preuves textuelles</b>, en distinguant faits et interprétations ; précisez que vous n’utilisez pas une « grille officielle » inventée.</li></ol>
+<p class="why"><b>Décision de départ :</b> qui est responsable de la note réelle ? <b>Vous, professeur.</b> L’IA ne peut fournir au mieux qu’un avis de travail. En cas de doute sur l’autorisation d’importer les copies, effectuez uniquement cette étape de conception avec l’IA, sans documents d’élèves.</p>
+<div class="retain"><b>Production :</b> une grille de lecture rédigée par le professeur, plus le sujet et les copies de référence sélectionnées.</div>
+</div></details>
+
+<details class="activity-accordion" id="s5-a3"><summary class="activity-toggle"><span class="activity-title">3. Tester l’IA sans calibrage : première lecture à l’aveugle</span><span class="activity-time">Environ 15 min</span></summary><div class="step">
+<p><b>Première expérience :</b> ouvrez une conversation <b>neuve</b> dans l’IA générative autorisée de votre choix. Ne lui donnez <b>ni copie corrigée, ni appréciation, ni note humaine</b>. Envoyez votre sujet et une copie <b>authentique et autorisée</b> non annotée. Vous cherchez à observer ce que l’outil fait spontanément, avant toute calibration.</p>
+<div class="prompt"><div class="ph">Prompt 1 · Première lecture expérimentale, sans calibration<button class="btn small copy" type="button">Copier</button></div><pre>Je suis professeur de philosophie en terminale. Je conduis un TEST de correction comparative, non une notation réelle d'élève. Le document joint est une COPIE AUTHENTIQUE dont la transmission à cet outil est autorisée et dont l'anonymisation et les droits ont été contrôlés. Si le fichier n'est pas lisible, signale-le, sans compléter ni inventer les passages manquants.
+
+Sujet : [COLLER LE SUJET EXACT OU LA RÉFÉRENCE VÉRIFIÉE].
+Type : [DISSERTATION / EXPLICATION DE TEXTE]. Niveau et voie : [PRÉCISER].
+ID d'essai sans identité : [A1].
+Copie : [JOINDRE LE FICHIER AUTORISÉ OU COLLER UN TEXTE EFFECTIVEMENT ANONYME].
+
+À ce stade, je ne fournis NI ma correction NI ma note ni mes exemples de calibrage. Fais une première lecture à l'aveugle. Fournis :
+1. Une appréciation descriptive des qualités et difficultés philosophiques que tu observes ;
+2. Trois passages exacts de la copie sur lesquels repose ton appréciation ;
+3. Une analyse des opérations philosophiques effectivement réalisées : conceptualisation, problématisation, argumentation, lecture/explication et organisation ;
+4. À titre STRICTEMENT EXPÉRIMENTAL, une note indicative sur 20, accompagnée de son incertitude et de ses limites ;
+5. Les points dont tu n'es pas sûr et les informations manquantes.
+
+Tu ne décides d'aucune note réelle. N'invente aucun extrait et ne déduis aucune caractéristique personnelle de l'élève.</pre></div>
+<ol class="do"><li><b>5 min :</b> personnalisez les champs, envoyez le sujet et une copie <b>effectivement autorisée</b> ; sinon limitez-vous au protocole sans transmission de copie.</li><li><b>5 min :</b> lisez l’analyse de l’IA : quels passages cite-t-elle ? distingue-t-elle les notions et arguments ? invente-t-elle des éléments ?</li><li><b>5 min :</b> conservez sa première appréciation et son estimation <b>indicative uniquement</b>, sans dévoiler la correction humaine si elle existe. Notez au moins une erreur ou incertitude.</li></ol>
+<div class="retain"><b>Production :</b> une première analyse non calibrée, datée et identifiable uniquement par un code de copie.</div>
+</div></details>
+
+<details class="activity-accordion" id="s5-a4"><summary class="activity-toggle"><span class="activity-title">4. Calibrer l’assistance avec des copies de référence</span><span class="activity-time">Environ 20 min</span></summary><div class="step">
+<p><b>Calibrer ne veut pas dire réentraîner le modèle.</b> Vous allez fournir à l’IA le sujet, vos critères, puis <b>une ou deux copies de référence déjà évaluées par un professeur</b> (A1/A2) afin qu’elle comprenne mieux vos exigences. Ces copies ne serviront <b>pas</b> de test final : elles ont déjà été vues lors du calibrage.</p>
+<div class="prompt"><div class="ph">Prompt 2 · Calibrage contextuel sur des copies authentiques de référence<button class="btn small copy" type="button">Copier</button></div><pre>Nous sommes un groupe de professeurs de philosophie qui TESTONS un outil d'assistance à la correction. Nous ne lui déléguerons pas les décisions d'évaluation ni la notation réelle.
+
+Je vais fournir :
+- les objectifs du programme officiel et la note de service de l'épreuve de philosophie correspondant à [VOIE] ;
+- ma grille ou mes CRITÈRES qualitatifs de relecture ;
+- [UNE OU DEUX] copies AUTHENTIQUES de référence, dont la transmission est autorisée, avec leurs appréciations et notes attribuées par un enseignant (IDs A1, A2). Ces documents sont distincts des copies de test à l'aveugle.
+
+TA MISSION :
+1. Lis d'abord les ressources réellement accessibles et distingue les exigences OFFICIELLES de ma grille pédagogique ;
+2. Explique chaque critère de manière observable, sans réduire mécaniquement une copie à une somme de cases ;
+3. Étudie les copies de référence et relève les passages concrets qui justifient les appréciations humaines ;
+4. Construis un PROTOCOLE D'ASSISTANCE pour les prochaines copies : résumé de l'argumentation, forces, difficultés, citations exactes, questions de reprise et proposition d'appréciation ;
+5. Si je te le demande uniquement à titre comparatif, propose une estimation NON DÉCISOIRE de note, en expliquant son incertitude ;
+6. Signale ce que l'IA peut mal juger : originalité d'une pensée, portée des objections, singularité d'un raisonnement, références mal reconnues, écriture manuscrite.
+
+NE reproduis pas le nom de l'élève. Ne prétends pas avoir été entraîné ou modifié dans tes poids : il s'agit d'une calibration CONTEXTUELLE dans cette conversation ou ce projet, pas d'un nouveau modèle fiable de notation.
+
+Termine par un protocole court et lisible que je pourrai TESTER sur des copies authentiques de contrôle que tu n'as pas encore vues.</pre></div>
+<ol class="do"><li><b>5 min :</b> chargez les critères et le texte de l’épreuve dans une conversation ou un projet de test, sous réserve d’autorisation.</li><li><b>7 min :</b> fournissez les vraies copies <b>A1/A2</b> et leurs appréciations humaines, uniquement si le traitement est autorisé.</li><li><b>5 min :</b> demandez à l’IA de réécrire sa méthode d’analyse et d’expliquer les exemples qu’elle a compris.</li><li><b>3 min :</b> discutez en binômes : l’IA reproduit-elle les critères, la forme des appréciations ou la qualité du jugement ? Quel biais pourrait produire l’apprentissage sur seulement deux copies ?</li></ol>
+<p class="why"><b>Point critique :</b> deux exemples ne démontrent pas qu’une IA est « calibrée » comme un correcteur fiable. Ils peuvent seulement orienter temporairement ses réponses. Conservez une version non calibrée et une version avec critères pour comparer.</p>
+<div class="retain"><b>Production :</b> une consigne de correction contextualisée et une liste de limites du calibrage.</div>
+</div></details>
+
+<details class="activity-accordion" id="s5-a5"><summary class="activity-toggle"><span class="activity-title">5. Tester sur de nouvelles copies non annotées</span><span class="activity-time">Environ 15 min</span></summary><div class="step">
+<p><b>Place aux vraies copies de contrôle B1/B2 :</b> elles n’ont pas servi à l’étape 4 et leurs notes humaines sont <b>cachées à l’IA</b> pendant cette étape. Utilisez idéalement les mêmes sujets et des copies de niveaux variés ; évitez de choisir exclusivement d’excellentes copies.</p>
+<div class="prompt"><div class="ph">Prompt 3 · Test à l’aveugle après calibrage<button class="btn small copy" type="button">Copier</button></div><pre>TEST À L'AVEUGLE APRÈS CALIBRAGE — PHILOSOPHIE TERMINALE.
+
+Tu as reçu auparavant les critères de relecture et des copies de RÉFÉRENCE A1/A2. Voici maintenant une NOUVELLE copie authentique de contrôle, ID [B1], dont l'anonymisation, les droits et l'autorisation de traitement ont été vérifiés. Elle n'a pas été utilisée dans les exemples de calibrage.
+
+Sujet : [SUJET EXACT].
+Fichier ou texte : [JOINDRE LA COPIE B1 AUTORISÉE ET NON ANNOTÉE].
+
+Sans demander ma note et sans inventer de texte absent :
+- vérifie la lisibilité complète de la copie ;
+- résume le mouvement du raisonnement ;
+- évalue qualitativement, avec des preuves textuelles exactes, la construction du problème, la rigueur des arguments, les objections, les références et la précision de l'expression ;
+- propose une appréciation utile à l'élève, au conditionnel lorsque c'est nécessaire ;
+- donne, À TITRE D'EXPÉRIENCE UNIQUEMENT, une estimation indicative sur 20 avec sa marge d'incertitude ;
+- signale les passages ou critères où ton jugement est fragile.
+
+N'essaie pas de retrouver une correction publiée en ligne. N'attribue aucune note réelle. Arrête-toi après cette copie ; j'ouvrirai ensuite ma fiche de comparaison humaine.</pre></div>
+<ol class="do"><li><b>5 min :</b> présentez la copie B1 non annotée, autorisée et vérifiée ; recueillez la proposition de l’IA.</li><li><b>5 min :</b> faites le même test avec B2, en conservant la même consigne. Si possible, recommencez une des copies dans une nouvelle conversation avec les mêmes instructions pour observer les variations.</li><li><b>5 min :</b> vérifiez que l’IA cite le texte exact des copies, ne confond pas les sujets et ne révèle aucune note de référence qu’elle ne devrait pas connaître.</li></ol>
+<div class="retain"><b>Production :</b> deux analyses expérimentales sur des copies authentiques inédites pour l’IA, sans décision d’évaluation.</div>
+</div></details>
+
+<details class="activity-accordion" id="s5-a6"><summary class="activity-toggle"><span class="activity-title">6. Comparer les jugements et mesurer les écarts</span><span class="activity-time">Environ 10 min</span></summary><div class="step">
+<p><b>Ouvrez seulement maintenant</b> vos notes et appréciations humaines concernant les copies B1/B2. Le but n’est pas de démontrer que l’enseignant possède la « note vraie », mais de repérer ce que l’IA a bien ou mal compris et si elle peut réellement faire gagner du temps.</p>
+<div class="tablewrap"><table class="philo-score-table"><thead><tr><th>Copie</th><th>Estimation IA /20</th><th>Note humaine /20</th><th>Écart et observation</th></tr></thead><tbody>
+<tr><td><b>B1</b></td><td><input id="s5-ia-b1" inputmode="decimal" placeholder="—" aria-label="Estimation expérimentale IA B1"></td><td><input id="s5-hu-b1" inputmode="decimal" placeholder="—" aria-label="Note humaine B1"></td><td><input id="s5-ob-b1" placeholder="Accord, contresens, référence…" aria-label="Observation B1"></td></tr>
+<tr><td><b>B2</b></td><td><input id="s5-ia-b2" inputmode="decimal" placeholder="—" aria-label="Estimation expérimentale IA B2"></td><td><input id="s5-hu-b2" inputmode="decimal" placeholder="—" aria-label="Note humaine B2"></td><td><input id="s5-ob-b2" placeholder="Accord, contresens, référence…" aria-label="Observation B2"></td></tr>
+</tbody></table></div>
+<p><button type="button" class="btn copy" id="copyS5Scores">Copier le tableau de comparaison (sans données d’identité)</button></p>
+<p class="why"><b>Les champs ci-dessus sont locaux au navigateur :</b> n’y saisissez jamais de noms, de numéros de candidat, de détails personnels ni de copies. Les notes sont <b>des valeurs de test</b>, pas des décisions réelles. Deux copies ne permettent pas de mesurer une fiabilité statistique.</p>
+<div class="prompt"><div class="ph">Prompt 4 · Analyser les accords et les écarts de correction<button class="btn small copy" type="button">Copier</button></div><pre>Nous avons évalué à l'aveugle les copies authentiques B1 et B2 dans un test local pédagogique. Les notes, appréciations et arguments qui suivent ont été attribués par des ENSEIGNANTS. Tes propres suggestions ne sont que des hypothèses à confronter à leur jugement.
+
+Tableau comparatif :
+[ID | NOTATION HUMAINE (CACHÉE PENDANT LE TEST) | ESTIMATION IA | APPRÉCIATION HUMAINE | OBSERVATIONS ET PREUVES TEXTUELLES]
+[COLLER LES LIGNES SANS AUCUNE DONNÉE IDENTIFIANTE].
+
+Analyse ce tableau sans prétendre découvrir la « bonne note ». Indique :
+1. Les accords sur les FORCES et les DIFFICULTÉS des copies, indépendamment du chiffre ;
+2. Les désaccords de jugement et leur importance pédagogique ;
+3. Les citations ou références inventées, mal reconnues ou mal interprétées ;
+4. Si la différence de notes s'est réduite ou non par rapport à la première passe, sachant que l'échantillon est TROP PETIT pour établir une fiabilité générale ;
+5. Les usages d'assistance qui paraissent pertinents et ceux qui demandent une vigilance accrue.
+
+Termine en répondant : « Cette expérience suffit-elle à faire de l'IA un correcteur autonome ? » (non : justification fondée sur les limites observées et sur le cadre de responsabilité de l'enseignant).</pre></div>
+<p><b>Question :</b> si l’IA propose le même chiffre qu’un professeur mais pour de mauvaises raisons, peut-on dire qu’elle a bien évalué ? Et si elle repère une difficulté pertinente mais propose une note différente ?</p>
+<div class="retain"><b>Production :</b> un tableau des écarts, deux observations étayées par le texte et une conclusion provisoire sur l’intérêt de l’assistance à la correction.</div>
+</div></details>
+
+<details class="activity-accordion" id="s5-a7"><summary class="activity-toggle"><span class="activity-title">7. Débattre : une IA peut-elle vraiment juger une copie ?</span><span class="activity-time">Environ 10 min</span></summary><div class="step">
+<p><b>Vous redevenez pleinement philosophes et pédagogues.</b> L’évaluation d’une dissertation n’est pas seulement le rapprochement d’une copie et de critères. Elle suppose d’interpréter une démarche singulière, d’apprécier une objection, de comprendre une tentative et de justifier une appréciation.</p>
+<div class="grid2">
+<div class="card teal"><h4>Questions pour un débat de 10 minutes</h4><ol class="do">
+<li><b>Évaluer, est-ce mesurer ou juger ?</b> Une grille suffit-elle à comprendre un raisonnement ?</li>
+<li><b>Une IA peut-elle reconnaître une pensée originale ?</b> Peut-elle comprendre un argument inattendu ou une objection fragile mais féconde ?</li>
+<li><b>La note est-elle indépendante du correcteur ?</b> Que révèlent les différences entre appréciations humaines et réponses de l’IA ?</li>
+<li><b>Qu’est-ce qu’un jugement responsable ?</b> Qui doit pouvoir expliquer et défendre l’appréciation remise à l’élève ?</li>
+<li><b>Remplacer ou assister ?</b> Pour quelles tâches l’IA vous a-t-elle réellement aidés, et pour lesquelles préférez-vous la lecture humaine ?</li>
+</ol></div>
+<div class="card blue"><h4>Conclusion à construire collectivement</h4><p>Faites exprimer à chaque binôme <b>une utilité constatée</b>, <b>une erreur ou limite observée</b> et <b>une condition non négociable</b> pour un usage professionnel. Comparez les expériences, sans généraliser abusivement à partir de deux copies.</p>
+<p><b>Ouverture :</b> « Une machine qui propose une appréciation a-t-elle exercé un jugement, ou a-t-elle seulement produit un texte ressemblant à celui d’un correcteur ? »</p></div>
+</div>
+<p><b>Références pour encadrer cette expérimentation :</b> <a href="https://www.cnil.fr/fr/enseignant-usage-systeme-ia" target="_blank" rel="noopener">CNIL – IA, copies et responsabilité de l’enseignant</a> · <a href="https://www.education.gouv.fr/cadre-d-usage-de-l-ia-en-education-450647" target="_blank" rel="noopener">Cadre national d’usage de l’IA en éducation</a> · <a href="https://ai-act-service-desk.ec.europa.eu/en/ai-act/annex-3" target="_blank" rel="noopener">Règlement européen sur l’IA – systèmes éducatifs d’évaluation</a>.</p>
+<div class="session-bilan" id="bilan-s5"><details class="butterfly"><summary><span aria-hidden="true">🦋</span> Bilan · Calibrer une assistance n’est pas déléguer son jugement <small>Cliquer pour déplier</small></summary><div class="butterfly-body">
+<div class="philo-pipeline"><div><b>Copies réelles</b><span>Autorisées, anonymisées, références séparées</span></div><span aria-hidden="true">→</span><div><b>Première analyse</b><span>Sans notes ni exemples</span></div><span aria-hidden="true">→</span><div><b>Calibration</b><span>Critères et copies de référence</span></div><span aria-hidden="true">→</span><div><b>Contrôle à l’aveugle</b><span>Nouvelles copies, comparaison humaine</span></div></div>
+<div class="retain"><b>À retenir :</b> un bon commentaire généré ne constitue pas une décision fiable. <b>Le professeur demeure responsable de la correction et de la note</b> ; la valeur de l’IA s’éprouve dans ses arguments, ses erreurs et son apport réel aux apprentissages.</div>
+</div></details></div>
+<div class="retain"><b>Production finale :</b> votre protocole de test, un mini-tableau d’observations tirées de vraies copies et une réponse argumentée à cette question : <b>« L’IA peut-elle assister mon jugement sans prétendre le remplacer ? »</b></div>
+</div></details>
+
+</div></details></section>
 <!-- ================= RECETTE ================= -->
 <section class="block" id="recette"><div class="eyebrow">Séance 2 · Partie 2 · Outil pratique</div><h2>Générateur de prompt pour un tuteur ChatGPT</h2>
 <p>Vous souhaitez que l’élève puisse <b>converser librement avec une IA</b> tout en restant acteur de son raisonnement ? Le formulaire autonome ci-dessous vous permet de configurer ce comportement : sujet, objectifs, types de questions, limites de l’aide et situations difficiles. Il génère un prompt complet <b>à copier directement dans ChatGPT</b>.</p>
@@ -918,7 +1085,7 @@ En haut du document, écris « PROJET DE CHARTE À RELIRE AVEC LES ÉLÈVES ». 
 
 </main>
 </div><!-- fin page-layout -->
-<footer><div class="wrap">Philosophie × IA · quatre séances (7 h hors pauses). Toutes les copies et situations d’élèves sont fictives. Le générateur de prompt HTML ne transmet pas les champs remplis à un serveur ; l’utilisation de liens et d’outils externes obéit à leurs propres règles de traitement des données. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a></div></footer>
+<footer><div class="wrap">Philosophie × IA · quatre séances (7 h hors pauses) + un atelier complémentaire de 1 h 30. Les dialogues pédagogiques illustrés sont fictifs ; l’atelier complémentaire étudie uniquement des copies authentiques dont l’utilisation est autorisée et sécurisée. Le générateur de prompt HTML ne transmet pas les champs remplis à un serveur ; l’utilisation de liens et d’outils externes obéit à leurs propres règles de traitement des données. <a href="index.html">Formation complète</a> · <a href="glossaire.html">Glossaire</a> · <a href="sources.html">Sources</a></div></footer>
 <div id="toast" role="status" aria-live="polite"></div>
 
 <script>
@@ -1029,6 +1196,18 @@ if(philoCopy)philoCopy.addEventListener('click',()=>{
  })];
  copy(lines.join('\n'));
  const label=$('#philoInventoryStatus');if(label)label.textContent='Inventaire prêt à coller dans votre projet ou dans vos notes.';
+});
+
+
+/* Atelier facultatif de comparaison des copies : informations locales non conservées */
+const compareS5=$('#copyS5Scores');
+if(compareS5)compareS5.addEventListener('click',()=>{
+ const val=id=>{const el=$('#'+id);return el?el.value.trim():''};
+ const out=['COMPARAISON EXPÉRIMENTALE — NE CONTIENT AUCUNE IDENTITÉ','Code | IA indicative /20 | Référence humaine /20 | Observation',
+ 'B1 | '+val('s5-ia-b1')+' | '+val('s5-hu-b1')+' | '+val('s5-ob-b1'),
+ 'B2 | '+val('s5-ia-b2')+' | '+val('s5-hu-b2')+' | '+val('s5-ob-b2'),
+ 'Ces essais ne valent ni notation effective ni validation statistique.'].join('\n');
+ copy(out);
 });
 
 /* boutons Copier des prompts */
