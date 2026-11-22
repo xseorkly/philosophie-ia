@@ -96,6 +96,14 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 .fbar-l{font-weight:700;margin-right:4px}.fbar input{padding:6px 10px;border-radius:6px;border:1px solid #6c8f8a;font:inherit;min-width:0;width:170px}
 .fbar .btn{padding:6px 12px;font-size:.88rem}#fMsg{color:#ffd7a8}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
 @media print{.fbar{display:none}}
+/* Infobulle pédagogique accessible au survol et au clavier */
+.person-info{position:relative;display:inline-block}
+.person-info>a{font-weight:600;text-decoration:underline;text-decoration-style:dotted;text-underline-offset:3px}
+.person-info .person-tooltip{position:absolute;bottom:calc(100% + 10px);left:0;width:min(320px,78vw);padding:12px 14px;background:#203042;color:#fff;border-radius:10px;box-shadow:0 8px 24px #0003;font-size:.88rem;line-height:1.45;font-weight:400;z-index:35;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(5px);transition:opacity .15s ease,transform .15s ease,visibility .15s}
+.person-info:hover .person-tooltip,.person-info:focus-within .person-tooltip{opacity:1;visibility:visible;transform:translateY(0)}
+.person-info .person-tooltip strong{display:block;margin-bottom:4px;color:#d7f4eb}
+@media(max-width:580px){.person-info .person-tooltip{left:auto;right:0;width:min(280px,78vw)}}
+@media print{.person-info .person-tooltip{display:none}}
 </style>
 </head>
 <body>
@@ -139,7 +147,7 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 </div>
 <div class="retain"><b>Production de l’activité 3 :</b> chaque groupe arrive à la discussion philosophique avec <b>une affirmation de Claude, un argument du philosophe étudié et une objection ou question ouverte</b>. Il ne s’agit pas de savoir si Claude « a raison », mais de construire un jugement critique.</div></div>
 <div class="step"><div class="when"><span class="time">Environ 15 min</span></div><h3>4. Discussion à visée philosophique : une machine qui parle pense-t-elle ?</h3>
-<p>Nous allons utiliser une <b>discussion à visée démocratique et philosophique (DVDP)</b>, dans une version courte inspirée des travaux de Michel Tozzi. <b>Il ne s’agit pas d’un débat « pour ou contre l’IA » :</b> le but est de chercher ensemble, de préciser les notions et de faire évoluer les arguments.</p>
+<p>Nous allons utiliser une <b>discussion à visée démocratique et philosophique (DVDP)</b>, dans une version courte inspirée des travaux de <span class="person-info"><a href="https://www.philotozzi.com/" target="_blank" rel="noopener" aria-describedby="tozzi-info-1">Michel Tozzi</a><span class="person-tooltip" id="tozzi-info-1" role="tooltip"><strong>Qui est Michel Tozzi ?</strong>Didacticien français de la philosophie, connu pour ses travaux sur l’apprentissage du philosopher et la discussion à visée démocratique et philosophique (DVDP). Il met en avant trois démarches : conceptualiser, problématiser et argumenter.</span></span>. <b>Il ne s’agit pas d’un débat « pour ou contre l’IA » :</b> le but est de chercher ensemble, de préciser les notions et de faire évoluer les arguments.</p>
 <div class="card teal"><h4>La question de départ</h4><p style="margin:0"><b>« Une machine qui dialogue avec nous peut-elle réellement comprendre ce qu’elle dit ? »</b></p></div>
 <p><b>Les règles :</b> on écoute sans interrompre ; on critique une idée, jamais une personne ; on justifie ce que l’on avance ; on a le droit de changer d’avis. Personne n’est obligé de prendre une position définitive.</p>
 <p><b>Pour commencer :</b> chaque rapporteur apporte en une phrase le résultat de l’activité 3 : « Claude affirme… ; notre philosophe nous permet de discuter cette affirmation parce que… ». Appuyez-vous ensuite sur ces quatre éclairages pour mener la discussion. <b>Ne repartez pas de zéro :</b> les arguments préparés sont les matériaux du débat.</p>
@@ -152,7 +160,7 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 <tr><td><b>4 · Synthétiser</b><br/>Environ 3 min</td><td>« Qu’avons-nous réussi à distinguer ? »<br/>« Sur quelle question devons-nous encore réfléchir ? »</td><td>Énoncer une distinction acquise et une question qui reste ouverte, <b>sans vote ni verdict</b>.</td></tr>
 </table></div>
 <div class="retain"><b>Trace écrite collective :</b> « Nous distinguons maintenant… / Un argument important est… / Une difficulté demeure… ». Le rapporteur restitue ces trois phrases. <b>On évalue la qualité du questionnement, pas le camp qui aurait gagné.</b></div>
-<p class="why">Méthode : adaptation courte de la DVDP de Michel Tozzi, fondée sur la conceptualisation, la problématisation et l’argumentation. <a href="https://www.philotozzi.com/2012/08/493/" target="_blank" rel="noopener">Repères méthodologiques</a>.</p></div>
+<p class="why">Méthode : adaptation courte de la DVDP de <span class="person-info"><a href="https://www.philotozzi.com/" target="_blank" rel="noopener" aria-describedby="tozzi-info-2">Michel Tozzi</a><span class="person-tooltip" id="tozzi-info-2" role="tooltip"><strong>Qui est Michel Tozzi ?</strong>Didacticien français de la philosophie, connu pour ses travaux sur l’apprentissage du philosopher et la discussion à visée démocratique et philosophique (DVDP). Il met en avant trois démarches : conceptualiser, problématiser et argumenter.</span></span>, fondée sur la conceptualisation, la problématisation et l’argumentation. <a href="https://www.philotozzi.com/2012/08/493/" target="_blank" rel="noopener">Repères méthodologiques</a>.</p></div>
 <div class="step"><div class="when"><span class="time">Environ 10 min</span></div><h3>5. Ce que je pensais, ce que je pense maintenant : passer du débat à une activité de classe</h3>
 <p><b>Objectif :</b> vérifier si la discussion a fait évoluer ou préciser votre raisonnement, puis repartir avec <b>une consigne simple que vous pourrez réellement donner à des élèves</b>. Travail individuel, sans IA. Vous n’avez pas à changer d’avis : vous devez expliquer et justifier votre position.</p>
 <ol class="do">
