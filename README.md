@@ -70,6 +70,7 @@ Chaque demi-journée (sauf la première et la dernière) s’ouvre sur 15 minute
 - `syntheses.html` : fiches formateur imprimables, générées à partir des bilans.
 - `supports.html` : supports imprimables et fiche « avant la formation ». `dossiers.html` y redirige.
 - `light.html` : **formation courte de 9 heures** (trois séances de 3 h) : comprendre et essayer, préparer ses cours avec Claude, créer un espace d’entraînement interactif pour ses élèves (page Claude publiée par lien), avec une fiche de préparation qui génère le texte à donner à Claude.
+- `cahier-formateur-light.pdf` : cahier du formateur de la formation courte (PDF protégé par mot de passe, accessible en haut de `light.html`).
 - `glossaire.html` : glossaire.
 - `cahier-formateur.pdf` : cahier du formateur (A4, environ 105 pages) : pour chaque module, ce qu’il faut préparer, le déroulé minuté, les phrases à dire, les relances, ce qu’il faut faire émerger, les points de vigilance et les documents à distribuer.
 - `sources.html` et `BIBLIOGRAPHIE.md` : bibliographie commentée.

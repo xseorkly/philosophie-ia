@@ -92,9 +92,14 @@ footer{color:var(--muted);font-size:.88rem;padding:24px 0 40px}
 #toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:999px;opacity:0;transition:opacity .2s;pointer-events:none;z-index:50}
 #toast.show{opacity:1}
 @media print{nav.toc,.btns,.btn,#toast{display:none!important}body{background:#fff}main section.block{border:0;padding:0;break-inside:auto}header.top{background:#fff;color:var(--ink)}header.top .eyebrow{color:var(--teal)}.step{break-inside:avoid}}
+.fbar{background:#14302d;color:#fff;font-size:.9rem;padding:8px 0}.fbar form{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.fbar-l{font-weight:700;margin-right:4px}.fbar input{padding:6px 10px;border-radius:6px;border:1px solid #6c8f8a;font:inherit;min-width:0;width:170px}
+.fbar .btn{padding:6px 12px;font-size:.88rem}#fMsg{color:#ffd7a8}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media print{.fbar{display:none}}
 </style>
 </head>
 <body>
+<div class="fbar"><div class="wrap"><form id="fForm" autocomplete="off"><span class="fbar-l">🔒 Espace formateur</span><label class="sr" for="fPwd">Mot de passe</label><input id="fPwd" type="password" placeholder="Mot de passe" /><button class="btn" type="submit">Ouvrir le cahier du formateur (PDF)</button><span id="fMsg" role="status"></span></form></div></div>
 <header class="top"><div class="wrap">
 <div class="eyebrow">Philosophie × IA · formation courte</div>
 <h1>Ce que l’IA fait à l’apprentissage du philosopher.<br/>Et ce que nous pouvons y faire.</h1>
@@ -693,5 +698,7 @@ $('#fillExample').addEventListener('click',()=>{Object.entries(EX).forEach(([k,v
 $('#clearForm').addEventListener('click',()=>{F.forEach(el=>{if(el.tagName==='SELECT'){el.selectedIndex=0}else if(el.id!=='r-never'){el.value=''}store.set('r-'+el.id,el.value)});render();toast('Fiche vidée')});
 })();
 </script>
+<script>(function(){var f=document.getElementById('fForm');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('fPwd').value.trim(),m=document.getElementById('fMsg');
+if(v==='ZESE2027'){m.textContent='Le PDF s’ouvre ; il redemandera le même mot de passe.';window.open('cahier-formateur-light.pdf','_blank');}else{m.textContent='Mot de passe incorrect.';}});})();</script>
 </body>
 </html>
