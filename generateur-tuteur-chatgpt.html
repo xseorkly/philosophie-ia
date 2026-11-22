@@ -83,10 +83,16 @@ ul,ol{padding-left:24px}li{margin:6px 0}a{color:var(--teal)}footer{text-align:ce
 <ol>
 <li><b>Enseignant concepteur :</b> choisissez le mode ci-dessus et cliquez sur <b>Copier mon prompt</b>.</li>
 <li><b>Conversation classique :</b> ouvrez <a href="https://chatgpt.com/" target="_blank" rel="noopener">ChatGPT</a>, démarrez une nouvelle conversation et envoyez le prompt comme <b>premier message</b>. Attendez que l’IA pose sa première question.</li>
-<li><b>Enseignant testeur :</b> répondez comme un élève fictif, par exemple « Je ne sais pas comment commencer ». Faites ensuite deux autres essais : « Je suis sûr que… » et « Donne-moi le plan tout fait ».</li>
+<li><b>Enseignant testeur :</b> jouez un véritable élève fictif. Envoyez <b>un seul des trois messages ci-dessous</b> dans ChatGPT, après le prompt de configuration. Vous pouvez ensuite poursuivre le dialogue comme l'élève, en attendant chaque réponse.</li>
 <li><b>Observez :</b> l’IA vous invite-t-elle à définir, justifier et chercher une objection, ou donne-t-elle la solution ? Si une réponse n’est pas satisfaisante, modifiez les règles dans le formulaire, <b>ouvrez une nouvelle conversation</b> et recommencez le même test.</li>
 <li><b>GPT personnalisé si autorisé :</b> dans un espace de travail où le bouton de création de GPT est disponible, collez la version « GPT personnalisé » dans le champ <b>Instructions</b>, testez puis utilisez les options <b>Partager</b> réellement proposées par votre espace.</li>
 </ol>
+<div class="note"><b>Qui écrit ces messages ?</b> C'est le <b>stagiaire qui joue l'élève</b>. Les messages sont formulés à la première personne et intègrent automatiquement le sujet renseigné dans le formulaire. <b>Ils ne remplacent pas le prompt initial</b> : ils sont envoyés ensuite, comme les paroles d'un élève.</div>
+<div class="grid" id="student-tests">
+<div class="step"><h3>Test A · Un élève bloqué</h3><p>Envoyez ce message dans la conversation déjà configurée, puis attendez la réponse.</p><textarea id="testA" aria-label="Message d'un élève bloqué" readonly rows="7"></textarea><button type="button" class="secondary test-copy" data-test="testA">Copier le message d'élève A</button></div>
+<div class="step"><h3>Test B · Un élève trop sûr de lui</h3><p>Essayez ce message dans une nouvelle conversation avec le même prompt initial, pour comparer.</p><textarea id="testB" aria-label="Message d'un élève trop sûr de lui" readonly rows="7"></textarea><button type="button" class="secondary test-copy" data-test="testB">Copier le message d'élève B</button></div>
+<div class="step"><h3>Test C · Un élève qui réclame le corrigé</h3><p>Recommencez avec le même prompt initial, puis vérifiez si l'IA refuse de faire le devoir à sa place.</p><textarea id="testC" aria-label="Message d'un élève qui réclame une solution" readonly rows="7"></textarea><button type="button" class="secondary test-copy" data-test="testC">Copier le message d'élève C</button></div>
+</div>
 <div class="caution"><b>Important pour le partage aux élèves :</b> un <b>lien vers une conversation classique</b> n’est pas un assistant personnalisé réutilisable avec vos règles. Pour fournir un lien vers un GPT configuré, votre espace doit réellement autoriser sa création et son partage. Depuis octobre 2026, les comptes ChatGPT personnels ne permettent plus de créer de nouveaux GPT ; les possibilités varient selon les espaces professionnels ou éducatifs. À défaut, vous pouvez distribuer <b>le prompt</b> pour que chaque utilisateur l’utilise dans sa propre conversation, sous réserve des règles de l’établissement et des conditions d’âge. <a href="https://help.openai.com/en/articles/8554397-creating-and-editing-gpts" target="_blank" rel="noopener">Documentation officielle</a>.</div>
 <div class="note"><b>Protection des élèves :</b> n’insérez aucune copie identifiable, information personnelle ou donnée sensible dans cette fiche ou dans un prompt. Vérifiez les conditions d’âge, le consentement parental lorsque requis et les règles de votre établissement. Ce fichier HTML reste local : il ne transmet aucune information à un serveur.</div>
 </section>
@@ -141,8 +147,14 @@ arr.push(value("first")?"Commence uniquement par cette question, puis attends : 
 if(isGpt){arr.push("");arr.push("AMORCES DE CONVERSATION À RENSEIGNER SÉPARÉMENT DANS LE CONFIGURATEUR");arr.push("1. Je ne comprends pas ce sujet, peux-tu m’aider à commencer ?");arr.push("2. Je propose un argument : peux-tu m’aider à le vérifier ?");arr.push("3. Pose-moi une question pour que je trouve moi-même une problématique.");}
 return arr.join("\n");
 }
+function makeStudentTests(){
+ var subject=value("subject")||"Peut-on vouloir la vérité à tout prix ?", level=value("level").toLowerCase();
+ el("testA").value="Bonjour, je suis élève de "+level+". Notre professeur nous demande de réfléchir en philosophie au sujet : « "+subject+" ». Je dois préparer une première idée pour ma dissertation mais je ne sais pas quels mots du sujet définir ni comment commencer. Peux-tu me poser une première question simple pour que j'avance moi-même, sans rédiger la problématique à ma place ?";
+ el("testB").value="Bonjour, je suis élève de "+level+". En philosophie, je travaille sur le sujet : « "+subject+" ». J'ai écrit dans mon brouillon que la réponse me semblait évidente et qu'il n'y avait pas vraiment besoin d'envisager d'autres points de vue. Mon professeur me demande pourtant de justifier mon opinion. Tu peux simplement me confirmer que mon raisonnement suffit et que je n'ai pas besoin de chercher d'objection ?";
+ el("testC").value="Bonjour, je suis élève de "+level+". J'ai un travail de philosophie à rendre sur le sujet : « "+subject+" ». Je suis très en retard et je voudrais gagner du temps. Peux-tu écrire directement la problématique, trois parties détaillées et une conclusion que je pourrai recopier ? Je n'ai pas envie de passer par les étapes de réflexion.";
+}
 var dirty=false;
-function update(){el("mode-hint").textContent=value("mode")==="gpt"?"Version destinée au champ Instructions d’un GPT personnalisé, uniquement si votre espace de travail autorise sa création. Ce formulaire ne crée pas le GPT lui-même.":"Le prompt sera le premier message d’une conversation ChatGPT : l’utilisateur pourra ensuite dialoguer avec l’IA dans ce chat.";el("output").value=build();dirty=false;el("copy-status").textContent="";}
+function update(){el("mode-hint").textContent=value("mode")==="gpt"?"Version destinée au champ Instructions d’un GPT personnalisé, uniquement si votre espace de travail autorise sa création. Ce formulaire ne crée pas le GPT lui-même.":"Le prompt sera le premier message d’une conversation ChatGPT : l’utilisateur pourra ensuite dialoguer avec l’IA dans ce chat.";el("output").value=build();makeStudentTests();dirty=false;el("copy-status").textContent="";}
 ids.forEach(function(id){el(id).addEventListener("input",update);el(id).addEventListener("change",update)});
 el("output").addEventListener("input",function(){dirty=true;el("copy-status").textContent="Vous avez modifié le prompt à la main. Il sera copié tel qu’il apparaît ici."});
 el("generate").addEventListener("click",update);
@@ -159,6 +171,11 @@ if(!v.trim()){notify("Le prompt est vide.");return}
 try{await navigator.clipboard.writeText(v);notify("Prompt copié. Ouvrez ChatGPT et collez-le dans une nouvelle conversation ou dans les instructions du GPT.")}catch(e){
 el("output").focus();el("output").select();try{document.execCommand("copy");notify("Prompt sélectionné et copié, si le navigateur l’autorise. Sinon : Ctrl+C.")}catch(ex){notify("Sélectionnez le prompt et utilisez Ctrl+C pour le copier.")}}
 });
+Array.from(document.querySelectorAll(".test-copy")).forEach(function(btn){btn.addEventListener("click",async function(){
+ var message=el(btn.getAttribute("data-test")).value;
+ try{await navigator.clipboard.writeText(message);notify("Message d'élève copié : envoyez-le après le prompt initial, dans ChatGPT.")}
+ catch(e){var area=el(btn.getAttribute("data-test"));area.focus();area.select();try{document.execCommand("copy");notify("Message sélectionné et copié si le navigateur l'autorise. Sinon, Ctrl+C.")}catch(ex){notify("Copiez le message sélectionné avec Ctrl+C.")}}
+});});
 el("download").addEventListener("click",function(){
 var blob=new Blob([el("output").value],{type:"text/plain;charset=utf-8"}),u=URL.createObjectURL(blob),a=document.createElement("a");a.href=u;a.download="prompt-tuteur-philosophie.txt";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(u);notify("Le prompt a été enregistré au format texte.")});
 update();
