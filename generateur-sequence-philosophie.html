@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Générateur de séquences de philosophie · ChatGPT ou Claude</title>
-<meta name="description" content="Construisez un prompt de séquence de philosophie contextualisé à partir de vos documents, puis utilisez-le dans votre projet ChatGPT ou Claude.">
+<title>Générateur de séquences de philosophie · ChatGPT, Claude ou Gemini</title>
+<meta name="description" content="Construisez un prompt de séquence de philosophie contextualisé à partir de vos documents, puis utilisez-le dans votre projet ChatGPT, Claude ou Gemini.">
 <style>
 :root{--ink:#203042;--muted:#5e6b77;--teal:#14635e;--pale:#e9f5f1;--bg:#f5f6f3;--border:#d4e2df;--paper:#fff;--gold:#fff4e7}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,"Segoe UI",sans-serif}
@@ -33,7 +33,7 @@ footer{text-align:center;color:var(--muted);padding:0 15px 25px;font-size:.9rem}
 @media(max-width:720px){.grid{grid-template-columns:1fr}.panel{padding:15px}main{padding:9px 10px 22px}}
 </style></head>
 <body>
-<header><div class="wrap"><a href="light.html#s3">← Revenir à la séance 3</a><h1>Créer une séquence de philosophie à partir de votre projet documentaire</h1><p>Renseignez vos choix pédagogiques ; le formulaire rédige un prompt complet, utilisable dans <strong>votre projet ChatGPT ou Claude</strong>.</p></div></header>
+<header><div class="wrap"><a href="light.html#s3">← Revenir à la séance 3</a><h1>Créer une séquence de philosophie à partir de votre projet documentaire</h1><p>Renseignez vos choix pédagogiques ; le formulaire rédige un prompt complet, utilisable dans <strong>votre projet ChatGPT, Claude ou Gemini, ou votre Gem Gemini</strong>.</p></div></header>
 <main>
 <div class="intro"><strong>Qui remplit le formulaire ?</strong> Vous, professeur de philosophie. <strong>À quoi sert-il ?</strong> À produire une demande explicite et contextualisée, pas à créer lui-même une séquence. Le projet d’IA doit déjà contenir vos documents de référence, et vous devrez vérifier la production obtenue.</div>
 <section class="panel"><h2>1 · Votre classe et le cadre du cours</h2>
@@ -92,7 +92,7 @@ const fields=["voie","notion","sujet","seances","minutes","place","prerequis","o
 const v=id=>($(id).value||"").trim();
 const lines=id=>v(id)||"[À PRÉCISER]";
 function projectContext(){
-return "Je suis professeur de philosophie en "+v("voie")+". Je travaille à partir de mon PROJET DOCUMENTAIRE ChatGPT ou Claude.\n"+
+return "Je suis professeur de philosophie en "+v("voie")+". Je travaille à partir de mon PROJET DOCUMENTAIRE (ChatGPT, Claude ou Gemini).\n"+
 "Sujet de séquence : « "+lines("sujet")+" ». Notion : "+lines("notion")+".\n"+
 "Ressources que j'indique comme réellement intégrées : "+(v("sources")||"Aucune liste de sources transmise : commence par me demander ce que j’ai chargé.")+"\n"+
 "Textes philosophiques envisagés : "+(v("textes")||"Aucun texte fixé ; n’invente pas d’extrait.")+"\n"+
@@ -136,7 +136,7 @@ fields.forEach(id=>{$(id).addEventListener("input",update);$(id).addEventListene
 async function copyText(txt,source){
 try{
  await navigator.clipboard.writeText(txt);
- $("status").textContent="Prompt copié. Collez-le dans une conversation de votre projet ChatGPT ou Claude.";
+ $("status").textContent="Prompt copié. Collez-le dans une conversation de votre projet ChatGPT, Claude ou Gemini.";
 }catch(e){
  const field=source||$("output");
  field.focus();field.select();
